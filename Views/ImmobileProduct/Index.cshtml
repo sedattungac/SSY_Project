@@ -1,0 +1,45 @@
+﻿@using SSY_Project.Models.Entity
+@model List<Data_HareketsizUrun>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+    int sira = 1;
+}
+
+<div class="mt-5 card">
+    <div class="card-header">
+        <h3 class="card-title">Hareketsiz Ürünler Listesi</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>MALIN CİNSİ</th>
+                    <th>KOD5</th>
+                    <th>KARTIN AÇILMA TARİHİ</th>
+                    <th>FİYAT DEĞİŞTİRME TARİHİ</th>
+                    <th>MALİYET</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var data_FiyatDegisen in Model)
+                {
+                    <tr>
+                        <td>@sira</td>
+                        <td>@data_FiyatDegisen.MALINCINSI</td>
+                        <td>@data_FiyatDegisen.KOD5</td>
+                        <td>@data_FiyatDegisen.KARTINACILMATARIHI</td>
+                        <td>@data_FiyatDegisen.GTARIH</td>
+                        <td>@data_FiyatDegisen.MALIYET</td>
+                    </tr>
+                    sira++;
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+
