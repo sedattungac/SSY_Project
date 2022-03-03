@@ -1,0 +1,69 @@
+﻿@using SSY_Project.Models.Entity
+@model List<Data_CariList>
+@{
+    ViewBag.Title = "CustomerList";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+
+<div class="mt-5 card">
+    <div class="card-header">
+        <h3 class="card-title">Cari Listesi</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>CRIND</th>
+                    <th>Firma Adı</th>
+                    <th>KOD5</th>
+                    <th>Bakiye</th>
+                    <th>SONSATISTARIHI</th>
+                    <th>SONTAHSILATTARIHI</th>
+                    <th>UNVAN</th>
+                    <th>FIRMATIPI</th>
+                    <th>PERSONELNO</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in Model)
+                {
+                    <tr>
+
+                        <td>@customer.IND</td>
+                        <td>@customer.FIRMAADI</td>
+                        <td>@customer.KOD5</td>
+                        <td>@customer.BAKIYE</td>
+                        <td>@customer.SONSATISTARIHI</td>
+                        <td>@customer.SONTAHSILATTARIHI</td>
+                        <td>@customer.UNVAN</td>
+                        <td>@customer.FIRMATIPI</td>
+                        <td>@customer.PERSONELNO</td>
+                        <td>
+
+                            <div class="dropdown-left">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="/Customer/CustomerDetail/">Cari Detay </a>
+                                    <a class="dropdown-item" href="#">Cari Bilgileri</a>
+                                    <a class="dropdown-item" href="#">Eski Satış Faturaları</a>
+                                    <a class="dropdown-item" href="#">Eski Tahsilatlar</a>
+
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+
+
+

@@ -1,0 +1,2027 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DbSahaSatisTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_AlinanCekler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_AlinanCekler">
+          <Key>
+            <PropertyRef Name="FIRMAADI" />
+            <PropertyRef Name="TARIH" />
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="VADE" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="TUTAR" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="TARIH" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="IND" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="VADE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="STATUS" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TUTAR" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_CariBilgi">
+          <Key>
+            <PropertyRef Name="FIRMAKODU" />
+          </Key>
+          <Property Name="RESIM" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ADRESFATURA" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ISTIHBARAT" Type="varchar" MaxLength="5000" Nullable="false" />
+          <Property Name="SATISYAPILMASIN" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="BAKIYE" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="YETKILI" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="VERGIDAIRESI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="VERGINO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="YGSM" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="UNVAN" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="KREDILIMITI" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="PERSONELNO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_CariDetay">
+          <Key>
+            <PropertyRef Name="FIRMAKODU" />
+          </Key>
+          <Property Name="TARIH" Type="varchar" MaxLength="255" />
+          <Property Name="BELGENO" Type="varchar" MaxLength="255" />
+          <Property Name="FIRMAKODU" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="255" />
+          <Property Name="IND" Type="varchar" MaxLength="255" />
+          <Property Name="ISLEMIZAHAT" Type="varchar" MaxLength="255" />
+          <Property Name="BELGEIZAHAT" Type="varchar" MaxLength="255" />
+          <Property Name="MIKTAR" Type="varchar" MaxLength="255" />
+          <Property Name="ALACAK" Type="varchar" MaxLength="255" />
+          <Property Name="BORC" Type="varchar" MaxLength="255" />
+          <Property Name="CARIIND" Type="varchar" MaxLength="50" />
+          <Property Name="KOD5" Type="varchar" MaxLength="50" />
+          <Property Name="AB" Type="varchar" MaxLength="50" />
+          <Property Name="UNVAN" Type="varchar" MaxLength="500" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Data_CariList">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="255" />
+          <Property Name="KOD5" Type="varchar" MaxLength="255" />
+          <Property Name="IND" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="BAKIYE" Type="varchar" MaxLength="255" />
+          <Property Name="SONSATISTARIHI" Type="varchar" MaxLength="255" />
+          <Property Name="SONTAHSILATTARIHI" Type="varchar" MaxLength="255" />
+          <Property Name="UNVAN" Type="varchar" MaxLength="500" />
+          <Property Name="FIRMATIPI" Type="varchar" MaxLength="50" />
+          <Property Name="STATUS" Type="varchar" MaxLength="50" />
+          <Property Name="PERSONELNO" Type="varchar" MaxLength="50" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_ECSCari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_ECSCari">
+          <Key>
+            <PropertyRef Name="TUTAR" />
+            <PropertyRef Name="FIRMAADI" />
+            <PropertyRef Name="FIRMAKODU" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="UNVAN" />
+            <PropertyRef Name="PERSONELNO" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="TUTAR" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="UNVAN" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="PERSONELNO" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_ECSTutar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_ECSTutar">
+          <Key>
+            <PropertyRef Name="TUTAR" />
+            <PropertyRef Name="STOKKODU" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="KOD1" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="TUTAR" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="STOKKODU" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="IND" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="KOD1" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_ECSUrunler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_ECSUrunler">
+          <Key>
+            <PropertyRef Name="STOKKODU" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="SATILANMIKTAR" />
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="KOD1" />
+            <PropertyRef Name="BIRIM" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="STOKKODU" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="SATILANMIKTAR" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="IND" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="KOD1" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="BIRIM" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_Faaliyet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_Faaliyet">
+          <Key>
+            <PropertyRef Name="BELGENO" />
+            <PropertyRef Name="TARIH" />
+            <PropertyRef Name="FIRMAADI" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="BAKIYE" />
+            <PropertyRef Name="TLCIKAN" />
+            <PropertyRef Name="TLGIREN" />
+            <PropertyRef Name="TLTOPLAM" />
+            <PropertyRef Name="BASLIKOZELKOD1" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="BELGENO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TARIH" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="19" Nullable="false" />
+          <Property Name="BAKIYE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TLCIKAN" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TLGIREN" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TLTOPLAM" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="BASLIKOZELKOD1" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_FiyatDegisen' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_FiyatDegisen">
+          <Key>
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="STOKKODU" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="MALIYET" />
+            <PropertyRef Name="KDVGRUBU" />
+            <PropertyRef Name="ENVANTER" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="SATISFIYATI1" />
+            <PropertyRef Name="BARCODE" />
+            <PropertyRef Name="BIRIMADI" />
+            <PropertyRef Name="FIYATDEGISMETARIHI1" />
+          </Key>
+          <Property Name="IND" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="STOKKODU" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="MALIYET" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="KDVGRUBU" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ENVANTER" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="STATUS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="BARCODE" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="BIRIMADI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIYATDEGISMETARIHI1" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="KOD1" Type="varchar" MaxLength="50" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Data_GecList">
+          <Key>
+            <PropertyRef Name="FIRMAKODU" />
+          </Key>
+          <Property Name="IND" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="TARIH" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="FIRMANO" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="STOKKODU" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="EVRAKCINSI" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="SBIRIMADI" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="SMIKTAR" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="BIRIMADI" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="KDVDAHIL" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="BARCODE" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="EVRAKNO" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="KDV" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="CIKAN" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="MIKTAR" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="BIRIMMALIYET" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="BIRIMFIYAT" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="TOPLAMKDV" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="ARATOPLAM" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="GENELTOPLAM" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_GecSipList">
+          <Key>
+            <PropertyRef Name="FIRMAKODU" />
+          </Key>
+          <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TARIH" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMANO" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="STOKKODU" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="EVRAKCINSI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SBIRIMADI" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SMIKTAR" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="KDVDAHIL" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="BARCODE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="EVRAKNO" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="KDV" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="CIKAN" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="MIKTAR" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="BIRIMMALIYET" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TOPLAMKDV" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ARATOPLAM" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="GENELTOPLAM" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_GecTahsilat">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IND" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="BAKIYE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SONSATISTARIHI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SONTAHSILATTARIHI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="UNVAN" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="PERSONELNO" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_HareketsizUrun' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_HareketsizUrun">
+          <Key>
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="KARTINACILMATARIHI" />
+            <PropertyRef Name="SATISFIYATI1" />
+            <PropertyRef Name="SATISFIYATI2" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="MALIYET" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="KARTINACILMATARIHI" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SATISFIYATI2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MALIYET" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_PlasTop' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_PlasTop">
+          <Key>
+            <PropertyRef Name="KOD" />
+            <PropertyRef Name="toplamSiparis" />
+            <PropertyRef Name="toplamTahsilat" />
+          </Key>
+          <Property Name="KOD" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="toplamSiparis" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="toplamTahsilat" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_SatFat">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TARIH" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="BELGENO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CARIIND" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="IPTAL" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TUTAR" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="UNVAN" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="PERSONELNO" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="FIRMATIPI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_SatFatDet">
+          <Key>
+            <PropertyRef Name="FIRMAKODU" />
+          </Key>
+          <Property Name="FIRMATIPI" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TARIH" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="BELGENO" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="STOKKODU" Type="varchar" MaxLength="350" Nullable="false" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="KDV" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="GERCEKTOPLAM" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="KDVTOPLAMI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="KDVDAHILTOPLAM" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="BIRIMFIYAT" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CARIIND" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EVRAKNO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BIRIM" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MIKTAR" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="STOKIND" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_SonGelenler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_SonGelenler">
+          <Key>
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="STOKKODU" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="MALIYET" />
+            <PropertyRef Name="KDVGRUBU" />
+            <PropertyRef Name="ENVANTER" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="SATISFIYATI1" />
+            <PropertyRef Name="BARCODE" />
+            <PropertyRef Name="BIRIMADI" />
+            <PropertyRef Name="KARTINACILMATARIHI" />
+            <PropertyRef Name="KOD1" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="STOKKODU" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MALIYET" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="KDVGRUBU" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ENVANTER" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="STATUS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BARCODE" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="BIRIMADI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="KARTINACILMATARIHI" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="KOD1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_StokDeger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_StokDeger">
+          <Key>
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="BIRIMADI" />
+            <PropertyRef Name="ALISFIYATI" />
+            <PropertyRef Name="MALIYET" />
+            <PropertyRef Name="ALISFIYATITUTARI" />
+            <PropertyRef Name="ALISFIYATITUTARIKDVLI" />
+            <PropertyRef Name="SATISFIYATITUTAR1" />
+            <PropertyRef Name="S1KDV" />
+            <PropertyRef Name="SATISFIYATITUTAR2" />
+            <PropertyRef Name="SATISFIYATI1" />
+            <PropertyRef Name="SATISFIYATI2" />
+            <PropertyRef Name="KDVDAHIL" />
+            <PropertyRef Name="MALIYETTUTAR" />
+            <PropertyRef Name="PB1" />
+            <PropertyRef Name="KALAN" />
+            <PropertyRef Name="KOD1" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="KDV" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="IND" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="STATUS" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="BIRIMADI" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ALISFIYATI" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="MALIYET" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ALISFIYATITUTARI" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ALISFIYATITUTARIKDVLI" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="SATISFIYATITUTAR1" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="S1KDV" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="SATISFIYATITUTAR2" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="SATISFIYATI2" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="KDVDAHIL" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="MALIYETTUTAR" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PB1" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="KALAN" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="KOD1" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="KDV" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_StokList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_StokList">
+          <Key>
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="STOKKODU" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="KDVGRUBU" />
+            <PropertyRef Name="ENVANTER" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="SATISFIYATI1" />
+            <PropertyRef Name="BARCODE" />
+            <PropertyRef Name="BIRIMADI" />
+          </Key>
+          <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="STOKKODU" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="KDVGRUBU" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ENVANTER" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="STATUS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BARCODE" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="BIRIMADI" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="KOD1" Type="varchar" MaxLength="50" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Data_TahsDet">
+          <Key>
+            <PropertyRef Name="BELGEIND" />
+          </Key>
+          <Property Name="IND" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="BELGEIND" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMANO" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="TARIH" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="IZAHAT" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="EVRAKNO" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="IADE" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="KUR" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="ODEMETARIHI" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="SONBAKIYE" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="STATUS" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="TLBORC" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="TLALACAK" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="TLBAKIYE" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="PARABIRIMI" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="UNVAN" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="PERSONELNO" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_Tahsilat">
+          <Key>
+            <PropertyRef Name="BELGEIND" />
+          </Key>
+          <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BELGEIND" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMANO" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TARIH" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="IZAHAT" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="EVRAKNO" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="IADE" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ODEMETARIHI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="KREDILIMITI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="RISKLIMITI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SONBAKIYE" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="STATUS" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="GSMNO" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TLBORC" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TLALACAK" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TLBAKIYE" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="PARABIRIMI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="UNVAN" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="PERSONELNO" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Data_VerilenCekler">
+          <Key>
+            <PropertyRef Name="ISLEMTARIHI" />
+            <PropertyRef Name="VADE" />
+            <PropertyRef Name="FIRMAADI" />
+            <PropertyRef Name="TUTAR" />
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="GTARH" />
+          </Key>
+          <Property Name="ISLEMTARIHI" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="VADE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="TUTAR" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="IND" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="STATUS" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="GTARH" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Data_CariBilgi_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_CariBilgi" Type="Self.Data_CariBilgi" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_CariBilgi">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_CariDetay_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_CariDetay" Type="Self.Data_CariDetay" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_CariDetay">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_GecList_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_GecList" Type="Self.Data_GecList" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_GecList">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_GecSipList_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_GecSipList" Type="Self.Data_GecSipList" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_GecSipList">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_GecTahsilat_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_GecTahsilat" Type="Self.Data_GecTahsilat" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_GecTahsilat">
+              <PropertyRef Name="IND" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_SatFat_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_SatFat" Type="Self.Data_SatFat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_SatFat">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_SatFatDet_Data_SatFat">
+          <End Role="Data_SatFat" Type="Self.Data_SatFat" Multiplicity="1" />
+          <End Role="Data_SatFatDet" Type="Self.Data_SatFatDet" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_SatFat">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_SatFatDet">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_TahsDet_Data_Tahsilat">
+          <End Role="Data_Tahsilat" Type="Self.Data_Tahsilat" Multiplicity="1" />
+          <End Role="Data_TahsDet" Type="Self.Data_TahsDet" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_Tahsilat">
+              <PropertyRef Name="BELGEIND" />
+            </Principal>
+            <Dependent Role="Data_TahsDet">
+              <PropertyRef Name="BELGEIND" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_Tahsilat_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_Tahsilat" Type="Self.Data_Tahsilat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_Tahsilat">
+              <PropertyRef Name="FIRMANO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DbSahaSatisTakipModelStoreContainer">
+          <EntitySet Name="Data_CariBilgi" EntityType="Self.Data_CariBilgi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_CariDetay" EntityType="Self.Data_CariDetay" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_CariList" EntityType="Self.Data_CariList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_GecList" EntityType="Self.Data_GecList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_GecSipList" EntityType="Self.Data_GecSipList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_GecTahsilat" EntityType="Self.Data_GecTahsilat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_SatFat" EntityType="Self.Data_SatFat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_SatFatDet" EntityType="Self.Data_SatFatDet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_TahsDet" EntityType="Self.Data_TahsDet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_Tahsilat" EntityType="Self.Data_Tahsilat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_AlinanCekler" EntityType="Self.Data_AlinanCekler" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_AlinanCekler].[FIRMAADI] AS [FIRMAADI], 
+    [Data_AlinanCekler].[TARIH] AS [TARIH], 
+    [Data_AlinanCekler].[IND] AS [IND], 
+    [Data_AlinanCekler].[VADE] AS [VADE], 
+    [Data_AlinanCekler].[STATUS] AS [STATUS], 
+    [Data_AlinanCekler].[TUTAR] AS [TUTAR], 
+    [Data_AlinanCekler].[GTARIH] AS [GTARIH]
+    FROM [dbo].[Data_AlinanCekler] AS [Data_AlinanCekler]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Data_ECSCari" EntityType="Self.Data_ECSCari" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_ECSCari].[TUTAR] AS [TUTAR], 
+    [Data_ECSCari].[FIRMAADI] AS [FIRMAADI], 
+    [Data_ECSCari].[FIRMAKODU] AS [FIRMAKODU], 
+    [Data_ECSCari].[KOD5] AS [KOD5], 
+    [Data_ECSCari].[UNVAN] AS [UNVAN], 
+    [Data_ECSCari].[PERSONELNO] AS [PERSONELNO], 
+    [Data_ECSCari].[GTARIH] AS [GTARIH]
+    FROM [dbo].[Data_ECSCari] AS [Data_ECSCari]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Data_ECSTutar" EntityType="Self.Data_ECSTutar" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_ECSTutar].[TUTAR] AS [TUTAR], 
+    [Data_ECSTutar].[STOKKODU] AS [STOKKODU], 
+    [Data_ECSTutar].[MALINCINSI] AS [MALINCINSI], 
+    [Data_ECSTutar].[IND] AS [IND], 
+    [Data_ECSTutar].[KOD1] AS [KOD1], 
+    [Data_ECSTutar].[GTARIH] AS [GTARIH]
+    FROM [dbo].[Data_ECSTutar] AS [Data_ECSTutar]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Data_ECSUrunler" EntityType="Self.Data_ECSUrunler" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_ECSUrunler].[STOKKODU] AS [STOKKODU], 
+    [Data_ECSUrunler].[MALINCINSI] AS [MALINCINSI], 
+    [Data_ECSUrunler].[SATILANMIKTAR] AS [SATILANMIKTAR], 
+    [Data_ECSUrunler].[IND] AS [IND], 
+    [Data_ECSUrunler].[KOD1] AS [KOD1], 
+    [Data_ECSUrunler].[BIRIM] AS [BIRIM], 
+    [Data_ECSUrunler].[GTARIH] AS [GTARIH]
+    FROM [dbo].[Data_ECSUrunler] AS [Data_ECSUrunler]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Data_Faaliyet" EntityType="Self.Data_Faaliyet" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_Faaliyet].[BELGENO] AS [BELGENO], 
+    [Data_Faaliyet].[TARIH] AS [TARIH], 
+    [Data_Faaliyet].[FIRMAADI] AS [FIRMAADI], 
+    [Data_Faaliyet].[KOD5] AS [KOD5], 
+    [Data_Faaliyet].[BAKIYE] AS [BAKIYE], 
+    [Data_Faaliyet].[TLCIKAN] AS [TLCIKAN], 
+    [Data_Faaliyet].[TLGIREN] AS [TLGIREN], 
+    [Data_Faaliyet].[TLTOPLAM] AS [TLTOPLAM], 
+    [Data_Faaliyet].[BASLIKOZELKOD1] AS [BASLIKOZELKOD1], 
+    [Data_Faaliyet].[GTARIH] AS [GTARIH]
+    FROM [dbo].[Data_Faaliyet] AS [Data_Faaliyet]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Data_FiyatDegisen" EntityType="Self.Data_FiyatDegisen" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_FiyatDegisen].[IND] AS [IND], 
+    [Data_FiyatDegisen].[STOKKODU] AS [STOKKODU], 
+    [Data_FiyatDegisen].[MALINCINSI] AS [MALINCINSI], 
+    [Data_FiyatDegisen].[KOD5] AS [KOD5], 
+    [Data_FiyatDegisen].[MALIYET] AS [MALIYET], 
+    [Data_FiyatDegisen].[KDVGRUBU] AS [KDVGRUBU], 
+    [Data_FiyatDegisen].[ENVANTER] AS [ENVANTER], 
+    [Data_FiyatDegisen].[STATUS] AS [STATUS], 
+    [Data_FiyatDegisen].[SATISFIYATI1] AS [SATISFIYATI1], 
+    [Data_FiyatDegisen].[BARCODE] AS [BARCODE], 
+    [Data_FiyatDegisen].[BIRIMADI] AS [BIRIMADI], 
+    [Data_FiyatDegisen].[FIYATDEGISMETARIHI1] AS [FIYATDEGISMETARIHI1], 
+    [Data_FiyatDegisen].[KOD1] AS [KOD1], 
+    [Data_FiyatDegisen].[GTARIH] AS [GTARIH]
+    FROM [dbo].[Data_FiyatDegisen] AS [Data_FiyatDegisen]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Data_HareketsizUrun" EntityType="Self.Data_HareketsizUrun" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_HareketsizUrun].[IND] AS [IND], 
+    [Data_HareketsizUrun].[MALINCINSI] AS [MALINCINSI], 
+    [Data_HareketsizUrun].[KARTINACILMATARIHI] AS [KARTINACILMATARIHI], 
+    [Data_HareketsizUrun].[SATISFIYATI1] AS [SATISFIYATI1], 
+    [Data_HareketsizUrun].[SATISFIYATI2] AS [SATISFIYATI2], 
+    [Data_HareketsizUrun].[KOD5] AS [KOD5], 
+    [Data_HareketsizUrun].[MALIYET] AS [MALIYET], 
+    [Data_HareketsizUrun].[GTARIH] AS [GTARIH]
+    FROM [dbo].[Data_HareketsizUrun] AS [Data_HareketsizUrun]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Data_PlasTop" EntityType="Self.Data_PlasTop" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_PlasTop].[KOD] AS [KOD], 
+    [Data_PlasTop].[toplamSiparis] AS [toplamSiparis], 
+    [Data_PlasTop].[toplamTahsilat] AS [toplamTahsilat]
+    FROM [dbo].[Data_PlasTop] AS [Data_PlasTop]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Data_SonGelenler" EntityType="Self.Data_SonGelenler" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_SonGelenler].[IND] AS [IND], 
+    [Data_SonGelenler].[STOKKODU] AS [STOKKODU], 
+    [Data_SonGelenler].[MALINCINSI] AS [MALINCINSI], 
+    [Data_SonGelenler].[KOD5] AS [KOD5], 
+    [Data_SonGelenler].[MALIYET] AS [MALIYET], 
+    [Data_SonGelenler].[KDVGRUBU] AS [KDVGRUBU], 
+    [Data_SonGelenler].[ENVANTER] AS [ENVANTER], 
+    [Data_SonGelenler].[STATUS] AS [STATUS], 
+    [Data_SonGelenler].[SATISFIYATI1] AS [SATISFIYATI1], 
+    [Data_SonGelenler].[BARCODE] AS [BARCODE], 
+    [Data_SonGelenler].[BIRIMADI] AS [BIRIMADI], 
+    [Data_SonGelenler].[KARTINACILMATARIHI] AS [KARTINACILMATARIHI], 
+    [Data_SonGelenler].[KOD1] AS [KOD1], 
+    [Data_SonGelenler].[GTARIH] AS [GTARIH]
+    FROM [dbo].[Data_SonGelenler] AS [Data_SonGelenler]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Data_StokDeger" EntityType="Self.Data_StokDeger" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_StokDeger].[IND] AS [IND], 
+    [Data_StokDeger].[MALINCINSI] AS [MALINCINSI], 
+    [Data_StokDeger].[STATUS] AS [STATUS], 
+    [Data_StokDeger].[BIRIMADI] AS [BIRIMADI], 
+    [Data_StokDeger].[ALISFIYATI] AS [ALISFIYATI], 
+    [Data_StokDeger].[MALIYET] AS [MALIYET], 
+    [Data_StokDeger].[ALISFIYATITUTARI] AS [ALISFIYATITUTARI], 
+    [Data_StokDeger].[ALISFIYATITUTARIKDVLI] AS [ALISFIYATITUTARIKDVLI], 
+    [Data_StokDeger].[SATISFIYATITUTAR1] AS [SATISFIYATITUTAR1], 
+    [Data_StokDeger].[S1KDV] AS [S1KDV], 
+    [Data_StokDeger].[SATISFIYATITUTAR2] AS [SATISFIYATITUTAR2], 
+    [Data_StokDeger].[SATISFIYATI1] AS [SATISFIYATI1], 
+    [Data_StokDeger].[SATISFIYATI2] AS [SATISFIYATI2], 
+    [Data_StokDeger].[KDVDAHIL] AS [KDVDAHIL], 
+    [Data_StokDeger].[MALIYETTUTAR] AS [MALIYETTUTAR], 
+    [Data_StokDeger].[PB1] AS [PB1], 
+    [Data_StokDeger].[KALAN] AS [KALAN], 
+    [Data_StokDeger].[KOD1] AS [KOD1], 
+    [Data_StokDeger].[KOD5] AS [KOD5], 
+    [Data_StokDeger].[KDV] AS [KDV], 
+    [Data_StokDeger].[GTARIH] AS [GTARIH]
+    FROM [dbo].[Data_StokDeger] AS [Data_StokDeger]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Data_StokList" EntityType="Self.Data_StokList" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_StokList].[IND] AS [IND], 
+    [Data_StokList].[STOKKODU] AS [STOKKODU], 
+    [Data_StokList].[MALINCINSI] AS [MALINCINSI], 
+    [Data_StokList].[KOD5] AS [KOD5], 
+    [Data_StokList].[KDVGRUBU] AS [KDVGRUBU], 
+    [Data_StokList].[ENVANTER] AS [ENVANTER], 
+    [Data_StokList].[STATUS] AS [STATUS], 
+    [Data_StokList].[SATISFIYATI1] AS [SATISFIYATI1], 
+    [Data_StokList].[BARCODE] AS [BARCODE], 
+    [Data_StokList].[BIRIMADI] AS [BIRIMADI], 
+    [Data_StokList].[KOD1] AS [KOD1], 
+    [Data_StokList].[GTARIH] AS [GTARIH]
+    FROM [dbo].[Data_StokList] AS [Data_StokList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Data_VerilenCekler" EntityType="Self.Data_VerilenCekler" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Data_VerilenCekler].[ISLEMTARIHI] AS [ISLEMTARIHI], 
+    [Data_VerilenCekler].[VADE] AS [VADE], 
+    [Data_VerilenCekler].[FIRMAADI] AS [FIRMAADI], 
+    [Data_VerilenCekler].[TUTAR] AS [TUTAR], 
+    [Data_VerilenCekler].[IND] AS [IND], 
+    [Data_VerilenCekler].[STATUS] AS [STATUS], 
+    [Data_VerilenCekler].[GTARH] AS [GTARH]
+    FROM [dbo].[Data_VerilenCekler] AS [Data_VerilenCekler]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Data_CariBilgi_Data_CariList" Association="Self.FK_Data_CariBilgi_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_CariBilgi" EntitySet="Data_CariBilgi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_CariDetay_Data_CariList" Association="Self.FK_Data_CariDetay_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_CariDetay" EntitySet="Data_CariDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_GecList_Data_CariList" Association="Self.FK_Data_GecList_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_GecList" EntitySet="Data_GecList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_GecSipList_Data_CariList" Association="Self.FK_Data_GecSipList_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_GecSipList" EntitySet="Data_GecSipList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_GecTahsilat_Data_CariList" Association="Self.FK_Data_GecTahsilat_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_GecTahsilat" EntitySet="Data_GecTahsilat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_SatFat_Data_CariList" Association="Self.FK_Data_SatFat_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_SatFat" EntitySet="Data_SatFat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_SatFatDet_Data_SatFat" Association="Self.FK_Data_SatFatDet_Data_SatFat">
+            <End Role="Data_SatFat" EntitySet="Data_SatFat" />
+            <End Role="Data_SatFatDet" EntitySet="Data_SatFatDet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_TahsDet_Data_Tahsilat" Association="Self.FK_Data_TahsDet_Data_Tahsilat">
+            <End Role="Data_Tahsilat" EntitySet="Data_Tahsilat" />
+            <End Role="Data_TahsDet" EntitySet="Data_TahsDet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_Tahsilat_Data_CariList" Association="Self.FK_Data_Tahsilat_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_Tahsilat" EntitySet="Data_Tahsilat" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DbSahaSatisTakipModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Data_CariBilgi">
+          <Key>
+            <PropertyRef Name="FIRMAKODU" />
+          </Key>
+          <Property Name="RESIM" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ADRESFATURA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ISTIHBARAT" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISYAPILMASIN" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BAKIYE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="YETKILI" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VERGIDAIRESI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VERGINO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="YGSM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KREDILIMITI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PERSONELNO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_CariBilgi_Data_CariList" FromRole="Data_CariBilgi" ToRole="Data_CariList" />
+        </EntityType>
+        <EntityType Name="Data_CariDetay">
+          <Key>
+            <PropertyRef Name="FIRMAKODU" />
+          </Key>
+          <Property Name="TARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BELGENO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FIRMAKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ISLEMIZAHAT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BELGEIZAHAT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="MIKTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ALACAK" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BORC" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CARIIND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_CariDetay_Data_CariList" FromRole="Data_CariDetay" ToRole="Data_CariList" />
+        </EntityType>
+        <EntityType Name="Data_CariList">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="FIRMAADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="KOD5" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BAKIYE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SONSATISTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SONTAHSILATTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FIRMATIPI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PERSONELNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Data_CariBilgi" Relationship="Self.FK_Data_CariBilgi_Data_CariList" FromRole="Data_CariList" ToRole="Data_CariBilgi" />
+          <NavigationProperty Name="Data_CariDetay" Relationship="Self.FK_Data_CariDetay_Data_CariList" FromRole="Data_CariList" ToRole="Data_CariDetay" />
+          <NavigationProperty Name="Data_GecList" Relationship="Self.FK_Data_GecList_Data_CariList" FromRole="Data_CariList" ToRole="Data_GecList" />
+          <NavigationProperty Name="Data_GecSipList" Relationship="Self.FK_Data_GecSipList_Data_CariList" FromRole="Data_CariList" ToRole="Data_GecSipList" />
+          <NavigationProperty Name="Data_GecTahsilat" Relationship="Self.FK_Data_GecTahsilat_Data_CariList" FromRole="Data_CariList" ToRole="Data_GecTahsilat" />
+          <NavigationProperty Name="Data_SatFat" Relationship="Self.FK_Data_SatFat_Data_CariList" FromRole="Data_CariList" ToRole="Data_SatFat" />
+          <NavigationProperty Name="Data_Tahsilat" Relationship="Self.FK_Data_Tahsilat_Data_CariList" FromRole="Data_CariList" ToRole="Data_Tahsilat" />
+        </EntityType>
+        <EntityType Name="Data_GecList">
+          <Key>
+            <PropertyRef Name="FIRMAKODU" />
+          </Key>
+          <Property Name="IND" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TARIH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMANO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STOKKODU" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EVRAKCINSI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SBIRIMADI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SMIKTAR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIRIMADI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDVDAHIL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BARCODE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EVRAKNO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDV" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CIKAN" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MIKTAR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIRIMMALIYET" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIRIMFIYAT" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TOPLAMKDV" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ARATOPLAM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GENELTOPLAM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_GecList_Data_CariList" FromRole="Data_GecList" ToRole="Data_CariList" />
+        </EntityType>
+        <EntityType Name="Data_GecSipList">
+          <Key>
+            <PropertyRef Name="FIRMAKODU" />
+          </Key>
+          <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMANO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STOKKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EVRAKCINSI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SBIRIMADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SMIKTAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDVDAHIL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BARCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EVRAKNO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDV" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CIKAN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MIKTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIRIMMALIYET" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TOPLAMKDV" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ARATOPLAM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GENELTOPLAM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_GecSipList_Data_CariList" FromRole="Data_GecSipList" ToRole="Data_CariList" />
+        </EntityType>
+        <EntityType Name="Data_GecTahsilat">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="FIRMAADI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BAKIYE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SONSATISTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SONTAHSILATTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PERSONELNO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_GecTahsilat_Data_CariList" FromRole="Data_GecTahsilat" ToRole="Data_CariList" />
+        </EntityType>
+        <EntityType Name="Data_SatFat">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BELGENO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CARIIND" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IPTAL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TUTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PERSONELNO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMATIPI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_SatFat_Data_CariList" FromRole="Data_SatFat" ToRole="Data_CariList" />
+          <NavigationProperty Name="Data_SatFatDet" Relationship="Self.FK_Data_SatFatDet_Data_SatFat" FromRole="Data_SatFat" ToRole="Data_SatFatDet" />
+        </EntityType>
+        <EntityType Name="Data_SatFatDet">
+          <Key>
+            <PropertyRef Name="FIRMAKODU" />
+          </Key>
+          <Property Name="FIRMATIPI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BELGENO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STOKKODU" Type="String" MaxLength="350" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GERCEKTOPLAM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDVTOPLAMI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDVDAHILTOPLAM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIRIMFIYAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CARIIND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EVRAKNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIRIM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MIKTAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STOKIND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Data_SatFat" Relationship="Self.FK_Data_SatFatDet_Data_SatFat" FromRole="Data_SatFatDet" ToRole="Data_SatFat" />
+        </EntityType>
+        <EntityType Name="Data_TahsDet">
+          <Key>
+            <PropertyRef Name="BELGEIND" />
+          </Key>
+          <Property Name="IND" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BELGEIND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMANO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TARIH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IZAHAT" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EVRAKNO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IADE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KUR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ODEMETARIHI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SONBAKIYE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STATUS" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TLBORC" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TLALACAK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TLBAKIYE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PARABIRIMI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PERSONELNO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Data_Tahsilat" Relationship="Self.FK_Data_TahsDet_Data_Tahsilat" FromRole="Data_TahsDet" ToRole="Data_Tahsilat" />
+        </EntityType>
+        <EntityType Name="Data_Tahsilat">
+          <Key>
+            <PropertyRef Name="BELGEIND" />
+          </Key>
+          <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BELGEIND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMANO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IZAHAT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EVRAKNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IADE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ODEMETARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KREDILIMITI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RISKLIMITI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SONBAKIYE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STATUS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GSMNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TLBORC" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TLALACAK" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TLBAKIYE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PARABIRIMI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PERSONELNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_Tahsilat_Data_CariList" FromRole="Data_Tahsilat" ToRole="Data_CariList" />
+          <NavigationProperty Name="Data_TahsDet" Relationship="Self.FK_Data_TahsDet_Data_Tahsilat" FromRole="Data_Tahsilat" ToRole="Data_TahsDet" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Data_AlinanCekler">
+          <Key>
+            <PropertyRef Name="FIRMAADI" />
+            <PropertyRef Name="TARIH" />
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="VADE" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="TUTAR" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="FIRMAADI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TARIH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IND" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VADE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STATUS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TUTAR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_ECSCari">
+          <Key>
+            <PropertyRef Name="TUTAR" />
+            <PropertyRef Name="FIRMAADI" />
+            <PropertyRef Name="FIRMAKODU" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="UNVAN" />
+            <PropertyRef Name="PERSONELNO" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="TUTAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PERSONELNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_ECSTutar">
+          <Key>
+            <PropertyRef Name="TUTAR" />
+            <PropertyRef Name="STOKKODU" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="KOD1" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="TUTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STOKKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IND" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_ECSUrunler">
+          <Key>
+            <PropertyRef Name="STOKKODU" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="SATILANMIKTAR" />
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="KOD1" />
+            <PropertyRef Name="BIRIM" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="STOKKODU" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATILANMIKTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIRIM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_Faaliyet">
+          <Key>
+            <PropertyRef Name="BELGENO" />
+            <PropertyRef Name="TARIH" />
+            <PropertyRef Name="FIRMAADI" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="BAKIYE" />
+            <PropertyRef Name="TLCIKAN" />
+            <PropertyRef Name="TLGIREN" />
+            <PropertyRef Name="TLTOPLAM" />
+            <PropertyRef Name="BASLIKOZELKOD1" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="BELGENO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TARIH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="19" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BAKIYE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TLCIKAN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TLGIREN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TLTOPLAM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BASLIKOZELKOD1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_FiyatDegisen">
+          <Key>
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="STOKKODU" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="MALIYET" />
+            <PropertyRef Name="KDVGRUBU" />
+            <PropertyRef Name="ENVANTER" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="SATISFIYATI1" />
+            <PropertyRef Name="BARCODE" />
+            <PropertyRef Name="BIRIMADI" />
+            <PropertyRef Name="FIYATDEGISMETARIHI1" />
+          </Key>
+          <Property Name="IND" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STOKKODU" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALIYET" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDVGRUBU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ENVANTER" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BARCODE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIRIMADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIYATDEGISMETARIHI1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Data_HareketsizUrun">
+          <Key>
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="KARTINACILMATARIHI" />
+            <PropertyRef Name="SATISFIYATI1" />
+            <PropertyRef Name="SATISFIYATI2" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="MALIYET" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KARTINACILMATARIHI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALIYET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_PlasTop">
+          <Key>
+            <PropertyRef Name="KOD" />
+            <PropertyRef Name="toplamSiparis" />
+            <PropertyRef Name="toplamTahsilat" />
+          </Key>
+          <Property Name="KOD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="toplamSiparis" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="toplamTahsilat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_SonGelenler">
+          <Key>
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="STOKKODU" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="MALIYET" />
+            <PropertyRef Name="KDVGRUBU" />
+            <PropertyRef Name="ENVANTER" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="SATISFIYATI1" />
+            <PropertyRef Name="BARCODE" />
+            <PropertyRef Name="BIRIMADI" />
+            <PropertyRef Name="KARTINACILMATARIHI" />
+            <PropertyRef Name="KOD1" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STOKKODU" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALIYET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDVGRUBU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ENVANTER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BARCODE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIRIMADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KARTINACILMATARIHI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_StokDeger">
+          <Key>
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="BIRIMADI" />
+            <PropertyRef Name="ALISFIYATI" />
+            <PropertyRef Name="MALIYET" />
+            <PropertyRef Name="ALISFIYATITUTARI" />
+            <PropertyRef Name="ALISFIYATITUTARIKDVLI" />
+            <PropertyRef Name="SATISFIYATITUTAR1" />
+            <PropertyRef Name="S1KDV" />
+            <PropertyRef Name="SATISFIYATITUTAR2" />
+            <PropertyRef Name="SATISFIYATI1" />
+            <PropertyRef Name="SATISFIYATI2" />
+            <PropertyRef Name="KDVDAHIL" />
+            <PropertyRef Name="MALIYETTUTAR" />
+            <PropertyRef Name="PB1" />
+            <PropertyRef Name="KALAN" />
+            <PropertyRef Name="KOD1" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="KDV" />
+            <PropertyRef Name="GTARIH" />
+          </Key>
+          <Property Name="IND" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIRIMADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ALISFIYATI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALIYET" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ALISFIYATITUTARI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ALISFIYATITUTARIKDVLI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATITUTAR1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="S1KDV" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATITUTAR2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDVDAHIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALIYETTUTAR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PB1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KALAN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDV" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data_StokList">
+          <Key>
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="STOKKODU" />
+            <PropertyRef Name="MALINCINSI" />
+            <PropertyRef Name="KOD5" />
+            <PropertyRef Name="KDVGRUBU" />
+            <PropertyRef Name="ENVANTER" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="SATISFIYATI1" />
+            <PropertyRef Name="BARCODE" />
+            <PropertyRef Name="BIRIMADI" />
+          </Key>
+          <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STOKKODU" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDVGRUBU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ENVANTER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BARCODE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIRIMADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Data_VerilenCekler">
+          <Key>
+            <PropertyRef Name="ISLEMTARIHI" />
+            <PropertyRef Name="VADE" />
+            <PropertyRef Name="FIRMAADI" />
+            <PropertyRef Name="TUTAR" />
+            <PropertyRef Name="IND" />
+            <PropertyRef Name="STATUS" />
+            <PropertyRef Name="GTARH" />
+          </Key>
+          <Property Name="ISLEMTARIHI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VADE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TUTAR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IND" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STATUS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Data_CariBilgi_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_CariBilgi" Type="Self.Data_CariBilgi" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_CariBilgi">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_CariDetay_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_CariDetay" Type="Self.Data_CariDetay" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_CariDetay">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_GecList_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_GecList" Type="Self.Data_GecList" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_GecList">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_GecSipList_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_GecSipList" Type="Self.Data_GecSipList" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_GecSipList">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_GecTahsilat_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_GecTahsilat" Type="Self.Data_GecTahsilat" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_GecTahsilat">
+              <PropertyRef Name="IND" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_SatFat_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_SatFat" Type="Self.Data_SatFat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_SatFat">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_Tahsilat_Data_CariList">
+          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
+          <End Role="Data_Tahsilat" Type="Self.Data_Tahsilat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Data_CariList">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_Tahsilat">
+              <PropertyRef Name="FIRMANO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_SatFatDet_Data_SatFat">
+          <End Role="Data_SatFat" Type="Self.Data_SatFat" Multiplicity="1" />
+          <End Role="Data_SatFatDet" Type="Self.Data_SatFatDet" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_SatFat">
+              <PropertyRef Name="IND" />
+            </Principal>
+            <Dependent Role="Data_SatFatDet">
+              <PropertyRef Name="FIRMAKODU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Data_TahsDet_Data_Tahsilat">
+          <End Role="Data_Tahsilat" Type="Self.Data_Tahsilat" Multiplicity="1" />
+          <End Role="Data_TahsDet" Type="Self.Data_TahsDet" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Data_Tahsilat">
+              <PropertyRef Name="BELGEIND" />
+            </Principal>
+            <Dependent Role="Data_TahsDet">
+              <PropertyRef Name="BELGEIND" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DbSahaSatisTakipEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Data_CariBilgi" EntityType="Self.Data_CariBilgi" />
+          <EntitySet Name="Data_CariDetay" EntityType="Self.Data_CariDetay" />
+          <EntitySet Name="Data_CariList" EntityType="Self.Data_CariList" />
+          <EntitySet Name="Data_GecList" EntityType="Self.Data_GecList" />
+          <EntitySet Name="Data_GecSipList" EntityType="Self.Data_GecSipList" />
+          <EntitySet Name="Data_GecTahsilat" EntityType="Self.Data_GecTahsilat" />
+          <EntitySet Name="Data_SatFat" EntityType="Self.Data_SatFat" />
+          <EntitySet Name="Data_SatFatDet" EntityType="Self.Data_SatFatDet" />
+          <EntitySet Name="Data_TahsDet" EntityType="Self.Data_TahsDet" />
+          <EntitySet Name="Data_Tahsilat" EntityType="Self.Data_Tahsilat" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Data_AlinanCekler" EntityType="Self.Data_AlinanCekler" />
+          <EntitySet Name="Data_ECSCari" EntityType="Self.Data_ECSCari" />
+          <EntitySet Name="Data_ECSTutar" EntityType="Self.Data_ECSTutar" />
+          <EntitySet Name="Data_ECSUrunler" EntityType="Self.Data_ECSUrunler" />
+          <EntitySet Name="Data_Faaliyet" EntityType="Self.Data_Faaliyet" />
+          <EntitySet Name="Data_FiyatDegisen" EntityType="Self.Data_FiyatDegisen" />
+          <EntitySet Name="Data_HareketsizUrun" EntityType="Self.Data_HareketsizUrun" />
+          <EntitySet Name="Data_PlasTop" EntityType="Self.Data_PlasTop" />
+          <EntitySet Name="Data_SonGelenler" EntityType="Self.Data_SonGelenler" />
+          <EntitySet Name="Data_StokDeger" EntityType="Self.Data_StokDeger" />
+          <EntitySet Name="Data_StokList" EntityType="Self.Data_StokList" />
+          <EntitySet Name="Data_VerilenCekler" EntityType="Self.Data_VerilenCekler" />
+          <AssociationSet Name="FK_Data_CariBilgi_Data_CariList" Association="Self.FK_Data_CariBilgi_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_CariBilgi" EntitySet="Data_CariBilgi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_CariDetay_Data_CariList" Association="Self.FK_Data_CariDetay_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_CariDetay" EntitySet="Data_CariDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_GecList_Data_CariList" Association="Self.FK_Data_GecList_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_GecList" EntitySet="Data_GecList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_GecSipList_Data_CariList" Association="Self.FK_Data_GecSipList_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_GecSipList" EntitySet="Data_GecSipList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_GecTahsilat_Data_CariList" Association="Self.FK_Data_GecTahsilat_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_GecTahsilat" EntitySet="Data_GecTahsilat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_SatFat_Data_CariList" Association="Self.FK_Data_SatFat_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_SatFat" EntitySet="Data_SatFat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_Tahsilat_Data_CariList" Association="Self.FK_Data_Tahsilat_Data_CariList">
+            <End Role="Data_CariList" EntitySet="Data_CariList" />
+            <End Role="Data_Tahsilat" EntitySet="Data_Tahsilat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_SatFatDet_Data_SatFat" Association="Self.FK_Data_SatFatDet_Data_SatFat">
+            <End Role="Data_SatFat" EntitySet="Data_SatFat" />
+            <End Role="Data_SatFatDet" EntitySet="Data_SatFatDet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Data_TahsDet_Data_Tahsilat" Association="Self.FK_Data_TahsDet_Data_Tahsilat">
+            <End Role="Data_Tahsilat" EntitySet="Data_Tahsilat" />
+            <End Role="Data_TahsDet" EntitySet="Data_TahsDet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DbSahaSatisTakipModelStoreContainer" CdmEntityContainer="DbSahaSatisTakipEntities">
+          <EntitySetMapping Name="Data_CariBilgi">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_CariBilgi">
+              <MappingFragment StoreEntitySet="Data_CariBilgi">
+                <ScalarProperty Name="RESIM" ColumnName="RESIM" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="ADRESFATURA" ColumnName="ADRESFATURA" />
+                <ScalarProperty Name="ISTIHBARAT" ColumnName="ISTIHBARAT" />
+                <ScalarProperty Name="SATISYAPILMASIN" ColumnName="SATISYAPILMASIN" />
+                <ScalarProperty Name="BAKIYE" ColumnName="BAKIYE" />
+                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
+                <ScalarProperty Name="YETKILI" ColumnName="YETKILI" />
+                <ScalarProperty Name="VERGIDAIRESI" ColumnName="VERGIDAIRESI" />
+                <ScalarProperty Name="VERGINO" ColumnName="VERGINO" />
+                <ScalarProperty Name="YGSM" ColumnName="YGSM" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="KREDILIMITI" ColumnName="KREDILIMITI" />
+                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_CariDetay">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_CariDetay">
+              <MappingFragment StoreEntitySet="Data_CariDetay">
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="BELGENO" ColumnName="BELGENO" />
+                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="ISLEMIZAHAT" ColumnName="ISLEMIZAHAT" />
+                <ScalarProperty Name="BELGEIZAHAT" ColumnName="BELGEIZAHAT" />
+                <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
+                <ScalarProperty Name="ALACAK" ColumnName="ALACAK" />
+                <ScalarProperty Name="BORC" ColumnName="BORC" />
+                <ScalarProperty Name="CARIIND" ColumnName="CARIIND" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="AB" ColumnName="AB" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_CariList">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_CariList">
+              <MappingFragment StoreEntitySet="Data_CariList">
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="BAKIYE" ColumnName="BAKIYE" />
+                <ScalarProperty Name="SONSATISTARIHI" ColumnName="SONSATISTARIHI" />
+                <ScalarProperty Name="SONTAHSILATTARIHI" ColumnName="SONTAHSILATTARIHI" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="FIRMATIPI" ColumnName="FIRMATIPI" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_GecList">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_GecList">
+              <MappingFragment StoreEntitySet="Data_GecList">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="FIRMANO" ColumnName="FIRMANO" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="EVRAKCINSI" ColumnName="EVRAKCINSI" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="SBIRIMADI" ColumnName="SBIRIMADI" />
+                <ScalarProperty Name="SMIKTAR" ColumnName="SMIKTAR" />
+                <ScalarProperty Name="BIRIMADI" ColumnName="BIRIMADI" />
+                <ScalarProperty Name="KDVDAHIL" ColumnName="KDVDAHIL" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+                <ScalarProperty Name="EVRAKNO" ColumnName="EVRAKNO" />
+                <ScalarProperty Name="KDV" ColumnName="KDV" />
+                <ScalarProperty Name="CIKAN" ColumnName="CIKAN" />
+                <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
+                <ScalarProperty Name="BIRIMMALIYET" ColumnName="BIRIMMALIYET" />
+                <ScalarProperty Name="BIRIMFIYAT" ColumnName="BIRIMFIYAT" />
+                <ScalarProperty Name="TOPLAMKDV" ColumnName="TOPLAMKDV" />
+                <ScalarProperty Name="ARATOPLAM" ColumnName="ARATOPLAM" />
+                <ScalarProperty Name="GENELTOPLAM" ColumnName="GENELTOPLAM" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_GecSipList">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_GecSipList">
+              <MappingFragment StoreEntitySet="Data_GecSipList">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="FIRMANO" ColumnName="FIRMANO" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="EVRAKCINSI" ColumnName="EVRAKCINSI" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="SBIRIMADI" ColumnName="SBIRIMADI" />
+                <ScalarProperty Name="SMIKTAR" ColumnName="SMIKTAR" />
+                <ScalarProperty Name="KDVDAHIL" ColumnName="KDVDAHIL" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+                <ScalarProperty Name="EVRAKNO" ColumnName="EVRAKNO" />
+                <ScalarProperty Name="KDV" ColumnName="KDV" />
+                <ScalarProperty Name="CIKAN" ColumnName="CIKAN" />
+                <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
+                <ScalarProperty Name="BIRIMMALIYET" ColumnName="BIRIMMALIYET" />
+                <ScalarProperty Name="TOPLAMKDV" ColumnName="TOPLAMKDV" />
+                <ScalarProperty Name="ARATOPLAM" ColumnName="ARATOPLAM" />
+                <ScalarProperty Name="GENELTOPLAM" ColumnName="GENELTOPLAM" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_GecTahsilat">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_GecTahsilat">
+              <MappingFragment StoreEntitySet="Data_GecTahsilat">
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="BAKIYE" ColumnName="BAKIYE" />
+                <ScalarProperty Name="SONSATISTARIHI" ColumnName="SONSATISTARIHI" />
+                <ScalarProperty Name="SONTAHSILATTARIHI" ColumnName="SONTAHSILATTARIHI" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_SatFat">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_SatFat">
+              <MappingFragment StoreEntitySet="Data_SatFat">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="BELGENO" ColumnName="BELGENO" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="CARIIND" ColumnName="CARIIND" />
+                <ScalarProperty Name="IPTAL" ColumnName="IPTAL" />
+                <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
+                <ScalarProperty Name="FIRMATIPI" ColumnName="FIRMATIPI" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_SatFatDet">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_SatFatDet">
+              <MappingFragment StoreEntitySet="Data_SatFatDet">
+                <ScalarProperty Name="FIRMATIPI" ColumnName="FIRMATIPI" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="BELGENO" ColumnName="BELGENO" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="KDV" ColumnName="KDV" />
+                <ScalarProperty Name="GERCEKTOPLAM" ColumnName="GERCEKTOPLAM" />
+                <ScalarProperty Name="KDVTOPLAMI" ColumnName="KDVTOPLAMI" />
+                <ScalarProperty Name="KDVDAHILTOPLAM" ColumnName="KDVDAHILTOPLAM" />
+                <ScalarProperty Name="BIRIMFIYAT" ColumnName="BIRIMFIYAT" />
+                <ScalarProperty Name="CARIIND" ColumnName="CARIIND" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="EVRAKNO" ColumnName="EVRAKNO" />
+                <ScalarProperty Name="BIRIM" ColumnName="BIRIM" />
+                <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
+                <ScalarProperty Name="STOKIND" ColumnName="STOKIND" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_TahsDet">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_TahsDet">
+              <MappingFragment StoreEntitySet="Data_TahsDet">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="BELGEIND" ColumnName="BELGEIND" />
+                <ScalarProperty Name="FIRMANO" ColumnName="FIRMANO" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="IZAHAT" ColumnName="IZAHAT" />
+                <ScalarProperty Name="EVRAKNO" ColumnName="EVRAKNO" />
+                <ScalarProperty Name="IADE" ColumnName="IADE" />
+                <ScalarProperty Name="KUR" ColumnName="KUR" />
+                <ScalarProperty Name="ODEMETARIHI" ColumnName="ODEMETARIHI" />
+                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="SONBAKIYE" ColumnName="SONBAKIYE" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="TLBORC" ColumnName="TLBORC" />
+                <ScalarProperty Name="TLALACAK" ColumnName="TLALACAK" />
+                <ScalarProperty Name="TLBAKIYE" ColumnName="TLBAKIYE" />
+                <ScalarProperty Name="PARABIRIMI" ColumnName="PARABIRIMI" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_Tahsilat">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_Tahsilat">
+              <MappingFragment StoreEntitySet="Data_Tahsilat">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="BELGEIND" ColumnName="BELGEIND" />
+                <ScalarProperty Name="FIRMANO" ColumnName="FIRMANO" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="IZAHAT" ColumnName="IZAHAT" />
+                <ScalarProperty Name="EVRAKNO" ColumnName="EVRAKNO" />
+                <ScalarProperty Name="IADE" ColumnName="IADE" />
+                <ScalarProperty Name="ODEMETARIHI" ColumnName="ODEMETARIHI" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="KREDILIMITI" ColumnName="KREDILIMITI" />
+                <ScalarProperty Name="RISKLIMITI" ColumnName="RISKLIMITI" />
+                <ScalarProperty Name="SONBAKIYE" ColumnName="SONBAKIYE" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="GSMNO" ColumnName="GSMNO" />
+                <ScalarProperty Name="TLBORC" ColumnName="TLBORC" />
+                <ScalarProperty Name="TLALACAK" ColumnName="TLALACAK" />
+                <ScalarProperty Name="TLBAKIYE" ColumnName="TLBAKIYE" />
+                <ScalarProperty Name="PARABIRIMI" ColumnName="PARABIRIMI" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_AlinanCekler">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_AlinanCekler">
+              <MappingFragment StoreEntitySet="Data_AlinanCekler">
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="VADE" ColumnName="VADE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_ECSCari">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_ECSCari">
+              <MappingFragment StoreEntitySet="Data_ECSCari">
+                <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_ECSTutar">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_ECSTutar">
+              <MappingFragment StoreEntitySet="Data_ECSTutar">
+                <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="KOD1" ColumnName="KOD1" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_ECSUrunler">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_ECSUrunler">
+              <MappingFragment StoreEntitySet="Data_ECSUrunler">
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="SATILANMIKTAR" ColumnName="SATILANMIKTAR" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="KOD1" ColumnName="KOD1" />
+                <ScalarProperty Name="BIRIM" ColumnName="BIRIM" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_Faaliyet">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_Faaliyet">
+              <MappingFragment StoreEntitySet="Data_Faaliyet">
+                <ScalarProperty Name="BELGENO" ColumnName="BELGENO" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="BAKIYE" ColumnName="BAKIYE" />
+                <ScalarProperty Name="TLCIKAN" ColumnName="TLCIKAN" />
+                <ScalarProperty Name="TLGIREN" ColumnName="TLGIREN" />
+                <ScalarProperty Name="TLTOPLAM" ColumnName="TLTOPLAM" />
+                <ScalarProperty Name="BASLIKOZELKOD1" ColumnName="BASLIKOZELKOD1" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_FiyatDegisen">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_FiyatDegisen">
+              <MappingFragment StoreEntitySet="Data_FiyatDegisen">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="MALIYET" ColumnName="MALIYET" />
+                <ScalarProperty Name="KDVGRUBU" ColumnName="KDVGRUBU" />
+                <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+                <ScalarProperty Name="BIRIMADI" ColumnName="BIRIMADI" />
+                <ScalarProperty Name="FIYATDEGISMETARIHI1" ColumnName="FIYATDEGISMETARIHI1" />
+                <ScalarProperty Name="KOD1" ColumnName="KOD1" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_HareketsizUrun">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_HareketsizUrun">
+              <MappingFragment StoreEntitySet="Data_HareketsizUrun">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="KARTINACILMATARIHI" ColumnName="KARTINACILMATARIHI" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="SATISFIYATI2" ColumnName="SATISFIYATI2" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="MALIYET" ColumnName="MALIYET" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_PlasTop">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_PlasTop">
+              <MappingFragment StoreEntitySet="Data_PlasTop">
+                <ScalarProperty Name="KOD" ColumnName="KOD" />
+                <ScalarProperty Name="toplamSiparis" ColumnName="toplamSiparis" />
+                <ScalarProperty Name="toplamTahsilat" ColumnName="toplamTahsilat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_SonGelenler">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_SonGelenler">
+              <MappingFragment StoreEntitySet="Data_SonGelenler">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="MALIYET" ColumnName="MALIYET" />
+                <ScalarProperty Name="KDVGRUBU" ColumnName="KDVGRUBU" />
+                <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+                <ScalarProperty Name="BIRIMADI" ColumnName="BIRIMADI" />
+                <ScalarProperty Name="KARTINACILMATARIHI" ColumnName="KARTINACILMATARIHI" />
+                <ScalarProperty Name="KOD1" ColumnName="KOD1" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_StokDeger">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_StokDeger">
+              <MappingFragment StoreEntitySet="Data_StokDeger">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="BIRIMADI" ColumnName="BIRIMADI" />
+                <ScalarProperty Name="ALISFIYATI" ColumnName="ALISFIYATI" />
+                <ScalarProperty Name="MALIYET" ColumnName="MALIYET" />
+                <ScalarProperty Name="ALISFIYATITUTARI" ColumnName="ALISFIYATITUTARI" />
+                <ScalarProperty Name="ALISFIYATITUTARIKDVLI" ColumnName="ALISFIYATITUTARIKDVLI" />
+                <ScalarProperty Name="SATISFIYATITUTAR1" ColumnName="SATISFIYATITUTAR1" />
+                <ScalarProperty Name="S1KDV" ColumnName="S1KDV" />
+                <ScalarProperty Name="SATISFIYATITUTAR2" ColumnName="SATISFIYATITUTAR2" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="SATISFIYATI2" ColumnName="SATISFIYATI2" />
+                <ScalarProperty Name="KDVDAHIL" ColumnName="KDVDAHIL" />
+                <ScalarProperty Name="MALIYETTUTAR" ColumnName="MALIYETTUTAR" />
+                <ScalarProperty Name="PB1" ColumnName="PB1" />
+                <ScalarProperty Name="KALAN" ColumnName="KALAN" />
+                <ScalarProperty Name="KOD1" ColumnName="KOD1" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="KDV" ColumnName="KDV" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_StokList">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_StokList">
+              <MappingFragment StoreEntitySet="Data_StokList">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="KDVGRUBU" ColumnName="KDVGRUBU" />
+                <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+                <ScalarProperty Name="BIRIMADI" ColumnName="BIRIMADI" />
+                <ScalarProperty Name="KOD1" ColumnName="KOD1" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_VerilenCekler">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_VerilenCekler">
+              <MappingFragment StoreEntitySet="Data_VerilenCekler">
+                <ScalarProperty Name="ISLEMTARIHI" ColumnName="ISLEMTARIHI" />
+                <ScalarProperty Name="VADE" ColumnName="VADE" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="GTARH" ColumnName="GTARH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

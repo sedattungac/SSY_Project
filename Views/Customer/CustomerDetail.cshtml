@@ -1,0 +1,54 @@
+﻿@using SSY_Project.Models.Entity
+@model List<Data_CariDetay>
+@{
+    ViewBag.Title = "CustomerDetail";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+<br />
+
+
+<div class="mt-5 card">
+    <div class="card-header">
+        <h3 class="card-title">Cari Detay</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="mt-3 row d-flex justify-content-center">
+        <a class="btn btn-primary" href="/Customer/Index"><i class="fas fa-users"></i> Cari Listesi</a> &nbsp;
+        <a class="btn btn-primary" href=""><i class="fas fa-file"></i> Eski Satış Faturaları</a> &nbsp;
+        <a class="btn btn-primary" href=""><i class="fas fa-edit "></i> Eski Tahsilatlar</a> &nbsp;
+    </div>
+    <hr />
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>FIRMA ADI</th>
+                    <th>ISLEM IZAHAT</th>
+                    <th>BELGE IZAHAT</th>
+                    <th>MIKTAR</th>
+                    <th>ALACAK</th>
+                    <th>BORC</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in Model)
+                {
+                    <tr>
+
+                        <td>@customer.IND</td>
+                        <td>@customer.FIRMAADI</td>
+                        <td>@customer.ISLEMIZAHAT</td>
+                        <td>@customer.BELGEIZAHAT</td>
+                        <td>@customer.MIKTAR</td>
+                        <td>@customer.ALACAK</td>
+                        <td>@customer.BORC</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+

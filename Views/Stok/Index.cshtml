@@ -1,0 +1,44 @@
+﻿@using SSY_Project.Models.Entity
+@model List<Data_StokList>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+
+<div class="mt-5 card">
+    <div class="card-header">
+        <h3 class="card-title">Stok Listesi</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>S.Fiyat1</th>
+                    <th>Malın Cinsi</th>
+                    <th>KOD5</th>
+                    <th>KOD1</th>
+                    <th>KDV</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var stok in Model)
+                {
+                    <tr>
+
+                        <td>@stok.IND</td>
+                        <td>@stok.SATISFIYATI1</td>
+                        <td>@stok.MALINCINSI</td>
+                        <td>@stok.KOD5</td>
+                        <td>@stok.KOD1</td>
+                        <td>@stok.KDVGRUBU</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+
