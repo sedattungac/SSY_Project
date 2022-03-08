@@ -170,6 +170,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\ECSController.cs" />
     <Compile Include="Controllers\ImmobileProductController.cs" />
     <Compile Include="Controllers\PriceChangeController.cs" />
     <Compile Include="Controllers\RecentArrivalsController.cs" />
@@ -2765,6 +2766,7 @@
     <Content Include="Views\PriceChange\Index.cshtml" />
     <Content Include="Views\RecentArrivals\Index.cshtml" />
     <Content Include="Views\ImmobileProduct\Index.cshtml" />
+    <Content Include="Views\ECS\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

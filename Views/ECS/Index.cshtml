@@ -1,0 +1,58 @@
+﻿@using SSY_Project.Models.Entity
+@model List<data_ecscari>
+@{
+    ViewBag.Title = "CustomerList";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+
+<div class="mt-5 card">
+    <div class="card-header">
+        <h3 class="card-title">ECSCari Listesi</h3>
+    </div>
+    <!--<br />-->
+    @*<div class="col-11 row d-flex justify-content-center">
+            <a class="btn btn-primary" href="">BUTTON1</a> &nbsp;
+            <a class="btn btn-primary" href="">BUTTON2</a> &nbsp;
+            <a class="btn btn-primary" href="">BUTTON3</a> &nbsp;
+            <a class="btn btn-primary" href="">BUTTON4</a> &nbsp;
+
+        </div>*@
+    <!--<hr />-->
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+
+                    <th>FİRMA ADI</th>
+                    <th>FİRMA KODU</th>
+                    <th>KOD5</th>
+                    <th>KOD5</th>
+                    <th>PERSONELNO</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in Model)
+                {
+                    <tr>
+
+                        <td>@customer.FIRMAADI</td>
+                        <td>@customer.FIRMAKODU</td>
+                        <td>@customer.KOD5</td>
+                        <td>@customer.PERSONELNO</td>
+
+
+                    </tr>
+
+
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+
+
+
