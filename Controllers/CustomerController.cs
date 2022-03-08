@@ -10,26 +10,26 @@ namespace SSY_Project.Controllers
     public class CustomerController : Controller
     {
 
-        DbSahaSatisTakipEntities db = new DbSahaSatisTakipEntities();
+        DbDatabase db = new DbDatabase();
         // GET: Customer
         public ActionResult Index()
         {
-            var customerList = db.Data_CariList.ToList();
+            var customerList = db.data_carilist.ToList();
             return View(customerList);
         }
         public ActionResult CustomerList()
         {
-            var customerList = db.Data_CariList.ToList();
+            var customerList = db.data_carilist.ToList();
             return View(customerList);
         }
         public ActionResult CustomerDetail(string id)
         { 
-            var value = db.Data_CariDetay.Where(x => x.FIRMAKODU == id).ToList();
+            var value = db.data_caridetay.Where(x => x.FIRMAKODU == id).ToList();
             return View(value);
         }
         public ActionResult OldBillofSale(string id)
         {
-            var value = db.Data_SatFat.Where(x => x.FIRMAKODU == id).ToList();
+            var value = db.data_satfat.Where(x => x.FIRMAKODU == id).ToList();
             return View(value);
         }
 

@@ -12,13 +12,13 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_CariList
+    public partial class data_carilist
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Data_CariList()
+        public data_carilist()
         {
-            this.Data_SatFat = new HashSet<Data_SatFat>();
-            this.Data_Tahsilat = new HashSet<Data_Tahsilat>();
+            this.data_satfat = new HashSet<data_satfat>();
+            this.data_tahsilat = new HashSet<data_tahsilat>();
         }
     
         public string FIRMAADI { get; set; }
@@ -33,14 +33,14 @@ namespace SSY_Project.Models.Entity
         public string PERSONELNO { get; set; }
         public string GTARIH { get; set; }
     
-        public virtual Data_CariBilgi Data_CariBilgi { get; set; }
-        public virtual Data_CariDetay Data_CariDetay { get; set; }
-        public virtual Data_GecList Data_GecList { get; set; }
-        public virtual Data_GecSipList Data_GecSipList { get; set; }
-        public virtual Data_GecTahsilat Data_GecTahsilat { get; set; }
+        public virtual data_caribilgi data_caribilgi { get; set; }
+        public virtual data_caridetay data_caridetay { get; set; }
+        public virtual data_geclist data_geclist { get; set; }
+        public virtual data_getsiplist data_getsiplist { get; set; }
+        public virtual data_gectahsilat data_gectahsilat { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Data_SatFat> Data_SatFat { get; set; }
+        public virtual ICollection<data_satfat> data_satfat { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Data_Tahsilat> Data_Tahsilat { get; set; }
+        public virtual ICollection<data_tahsilat> data_tahsilat { get; set; }
     }
 }

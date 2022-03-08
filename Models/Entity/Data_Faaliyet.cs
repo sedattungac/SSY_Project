@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_Faaliyet
+    public partial class data_faaliyet
     {
         public string BELGENO { get; set; }
         public string TARIH { get; set; }

@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_PlasTop
+    public partial class data_plastop
     {
         public string KOD { get; set; }
         public string toplamSiparis { get; set; }

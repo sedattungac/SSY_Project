@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_StokDeger
+    public partial class data_stokdeger
     {
         public string IND { get; set; }
         public string MALINCINSI { get; set; }

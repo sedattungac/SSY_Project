@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_GecList
+    public partial class data_geclist
     {
         public string IND { get; set; }
         public string TARIH { get; set; }
@@ -39,6 +39,6 @@ namespace SSY_Project.Models.Entity
         public string GENELTOPLAM { get; set; }
         public string GTARIH { get; set; }
     
-        public virtual Data_CariList Data_CariList { get; set; }
+        public virtual data_carilist data_carilist { get; set; }
     }
 }

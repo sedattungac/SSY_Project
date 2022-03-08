@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_FiyatDegisen
+    public partial class data_fiyatdegisen
     {
         public string IND { get; set; }
         public string STOKKODU { get; set; }

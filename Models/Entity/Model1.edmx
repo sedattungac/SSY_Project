@@ -6,8 +6,8 @@
     <edmx:StorageModels>
       <Schema Namespace="DbSahaSatisTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_AlinanCekler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_AlinanCekler">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_alinancekler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_alinancekler">
           <Key>
             <PropertyRef Name="FIRMAADI" />
             <PropertyRef Name="TARIH" />
@@ -25,7 +25,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_AlinanCekler' does not h
           <Property Name="TUTAR" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="GTARIH" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_CariBilgi">
+        <EntityType Name="data_caribilgi">
           <Key>
             <PropertyRef Name="FIRMAKODU" />
           </Key>
@@ -47,7 +47,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_AlinanCekler' does not h
           <Property Name="PERSONELNO" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_CariDetay">
+        <EntityType Name="data_caridetay">
           <Key>
             <PropertyRef Name="FIRMAKODU" />
           </Key>
@@ -67,7 +67,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_AlinanCekler' does not h
           <Property Name="UNVAN" Type="varchar" MaxLength="500" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="Data_CariList">
+        <EntityType Name="data_carilist">
           <Key>
             <PropertyRef Name="IND" />
           </Key>
@@ -84,8 +84,8 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_AlinanCekler' does not h
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_ECSCari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_ECSCari">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_ecscari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_ecscari">
           <Key>
             <PropertyRef Name="TUTAR" />
             <PropertyRef Name="FIRMAADI" />
@@ -104,8 +104,8 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_ECSCari' does not have a
           <Property Name="GTARIH" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_ECSTutar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_ECSTutar">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_ecstutar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_ecstutar">
           <Key>
             <PropertyRef Name="TUTAR" />
             <PropertyRef Name="STOKKODU" />
@@ -122,8 +122,8 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_ECSTutar' does not have 
           <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_ECSUrunler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_ECSUrunler">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_ecsurunler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_ecsurunler">
           <Key>
             <PropertyRef Name="STOKKODU" />
             <PropertyRef Name="MALINCINSI" />
@@ -142,8 +142,8 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_ECSUrunler' does not hav
           <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_Faaliyet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_Faaliyet">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_faaliyet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_faaliyet">
           <Key>
             <PropertyRef Name="BELGENO" />
             <PropertyRef Name="TARIH" />
@@ -168,8 +168,8 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_Faaliyet' does not have 
           <Property Name="GTARIH" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_FiyatDegisen' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_FiyatDegisen">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_fiyatdegisen' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_fiyatdegisen">
           <Key>
             <PropertyRef Name="IND" />
             <PropertyRef Name="STOKKODU" />
@@ -199,7 +199,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_FiyatDegisen' does not h
           <Property Name="KOD1" Type="varchar" MaxLength="50" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="Data_GecList">
+        <EntityType Name="data_geclist">
           <Key>
             <PropertyRef Name="FIRMAKODU" />
           </Key>
@@ -228,7 +228,21 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_FiyatDegisen' does not h
           <Property Name="GENELTOPLAM" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="GTARIH" Type="varchar" MaxLength="250" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_GecSipList">
+        <EntityType Name="data_gectahsilat">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IND" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="BAKIYE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SONSATISTARIHI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SONTAHSILATTARIHI" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="UNVAN" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="PERSONELNO" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="data_getsiplist">
           <Key>
             <PropertyRef Name="FIRMAKODU" />
           </Key>
@@ -255,23 +269,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_FiyatDegisen' does not h
           <Property Name="GENELTOPLAM" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_GecTahsilat">
-          <Key>
-            <PropertyRef Name="IND" />
-          </Key>
-          <Property Name="FIRMAADI" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="IND" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="BAKIYE" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="SONSATISTARIHI" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="SONTAHSILATTARIHI" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="UNVAN" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="PERSONELNO" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
-        </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_HareketsizUrun' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_HareketsizUrun">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_hareketsizurun' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_hareketsizurun">
           <Key>
             <PropertyRef Name="IND" />
             <PropertyRef Name="MALINCINSI" />
@@ -292,8 +292,8 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_HareketsizUrun' does not
           <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_PlasTop' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_PlasTop">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_plastop' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_plastop">
           <Key>
             <PropertyRef Name="KOD" />
             <PropertyRef Name="toplamSiparis" />
@@ -303,7 +303,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_PlasTop' does not have a
           <Property Name="toplamSiparis" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="toplamTahsilat" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_SatFat">
+        <EntityType Name="data_satfat">
           <Key>
             <PropertyRef Name="IND" />
           </Key>
@@ -321,7 +321,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_PlasTop' does not have a
           <Property Name="FIRMATIPI" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_SatFatDet">
+        <EntityType Name="data_satfatdet">
           <Key>
             <PropertyRef Name="FIRMAKODU" />
           </Key>
@@ -347,8 +347,8 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_PlasTop' does not have a
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_SonGelenler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_SonGelenler">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_songelenler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_songelenler">
           <Key>
             <PropertyRef Name="IND" />
             <PropertyRef Name="STOKKODU" />
@@ -381,8 +381,8 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_SonGelenler' does not ha
           <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_StokDeger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_StokDeger">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_stokdeger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_stokdeger">
           <Key>
             <PropertyRef Name="IND" />
             <PropertyRef Name="MALINCINSI" />
@@ -429,8 +429,8 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_StokDeger' does not have
           <Property Name="GTARIH" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_StokList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_StokList">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_stoklist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_stoklist">
           <Key>
             <PropertyRef Name="IND" />
             <PropertyRef Name="STOKKODU" />
@@ -456,7 +456,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_StokList' does not have 
           <Property Name="KOD1" Type="varchar" MaxLength="50" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="Data_TahsDet">
+        <EntityType Name="data_tahsdet">
           <Key>
             <PropertyRef Name="BELGEIND" />
           </Key>
@@ -482,7 +482,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_StokList' does not have 
           <Property Name="PERSONELNO" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="GTARIH" Type="varchar" MaxLength="250" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_Tahsilat">
+        <EntityType Name="data_tahsilat">
           <Key>
             <PropertyRef Name="BELGEIND" />
           </Key>
@@ -510,8 +510,8 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_StokList' does not have 
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_VerilenCekler">
+warning 6002: The table/view 'DbSahaSatisTakip.dbo.data_verilencekler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="data_verilencekler">
           <Key>
             <PropertyRef Name="ISLEMTARIHI" />
             <PropertyRef Name="VADE" />
@@ -540,324 +540,324 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_Data_CariBilgi_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_CariBilgi" Type="Self.Data_CariBilgi" Multiplicity="0..1" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_caribilgi" Type="Self.data_caribilgi" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_CariBilgi">
+            <Dependent Role="data_caribilgi">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_CariDetay_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_CariDetay" Type="Self.Data_CariDetay" Multiplicity="0..1" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_caridetay" Type="Self.data_caridetay" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_CariDetay">
+            <Dependent Role="data_caridetay">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_GecList_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_GecList" Type="Self.Data_GecList" Multiplicity="0..1" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_geclist" Type="Self.data_geclist" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_GecList">
+            <Dependent Role="data_geclist">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_GecSipList_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_GecSipList" Type="Self.Data_GecSipList" Multiplicity="0..1" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_getsiplist" Type="Self.data_getsiplist" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_GecSipList">
+            <Dependent Role="data_getsiplist">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_GecTahsilat_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_GecTahsilat" Type="Self.Data_GecTahsilat" Multiplicity="0..1" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_gectahsilat" Type="Self.data_gectahsilat" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_GecTahsilat">
+            <Dependent Role="data_gectahsilat">
               <PropertyRef Name="IND" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_SatFat_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_SatFat" Type="Self.Data_SatFat" Multiplicity="*" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_satfat" Type="Self.data_satfat" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_SatFat">
+            <Dependent Role="data_satfat">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_SatFatDet_Data_SatFat">
-          <End Role="Data_SatFat" Type="Self.Data_SatFat" Multiplicity="1" />
-          <End Role="Data_SatFatDet" Type="Self.Data_SatFatDet" Multiplicity="0..1" />
+          <End Role="data_satfat" Type="Self.data_satfat" Multiplicity="1" />
+          <End Role="data_satfatdet" Type="Self.data_satfatdet" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_SatFat">
+            <Principal Role="data_satfat">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_SatFatDet">
+            <Dependent Role="data_satfatdet">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_TahsDet_Data_Tahsilat">
-          <End Role="Data_Tahsilat" Type="Self.Data_Tahsilat" Multiplicity="1" />
-          <End Role="Data_TahsDet" Type="Self.Data_TahsDet" Multiplicity="0..1" />
+          <End Role="data_tahsilat" Type="Self.data_tahsilat" Multiplicity="1" />
+          <End Role="data_tahsdet" Type="Self.data_tahsdet" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_Tahsilat">
+            <Principal Role="data_tahsilat">
               <PropertyRef Name="BELGEIND" />
             </Principal>
-            <Dependent Role="Data_TahsDet">
+            <Dependent Role="data_tahsdet">
               <PropertyRef Name="BELGEIND" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_Tahsilat_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_Tahsilat" Type="Self.Data_Tahsilat" Multiplicity="*" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_tahsilat" Type="Self.data_tahsilat" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_Tahsilat">
+            <Dependent Role="data_tahsilat">
               <PropertyRef Name="FIRMANO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DbSahaSatisTakipModelStoreContainer">
-          <EntitySet Name="Data_CariBilgi" EntityType="Self.Data_CariBilgi" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Data_CariDetay" EntityType="Self.Data_CariDetay" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Data_CariList" EntityType="Self.Data_CariList" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Data_GecList" EntityType="Self.Data_GecList" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Data_GecSipList" EntityType="Self.Data_GecSipList" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Data_GecTahsilat" EntityType="Self.Data_GecTahsilat" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Data_SatFat" EntityType="Self.Data_SatFat" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Data_SatFatDet" EntityType="Self.Data_SatFatDet" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Data_TahsDet" EntityType="Self.Data_TahsDet" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Data_Tahsilat" EntityType="Self.Data_Tahsilat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_caribilgi" EntityType="Self.data_caribilgi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_caridetay" EntityType="Self.data_caridetay" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_carilist" EntityType="Self.data_carilist" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_geclist" EntityType="Self.data_geclist" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_gectahsilat" EntityType="Self.data_gectahsilat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_getsiplist" EntityType="Self.data_getsiplist" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_satfat" EntityType="Self.data_satfat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_satfatdet" EntityType="Self.data_satfatdet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_tahsdet" EntityType="Self.data_tahsdet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_tahsilat" EntityType="Self.data_tahsilat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Data_AlinanCekler" EntityType="Self.Data_AlinanCekler" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_alinancekler" EntityType="Self.data_alinancekler" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_AlinanCekler].[FIRMAADI] AS [FIRMAADI], 
-    [Data_AlinanCekler].[TARIH] AS [TARIH], 
-    [Data_AlinanCekler].[IND] AS [IND], 
-    [Data_AlinanCekler].[VADE] AS [VADE], 
-    [Data_AlinanCekler].[STATUS] AS [STATUS], 
-    [Data_AlinanCekler].[TUTAR] AS [TUTAR], 
-    [Data_AlinanCekler].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_AlinanCekler] AS [Data_AlinanCekler]</DefiningQuery>
+    [data_alinancekler].[FIRMAADI] AS [FIRMAADI], 
+    [data_alinancekler].[TARIH] AS [TARIH], 
+    [data_alinancekler].[IND] AS [IND], 
+    [data_alinancekler].[VADE] AS [VADE], 
+    [data_alinancekler].[STATUS] AS [STATUS], 
+    [data_alinancekler].[TUTAR] AS [TUTAR], 
+    [data_alinancekler].[GTARIH] AS [GTARIH]
+    FROM [dbo].[data_alinancekler] AS [data_alinancekler]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_ECSCari" EntityType="Self.Data_ECSCari" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_ecscari" EntityType="Self.data_ecscari" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_ECSCari].[TUTAR] AS [TUTAR], 
-    [Data_ECSCari].[FIRMAADI] AS [FIRMAADI], 
-    [Data_ECSCari].[FIRMAKODU] AS [FIRMAKODU], 
-    [Data_ECSCari].[KOD5] AS [KOD5], 
-    [Data_ECSCari].[UNVAN] AS [UNVAN], 
-    [Data_ECSCari].[PERSONELNO] AS [PERSONELNO], 
-    [Data_ECSCari].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_ECSCari] AS [Data_ECSCari]</DefiningQuery>
+    [data_ecscari].[TUTAR] AS [TUTAR], 
+    [data_ecscari].[FIRMAADI] AS [FIRMAADI], 
+    [data_ecscari].[FIRMAKODU] AS [FIRMAKODU], 
+    [data_ecscari].[KOD5] AS [KOD5], 
+    [data_ecscari].[UNVAN] AS [UNVAN], 
+    [data_ecscari].[PERSONELNO] AS [PERSONELNO], 
+    [data_ecscari].[GTARIH] AS [GTARIH]
+    FROM [dbo].[data_ecscari] AS [data_ecscari]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_ECSTutar" EntityType="Self.Data_ECSTutar" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_ecstutar" EntityType="Self.data_ecstutar" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_ECSTutar].[TUTAR] AS [TUTAR], 
-    [Data_ECSTutar].[STOKKODU] AS [STOKKODU], 
-    [Data_ECSTutar].[MALINCINSI] AS [MALINCINSI], 
-    [Data_ECSTutar].[IND] AS [IND], 
-    [Data_ECSTutar].[KOD1] AS [KOD1], 
-    [Data_ECSTutar].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_ECSTutar] AS [Data_ECSTutar]</DefiningQuery>
+    [data_ecstutar].[TUTAR] AS [TUTAR], 
+    [data_ecstutar].[STOKKODU] AS [STOKKODU], 
+    [data_ecstutar].[MALINCINSI] AS [MALINCINSI], 
+    [data_ecstutar].[IND] AS [IND], 
+    [data_ecstutar].[KOD1] AS [KOD1], 
+    [data_ecstutar].[GTARIH] AS [GTARIH]
+    FROM [dbo].[data_ecstutar] AS [data_ecstutar]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_ECSUrunler" EntityType="Self.Data_ECSUrunler" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_ecsurunler" EntityType="Self.data_ecsurunler" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_ECSUrunler].[STOKKODU] AS [STOKKODU], 
-    [Data_ECSUrunler].[MALINCINSI] AS [MALINCINSI], 
-    [Data_ECSUrunler].[SATILANMIKTAR] AS [SATILANMIKTAR], 
-    [Data_ECSUrunler].[IND] AS [IND], 
-    [Data_ECSUrunler].[KOD1] AS [KOD1], 
-    [Data_ECSUrunler].[BIRIM] AS [BIRIM], 
-    [Data_ECSUrunler].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_ECSUrunler] AS [Data_ECSUrunler]</DefiningQuery>
+    [data_ecsurunler].[STOKKODU] AS [STOKKODU], 
+    [data_ecsurunler].[MALINCINSI] AS [MALINCINSI], 
+    [data_ecsurunler].[SATILANMIKTAR] AS [SATILANMIKTAR], 
+    [data_ecsurunler].[IND] AS [IND], 
+    [data_ecsurunler].[KOD1] AS [KOD1], 
+    [data_ecsurunler].[BIRIM] AS [BIRIM], 
+    [data_ecsurunler].[GTARIH] AS [GTARIH]
+    FROM [dbo].[data_ecsurunler] AS [data_ecsurunler]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_Faaliyet" EntityType="Self.Data_Faaliyet" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_faaliyet" EntityType="Self.data_faaliyet" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_Faaliyet].[BELGENO] AS [BELGENO], 
-    [Data_Faaliyet].[TARIH] AS [TARIH], 
-    [Data_Faaliyet].[FIRMAADI] AS [FIRMAADI], 
-    [Data_Faaliyet].[KOD5] AS [KOD5], 
-    [Data_Faaliyet].[BAKIYE] AS [BAKIYE], 
-    [Data_Faaliyet].[TLCIKAN] AS [TLCIKAN], 
-    [Data_Faaliyet].[TLGIREN] AS [TLGIREN], 
-    [Data_Faaliyet].[TLTOPLAM] AS [TLTOPLAM], 
-    [Data_Faaliyet].[BASLIKOZELKOD1] AS [BASLIKOZELKOD1], 
-    [Data_Faaliyet].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_Faaliyet] AS [Data_Faaliyet]</DefiningQuery>
+    [data_faaliyet].[BELGENO] AS [BELGENO], 
+    [data_faaliyet].[TARIH] AS [TARIH], 
+    [data_faaliyet].[FIRMAADI] AS [FIRMAADI], 
+    [data_faaliyet].[KOD5] AS [KOD5], 
+    [data_faaliyet].[BAKIYE] AS [BAKIYE], 
+    [data_faaliyet].[TLCIKAN] AS [TLCIKAN], 
+    [data_faaliyet].[TLGIREN] AS [TLGIREN], 
+    [data_faaliyet].[TLTOPLAM] AS [TLTOPLAM], 
+    [data_faaliyet].[BASLIKOZELKOD1] AS [BASLIKOZELKOD1], 
+    [data_faaliyet].[GTARIH] AS [GTARIH]
+    FROM [dbo].[data_faaliyet] AS [data_faaliyet]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_FiyatDegisen" EntityType="Self.Data_FiyatDegisen" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_fiyatdegisen" EntityType="Self.data_fiyatdegisen" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_FiyatDegisen].[IND] AS [IND], 
-    [Data_FiyatDegisen].[STOKKODU] AS [STOKKODU], 
-    [Data_FiyatDegisen].[MALINCINSI] AS [MALINCINSI], 
-    [Data_FiyatDegisen].[KOD5] AS [KOD5], 
-    [Data_FiyatDegisen].[MALIYET] AS [MALIYET], 
-    [Data_FiyatDegisen].[KDVGRUBU] AS [KDVGRUBU], 
-    [Data_FiyatDegisen].[ENVANTER] AS [ENVANTER], 
-    [Data_FiyatDegisen].[STATUS] AS [STATUS], 
-    [Data_FiyatDegisen].[SATISFIYATI1] AS [SATISFIYATI1], 
-    [Data_FiyatDegisen].[BARCODE] AS [BARCODE], 
-    [Data_FiyatDegisen].[BIRIMADI] AS [BIRIMADI], 
-    [Data_FiyatDegisen].[FIYATDEGISMETARIHI1] AS [FIYATDEGISMETARIHI1], 
-    [Data_FiyatDegisen].[KOD1] AS [KOD1], 
-    [Data_FiyatDegisen].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_FiyatDegisen] AS [Data_FiyatDegisen]</DefiningQuery>
+    [data_fiyatdegisen].[IND] AS [IND], 
+    [data_fiyatdegisen].[STOKKODU] AS [STOKKODU], 
+    [data_fiyatdegisen].[MALINCINSI] AS [MALINCINSI], 
+    [data_fiyatdegisen].[KOD5] AS [KOD5], 
+    [data_fiyatdegisen].[MALIYET] AS [MALIYET], 
+    [data_fiyatdegisen].[KDVGRUBU] AS [KDVGRUBU], 
+    [data_fiyatdegisen].[ENVANTER] AS [ENVANTER], 
+    [data_fiyatdegisen].[STATUS] AS [STATUS], 
+    [data_fiyatdegisen].[SATISFIYATI1] AS [SATISFIYATI1], 
+    [data_fiyatdegisen].[BARCODE] AS [BARCODE], 
+    [data_fiyatdegisen].[BIRIMADI] AS [BIRIMADI], 
+    [data_fiyatdegisen].[FIYATDEGISMETARIHI1] AS [FIYATDEGISMETARIHI1], 
+    [data_fiyatdegisen].[KOD1] AS [KOD1], 
+    [data_fiyatdegisen].[GTARIH] AS [GTARIH]
+    FROM [dbo].[data_fiyatdegisen] AS [data_fiyatdegisen]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_HareketsizUrun" EntityType="Self.Data_HareketsizUrun" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_hareketsizurun" EntityType="Self.data_hareketsizurun" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_HareketsizUrun].[IND] AS [IND], 
-    [Data_HareketsizUrun].[MALINCINSI] AS [MALINCINSI], 
-    [Data_HareketsizUrun].[KARTINACILMATARIHI] AS [KARTINACILMATARIHI], 
-    [Data_HareketsizUrun].[SATISFIYATI1] AS [SATISFIYATI1], 
-    [Data_HareketsizUrun].[SATISFIYATI2] AS [SATISFIYATI2], 
-    [Data_HareketsizUrun].[KOD5] AS [KOD5], 
-    [Data_HareketsizUrun].[MALIYET] AS [MALIYET], 
-    [Data_HareketsizUrun].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_HareketsizUrun] AS [Data_HareketsizUrun]</DefiningQuery>
+    [data_hareketsizurun].[IND] AS [IND], 
+    [data_hareketsizurun].[MALINCINSI] AS [MALINCINSI], 
+    [data_hareketsizurun].[KARTINACILMATARIHI] AS [KARTINACILMATARIHI], 
+    [data_hareketsizurun].[SATISFIYATI1] AS [SATISFIYATI1], 
+    [data_hareketsizurun].[SATISFIYATI2] AS [SATISFIYATI2], 
+    [data_hareketsizurun].[KOD5] AS [KOD5], 
+    [data_hareketsizurun].[MALIYET] AS [MALIYET], 
+    [data_hareketsizurun].[GTARIH] AS [GTARIH]
+    FROM [dbo].[data_hareketsizurun] AS [data_hareketsizurun]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_PlasTop" EntityType="Self.Data_PlasTop" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_plastop" EntityType="Self.data_plastop" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_PlasTop].[KOD] AS [KOD], 
-    [Data_PlasTop].[toplamSiparis] AS [toplamSiparis], 
-    [Data_PlasTop].[toplamTahsilat] AS [toplamTahsilat]
-    FROM [dbo].[Data_PlasTop] AS [Data_PlasTop]</DefiningQuery>
+    [data_plastop].[KOD] AS [KOD], 
+    [data_plastop].[toplamSiparis] AS [toplamSiparis], 
+    [data_plastop].[toplamTahsilat] AS [toplamTahsilat]
+    FROM [dbo].[data_plastop] AS [data_plastop]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_SonGelenler" EntityType="Self.Data_SonGelenler" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_songelenler" EntityType="Self.data_songelenler" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_SonGelenler].[IND] AS [IND], 
-    [Data_SonGelenler].[STOKKODU] AS [STOKKODU], 
-    [Data_SonGelenler].[MALINCINSI] AS [MALINCINSI], 
-    [Data_SonGelenler].[KOD5] AS [KOD5], 
-    [Data_SonGelenler].[MALIYET] AS [MALIYET], 
-    [Data_SonGelenler].[KDVGRUBU] AS [KDVGRUBU], 
-    [Data_SonGelenler].[ENVANTER] AS [ENVANTER], 
-    [Data_SonGelenler].[STATUS] AS [STATUS], 
-    [Data_SonGelenler].[SATISFIYATI1] AS [SATISFIYATI1], 
-    [Data_SonGelenler].[BARCODE] AS [BARCODE], 
-    [Data_SonGelenler].[BIRIMADI] AS [BIRIMADI], 
-    [Data_SonGelenler].[KARTINACILMATARIHI] AS [KARTINACILMATARIHI], 
-    [Data_SonGelenler].[KOD1] AS [KOD1], 
-    [Data_SonGelenler].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_SonGelenler] AS [Data_SonGelenler]</DefiningQuery>
+    [data_songelenler].[IND] AS [IND], 
+    [data_songelenler].[STOKKODU] AS [STOKKODU], 
+    [data_songelenler].[MALINCINSI] AS [MALINCINSI], 
+    [data_songelenler].[KOD5] AS [KOD5], 
+    [data_songelenler].[MALIYET] AS [MALIYET], 
+    [data_songelenler].[KDVGRUBU] AS [KDVGRUBU], 
+    [data_songelenler].[ENVANTER] AS [ENVANTER], 
+    [data_songelenler].[STATUS] AS [STATUS], 
+    [data_songelenler].[SATISFIYATI1] AS [SATISFIYATI1], 
+    [data_songelenler].[BARCODE] AS [BARCODE], 
+    [data_songelenler].[BIRIMADI] AS [BIRIMADI], 
+    [data_songelenler].[KARTINACILMATARIHI] AS [KARTINACILMATARIHI], 
+    [data_songelenler].[KOD1] AS [KOD1], 
+    [data_songelenler].[GTARIH] AS [GTARIH]
+    FROM [dbo].[data_songelenler] AS [data_songelenler]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_StokDeger" EntityType="Self.Data_StokDeger" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_stokdeger" EntityType="Self.data_stokdeger" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_StokDeger].[IND] AS [IND], 
-    [Data_StokDeger].[MALINCINSI] AS [MALINCINSI], 
-    [Data_StokDeger].[STATUS] AS [STATUS], 
-    [Data_StokDeger].[BIRIMADI] AS [BIRIMADI], 
-    [Data_StokDeger].[ALISFIYATI] AS [ALISFIYATI], 
-    [Data_StokDeger].[MALIYET] AS [MALIYET], 
-    [Data_StokDeger].[ALISFIYATITUTARI] AS [ALISFIYATITUTARI], 
-    [Data_StokDeger].[ALISFIYATITUTARIKDVLI] AS [ALISFIYATITUTARIKDVLI], 
-    [Data_StokDeger].[SATISFIYATITUTAR1] AS [SATISFIYATITUTAR1], 
-    [Data_StokDeger].[S1KDV] AS [S1KDV], 
-    [Data_StokDeger].[SATISFIYATITUTAR2] AS [SATISFIYATITUTAR2], 
-    [Data_StokDeger].[SATISFIYATI1] AS [SATISFIYATI1], 
-    [Data_StokDeger].[SATISFIYATI2] AS [SATISFIYATI2], 
-    [Data_StokDeger].[KDVDAHIL] AS [KDVDAHIL], 
-    [Data_StokDeger].[MALIYETTUTAR] AS [MALIYETTUTAR], 
-    [Data_StokDeger].[PB1] AS [PB1], 
-    [Data_StokDeger].[KALAN] AS [KALAN], 
-    [Data_StokDeger].[KOD1] AS [KOD1], 
-    [Data_StokDeger].[KOD5] AS [KOD5], 
-    [Data_StokDeger].[KDV] AS [KDV], 
-    [Data_StokDeger].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_StokDeger] AS [Data_StokDeger]</DefiningQuery>
+    [data_stokdeger].[IND] AS [IND], 
+    [data_stokdeger].[MALINCINSI] AS [MALINCINSI], 
+    [data_stokdeger].[STATUS] AS [STATUS], 
+    [data_stokdeger].[BIRIMADI] AS [BIRIMADI], 
+    [data_stokdeger].[ALISFIYATI] AS [ALISFIYATI], 
+    [data_stokdeger].[MALIYET] AS [MALIYET], 
+    [data_stokdeger].[ALISFIYATITUTARI] AS [ALISFIYATITUTARI], 
+    [data_stokdeger].[ALISFIYATITUTARIKDVLI] AS [ALISFIYATITUTARIKDVLI], 
+    [data_stokdeger].[SATISFIYATITUTAR1] AS [SATISFIYATITUTAR1], 
+    [data_stokdeger].[S1KDV] AS [S1KDV], 
+    [data_stokdeger].[SATISFIYATITUTAR2] AS [SATISFIYATITUTAR2], 
+    [data_stokdeger].[SATISFIYATI1] AS [SATISFIYATI1], 
+    [data_stokdeger].[SATISFIYATI2] AS [SATISFIYATI2], 
+    [data_stokdeger].[KDVDAHIL] AS [KDVDAHIL], 
+    [data_stokdeger].[MALIYETTUTAR] AS [MALIYETTUTAR], 
+    [data_stokdeger].[PB1] AS [PB1], 
+    [data_stokdeger].[KALAN] AS [KALAN], 
+    [data_stokdeger].[KOD1] AS [KOD1], 
+    [data_stokdeger].[KOD5] AS [KOD5], 
+    [data_stokdeger].[KDV] AS [KDV], 
+    [data_stokdeger].[GTARIH] AS [GTARIH]
+    FROM [dbo].[data_stokdeger] AS [data_stokdeger]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_StokList" EntityType="Self.Data_StokList" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_stoklist" EntityType="Self.data_stoklist" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_StokList].[IND] AS [IND], 
-    [Data_StokList].[STOKKODU] AS [STOKKODU], 
-    [Data_StokList].[MALINCINSI] AS [MALINCINSI], 
-    [Data_StokList].[KOD5] AS [KOD5], 
-    [Data_StokList].[KDVGRUBU] AS [KDVGRUBU], 
-    [Data_StokList].[ENVANTER] AS [ENVANTER], 
-    [Data_StokList].[STATUS] AS [STATUS], 
-    [Data_StokList].[SATISFIYATI1] AS [SATISFIYATI1], 
-    [Data_StokList].[BARCODE] AS [BARCODE], 
-    [Data_StokList].[BIRIMADI] AS [BIRIMADI], 
-    [Data_StokList].[KOD1] AS [KOD1], 
-    [Data_StokList].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_StokList] AS [Data_StokList]</DefiningQuery>
+    [data_stoklist].[IND] AS [IND], 
+    [data_stoklist].[STOKKODU] AS [STOKKODU], 
+    [data_stoklist].[MALINCINSI] AS [MALINCINSI], 
+    [data_stoklist].[KOD5] AS [KOD5], 
+    [data_stoklist].[KDVGRUBU] AS [KDVGRUBU], 
+    [data_stoklist].[ENVANTER] AS [ENVANTER], 
+    [data_stoklist].[STATUS] AS [STATUS], 
+    [data_stoklist].[SATISFIYATI1] AS [SATISFIYATI1], 
+    [data_stoklist].[BARCODE] AS [BARCODE], 
+    [data_stoklist].[BIRIMADI] AS [BIRIMADI], 
+    [data_stoklist].[KOD1] AS [KOD1], 
+    [data_stoklist].[GTARIH] AS [GTARIH]
+    FROM [dbo].[data_stoklist] AS [data_stoklist]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_VerilenCekler" EntityType="Self.Data_VerilenCekler" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="data_verilencekler" EntityType="Self.data_verilencekler" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_VerilenCekler].[ISLEMTARIHI] AS [ISLEMTARIHI], 
-    [Data_VerilenCekler].[VADE] AS [VADE], 
-    [Data_VerilenCekler].[FIRMAADI] AS [FIRMAADI], 
-    [Data_VerilenCekler].[TUTAR] AS [TUTAR], 
-    [Data_VerilenCekler].[IND] AS [IND], 
-    [Data_VerilenCekler].[STATUS] AS [STATUS], 
-    [Data_VerilenCekler].[GTARH] AS [GTARH]
-    FROM [dbo].[Data_VerilenCekler] AS [Data_VerilenCekler]</DefiningQuery>
+    [data_verilencekler].[ISLEMTARIHI] AS [ISLEMTARIHI], 
+    [data_verilencekler].[VADE] AS [VADE], 
+    [data_verilencekler].[FIRMAADI] AS [FIRMAADI], 
+    [data_verilencekler].[TUTAR] AS [TUTAR], 
+    [data_verilencekler].[IND] AS [IND], 
+    [data_verilencekler].[STATUS] AS [STATUS], 
+    [data_verilencekler].[GTARH] AS [GTARH]
+    FROM [dbo].[data_verilencekler] AS [data_verilencekler]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_Data_CariBilgi_Data_CariList" Association="Self.FK_Data_CariBilgi_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_CariBilgi" EntitySet="Data_CariBilgi" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_caribilgi" EntitySet="data_caribilgi" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_CariDetay_Data_CariList" Association="Self.FK_Data_CariDetay_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_CariDetay" EntitySet="Data_CariDetay" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_caridetay" EntitySet="data_caridetay" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_GecList_Data_CariList" Association="Self.FK_Data_GecList_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_GecList" EntitySet="Data_GecList" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_geclist" EntitySet="data_geclist" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_GecSipList_Data_CariList" Association="Self.FK_Data_GecSipList_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_GecSipList" EntitySet="Data_GecSipList" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_getsiplist" EntitySet="data_getsiplist" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_GecTahsilat_Data_CariList" Association="Self.FK_Data_GecTahsilat_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_GecTahsilat" EntitySet="Data_GecTahsilat" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_gectahsilat" EntitySet="data_gectahsilat" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_SatFat_Data_CariList" Association="Self.FK_Data_SatFat_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_SatFat" EntitySet="Data_SatFat" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_satfat" EntitySet="data_satfat" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_SatFatDet_Data_SatFat" Association="Self.FK_Data_SatFatDet_Data_SatFat">
-            <End Role="Data_SatFat" EntitySet="Data_SatFat" />
-            <End Role="Data_SatFatDet" EntitySet="Data_SatFatDet" />
+            <End Role="data_satfat" EntitySet="data_satfat" />
+            <End Role="data_satfatdet" EntitySet="data_satfatdet" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_TahsDet_Data_Tahsilat" Association="Self.FK_Data_TahsDet_Data_Tahsilat">
-            <End Role="Data_Tahsilat" EntitySet="Data_Tahsilat" />
-            <End Role="Data_TahsDet" EntitySet="Data_TahsDet" />
+            <End Role="data_tahsilat" EntitySet="data_tahsilat" />
+            <End Role="data_tahsdet" EntitySet="data_tahsdet" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_Tahsilat_Data_CariList" Association="Self.FK_Data_Tahsilat_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_Tahsilat" EntitySet="Data_Tahsilat" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_tahsilat" EntitySet="data_tahsilat" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -865,7 +865,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbSahaSatisTakipModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Data_CariBilgi">
+        <EntityType Name="data_caribilgi">
           <Key>
             <PropertyRef Name="FIRMAKODU" />
           </Key>
@@ -886,9 +886,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="KREDILIMITI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PERSONELNO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_CariBilgi_Data_CariList" FromRole="Data_CariBilgi" ToRole="Data_CariList" />
+          <NavigationProperty Name="data_carilist" Relationship="Self.FK_Data_CariBilgi_Data_CariList" FromRole="data_caribilgi" ToRole="data_carilist" />
         </EntityType>
-        <EntityType Name="Data_CariDetay">
+        <EntityType Name="data_caridetay">
           <Key>
             <PropertyRef Name="FIRMAKODU" />
           </Key>
@@ -907,9 +907,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="AB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_CariDetay_Data_CariList" FromRole="Data_CariDetay" ToRole="Data_CariList" />
+          <NavigationProperty Name="data_carilist" Relationship="Self.FK_Data_CariDetay_Data_CariList" FromRole="data_caridetay" ToRole="data_carilist" />
         </EntityType>
-        <EntityType Name="Data_CariList">
+        <EntityType Name="data_carilist">
           <Key>
             <PropertyRef Name="IND" />
           </Key>
@@ -924,15 +924,15 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PERSONELNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Data_CariBilgi" Relationship="Self.FK_Data_CariBilgi_Data_CariList" FromRole="Data_CariList" ToRole="Data_CariBilgi" />
-          <NavigationProperty Name="Data_CariDetay" Relationship="Self.FK_Data_CariDetay_Data_CariList" FromRole="Data_CariList" ToRole="Data_CariDetay" />
-          <NavigationProperty Name="Data_GecList" Relationship="Self.FK_Data_GecList_Data_CariList" FromRole="Data_CariList" ToRole="Data_GecList" />
-          <NavigationProperty Name="Data_GecSipList" Relationship="Self.FK_Data_GecSipList_Data_CariList" FromRole="Data_CariList" ToRole="Data_GecSipList" />
-          <NavigationProperty Name="Data_GecTahsilat" Relationship="Self.FK_Data_GecTahsilat_Data_CariList" FromRole="Data_CariList" ToRole="Data_GecTahsilat" />
-          <NavigationProperty Name="Data_SatFat" Relationship="Self.FK_Data_SatFat_Data_CariList" FromRole="Data_CariList" ToRole="Data_SatFat" />
-          <NavigationProperty Name="Data_Tahsilat" Relationship="Self.FK_Data_Tahsilat_Data_CariList" FromRole="Data_CariList" ToRole="Data_Tahsilat" />
+          <NavigationProperty Name="data_caribilgi" Relationship="Self.FK_Data_CariBilgi_Data_CariList" FromRole="data_carilist" ToRole="data_caribilgi" />
+          <NavigationProperty Name="data_caridetay" Relationship="Self.FK_Data_CariDetay_Data_CariList" FromRole="data_carilist" ToRole="data_caridetay" />
+          <NavigationProperty Name="data_geclist" Relationship="Self.FK_Data_GecList_Data_CariList" FromRole="data_carilist" ToRole="data_geclist" />
+          <NavigationProperty Name="data_getsiplist" Relationship="Self.FK_Data_GecSipList_Data_CariList" FromRole="data_carilist" ToRole="data_getsiplist" />
+          <NavigationProperty Name="data_gectahsilat" Relationship="Self.FK_Data_GecTahsilat_Data_CariList" FromRole="data_carilist" ToRole="data_gectahsilat" />
+          <NavigationProperty Name="data_satfat" Relationship="Self.FK_Data_SatFat_Data_CariList" FromRole="data_carilist" ToRole="data_satfat" />
+          <NavigationProperty Name="data_tahsilat" Relationship="Self.FK_Data_Tahsilat_Data_CariList" FromRole="data_carilist" ToRole="data_tahsilat" />
         </EntityType>
-        <EntityType Name="Data_GecList">
+        <EntityType Name="data_geclist">
           <Key>
             <PropertyRef Name="FIRMAKODU" />
           </Key>
@@ -960,9 +960,24 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="ARATOPLAM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GENELTOPLAM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_GecList_Data_CariList" FromRole="Data_GecList" ToRole="Data_CariList" />
+          <NavigationProperty Name="data_carilist" Relationship="Self.FK_Data_GecList_Data_CariList" FromRole="data_geclist" ToRole="data_carilist" />
         </EntityType>
-        <EntityType Name="Data_GecSipList">
+        <EntityType Name="data_gectahsilat">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="FIRMAADI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BAKIYE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SONSATISTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SONTAHSILATTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PERSONELNO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="data_carilist" Relationship="Self.FK_Data_GecTahsilat_Data_CariList" FromRole="data_gectahsilat" ToRole="data_carilist" />
+        </EntityType>
+        <EntityType Name="data_getsiplist">
           <Key>
             <PropertyRef Name="FIRMAKODU" />
           </Key>
@@ -988,24 +1003,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="ARATOPLAM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GENELTOPLAM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_GecSipList_Data_CariList" FromRole="Data_GecSipList" ToRole="Data_CariList" />
+          <NavigationProperty Name="data_carilist" Relationship="Self.FK_Data_GecSipList_Data_CariList" FromRole="data_getsiplist" ToRole="data_carilist" />
         </EntityType>
-        <EntityType Name="Data_GecTahsilat">
-          <Key>
-            <PropertyRef Name="IND" />
-          </Key>
-          <Property Name="FIRMAADI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BAKIYE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SONSATISTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SONTAHSILATTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PERSONELNO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_GecTahsilat_Data_CariList" FromRole="Data_GecTahsilat" ToRole="Data_CariList" />
-        </EntityType>
-        <EntityType Name="Data_SatFat">
+        <EntityType Name="data_satfat">
           <Key>
             <PropertyRef Name="IND" />
           </Key>
@@ -1022,10 +1022,10 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="PERSONELNO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="FIRMATIPI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_SatFat_Data_CariList" FromRole="Data_SatFat" ToRole="Data_CariList" />
-          <NavigationProperty Name="Data_SatFatDet" Relationship="Self.FK_Data_SatFatDet_Data_SatFat" FromRole="Data_SatFat" ToRole="Data_SatFatDet" />
+          <NavigationProperty Name="data_carilist" Relationship="Self.FK_Data_SatFat_Data_CariList" FromRole="data_satfat" ToRole="data_carilist" />
+          <NavigationProperty Name="data_satfatdet" Relationship="Self.FK_Data_SatFatDet_Data_SatFat" FromRole="data_satfat" ToRole="data_satfatdet" />
         </EntityType>
-        <EntityType Name="Data_SatFatDet">
+        <EntityType Name="data_satfatdet">
           <Key>
             <PropertyRef Name="FIRMAKODU" />
           </Key>
@@ -1049,9 +1049,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="MIKTAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="STOKIND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Data_SatFat" Relationship="Self.FK_Data_SatFatDet_Data_SatFat" FromRole="Data_SatFatDet" ToRole="Data_SatFat" />
+          <NavigationProperty Name="data_satfat" Relationship="Self.FK_Data_SatFatDet_Data_SatFat" FromRole="data_satfatdet" ToRole="data_satfat" />
         </EntityType>
-        <EntityType Name="Data_TahsDet">
+        <EntityType Name="data_tahsdet">
           <Key>
             <PropertyRef Name="BELGEIND" />
           </Key>
@@ -1076,9 +1076,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="UNVAN" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PERSONELNO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Data_Tahsilat" Relationship="Self.FK_Data_TahsDet_Data_Tahsilat" FromRole="Data_TahsDet" ToRole="Data_Tahsilat" />
+          <NavigationProperty Name="data_tahsilat" Relationship="Self.FK_Data_TahsDet_Data_Tahsilat" FromRole="data_tahsdet" ToRole="data_tahsilat" />
         </EntityType>
-        <EntityType Name="Data_Tahsilat">
+        <EntityType Name="data_tahsilat">
           <Key>
             <PropertyRef Name="BELGEIND" />
           </Key>
@@ -1104,8 +1104,8 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="UNVAN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PERSONELNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Data_CariList" Relationship="Self.FK_Data_Tahsilat_Data_CariList" FromRole="Data_Tahsilat" ToRole="Data_CariList" />
-          <NavigationProperty Name="Data_TahsDet" Relationship="Self.FK_Data_TahsDet_Data_Tahsilat" FromRole="Data_Tahsilat" ToRole="Data_TahsDet" />
+          <NavigationProperty Name="data_carilist" Relationship="Self.FK_Data_Tahsilat_Data_CariList" FromRole="data_tahsilat" ToRole="data_carilist" />
+          <NavigationProperty Name="data_tahsdet" Relationship="Self.FK_Data_TahsDet_Data_Tahsilat" FromRole="data_tahsilat" ToRole="data_tahsdet" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -1117,7 +1117,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <EntityType Name="Data_AlinanCekler">
+        <EntityType Name="data_alinancekler">
           <Key>
             <PropertyRef Name="FIRMAADI" />
             <PropertyRef Name="TARIH" />
@@ -1135,7 +1135,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="TUTAR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_ECSCari">
+        <EntityType Name="data_ecscari">
           <Key>
             <PropertyRef Name="TUTAR" />
             <PropertyRef Name="FIRMAADI" />
@@ -1153,7 +1153,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="PERSONELNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_ECSTutar">
+        <EntityType Name="data_ecstutar">
           <Key>
             <PropertyRef Name="TUTAR" />
             <PropertyRef Name="STOKKODU" />
@@ -1169,7 +1169,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="KOD1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_ECSUrunler">
+        <EntityType Name="data_ecsurunler">
           <Key>
             <PropertyRef Name="STOKKODU" />
             <PropertyRef Name="MALINCINSI" />
@@ -1187,7 +1187,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="BIRIM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_Faaliyet">
+        <EntityType Name="data_faaliyet">
           <Key>
             <PropertyRef Name="BELGENO" />
             <PropertyRef Name="TARIH" />
@@ -1211,7 +1211,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="BASLIKOZELKOD1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_FiyatDegisen">
+        <EntityType Name="data_fiyatdegisen">
           <Key>
             <PropertyRef Name="IND" />
             <PropertyRef Name="STOKKODU" />
@@ -1241,7 +1241,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="Data_HareketsizUrun">
+        <EntityType Name="data_hareketsizurun">
           <Key>
             <PropertyRef Name="IND" />
             <PropertyRef Name="MALINCINSI" />
@@ -1261,7 +1261,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="MALIYET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_PlasTop">
+        <EntityType Name="data_plastop">
           <Key>
             <PropertyRef Name="KOD" />
             <PropertyRef Name="toplamSiparis" />
@@ -1271,7 +1271,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="toplamSiparis" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="toplamTahsilat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_SonGelenler">
+        <EntityType Name="data_songelenler">
           <Key>
             <PropertyRef Name="IND" />
             <PropertyRef Name="STOKKODU" />
@@ -1303,7 +1303,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_StokDeger">
+        <EntityType Name="data_stokdeger">
           <Key>
             <PropertyRef Name="IND" />
             <PropertyRef Name="MALINCINSI" />
@@ -1349,7 +1349,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="KDV" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_StokList">
+        <EntityType Name="data_stoklist">
           <Key>
             <PropertyRef Name="IND" />
             <PropertyRef Name="STOKKODU" />
@@ -1375,7 +1375,7 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="Data_VerilenCekler">
+        <EntityType Name="data_verilencekler">
           <Key>
             <PropertyRef Name="ISLEMTARIHI" />
             <PropertyRef Name="VADE" />
@@ -1394,172 +1394,172 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
           <Property Name="GTARH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <Association Name="FK_Data_CariBilgi_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_CariBilgi" Type="Self.Data_CariBilgi" Multiplicity="0..1" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_caribilgi" Type="Self.data_caribilgi" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_CariBilgi">
+            <Dependent Role="data_caribilgi">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_CariDetay_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_CariDetay" Type="Self.Data_CariDetay" Multiplicity="0..1" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_caridetay" Type="Self.data_caridetay" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_CariDetay">
+            <Dependent Role="data_caridetay">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_GecList_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_GecList" Type="Self.Data_GecList" Multiplicity="0..1" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_geclist" Type="Self.data_geclist" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_GecList">
+            <Dependent Role="data_geclist">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_GecSipList_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_GecSipList" Type="Self.Data_GecSipList" Multiplicity="0..1" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_getsiplist" Type="Self.data_getsiplist" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_GecSipList">
+            <Dependent Role="data_getsiplist">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_GecTahsilat_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_GecTahsilat" Type="Self.Data_GecTahsilat" Multiplicity="0..1" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_gectahsilat" Type="Self.data_gectahsilat" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_GecTahsilat">
+            <Dependent Role="data_gectahsilat">
               <PropertyRef Name="IND" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_SatFat_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_SatFat" Type="Self.Data_SatFat" Multiplicity="*" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_satfat" Type="Self.data_satfat" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_SatFat">
+            <Dependent Role="data_satfat">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_Tahsilat_Data_CariList">
-          <End Role="Data_CariList" Type="Self.Data_CariList" Multiplicity="1" />
-          <End Role="Data_Tahsilat" Type="Self.Data_Tahsilat" Multiplicity="*" />
+          <End Role="data_carilist" Type="Self.data_carilist" Multiplicity="1" />
+          <End Role="data_tahsilat" Type="Self.data_tahsilat" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Data_CariList">
+            <Principal Role="data_carilist">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_Tahsilat">
+            <Dependent Role="data_tahsilat">
               <PropertyRef Name="FIRMANO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_SatFatDet_Data_SatFat">
-          <End Role="Data_SatFat" Type="Self.Data_SatFat" Multiplicity="1" />
-          <End Role="Data_SatFatDet" Type="Self.Data_SatFatDet" Multiplicity="0..1" />
+          <End Role="data_satfat" Type="Self.data_satfat" Multiplicity="1" />
+          <End Role="data_satfatdet" Type="Self.data_satfatdet" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_SatFat">
+            <Principal Role="data_satfat">
               <PropertyRef Name="IND" />
             </Principal>
-            <Dependent Role="Data_SatFatDet">
+            <Dependent Role="data_satfatdet">
               <PropertyRef Name="FIRMAKODU" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Data_TahsDet_Data_Tahsilat">
-          <End Role="Data_Tahsilat" Type="Self.Data_Tahsilat" Multiplicity="1" />
-          <End Role="Data_TahsDet" Type="Self.Data_TahsDet" Multiplicity="0..1" />
+          <End Role="data_tahsilat" Type="Self.data_tahsilat" Multiplicity="1" />
+          <End Role="data_tahsdet" Type="Self.data_tahsdet" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="Data_Tahsilat">
+            <Principal Role="data_tahsilat">
               <PropertyRef Name="BELGEIND" />
             </Principal>
-            <Dependent Role="Data_TahsDet">
+            <Dependent Role="data_tahsdet">
               <PropertyRef Name="BELGEIND" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DbSahaSatisTakipEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Data_CariBilgi" EntityType="Self.Data_CariBilgi" />
-          <EntitySet Name="Data_CariDetay" EntityType="Self.Data_CariDetay" />
-          <EntitySet Name="Data_CariList" EntityType="Self.Data_CariList" />
-          <EntitySet Name="Data_GecList" EntityType="Self.Data_GecList" />
-          <EntitySet Name="Data_GecSipList" EntityType="Self.Data_GecSipList" />
-          <EntitySet Name="Data_GecTahsilat" EntityType="Self.Data_GecTahsilat" />
-          <EntitySet Name="Data_SatFat" EntityType="Self.Data_SatFat" />
-          <EntitySet Name="Data_SatFatDet" EntityType="Self.Data_SatFatDet" />
-          <EntitySet Name="Data_TahsDet" EntityType="Self.Data_TahsDet" />
-          <EntitySet Name="Data_Tahsilat" EntityType="Self.Data_Tahsilat" />
+        <EntityContainer Name="DbDatabase" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="data_caribilgi" EntityType="Self.data_caribilgi" />
+          <EntitySet Name="data_caridetay" EntityType="Self.data_caridetay" />
+          <EntitySet Name="data_carilist" EntityType="Self.data_carilist" />
+          <EntitySet Name="data_geclist" EntityType="Self.data_geclist" />
+          <EntitySet Name="data_gectahsilat" EntityType="Self.data_gectahsilat" />
+          <EntitySet Name="data_getsiplist" EntityType="Self.data_getsiplist" />
+          <EntitySet Name="data_satfat" EntityType="Self.data_satfat" />
+          <EntitySet Name="data_satfatdet" EntityType="Self.data_satfatdet" />
+          <EntitySet Name="data_tahsdet" EntityType="Self.data_tahsdet" />
+          <EntitySet Name="data_tahsilat" EntityType="Self.data_tahsilat" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-          <EntitySet Name="Data_AlinanCekler" EntityType="Self.Data_AlinanCekler" />
-          <EntitySet Name="Data_ECSCari" EntityType="Self.Data_ECSCari" />
-          <EntitySet Name="Data_ECSTutar" EntityType="Self.Data_ECSTutar" />
-          <EntitySet Name="Data_ECSUrunler" EntityType="Self.Data_ECSUrunler" />
-          <EntitySet Name="Data_Faaliyet" EntityType="Self.Data_Faaliyet" />
-          <EntitySet Name="Data_FiyatDegisen" EntityType="Self.Data_FiyatDegisen" />
-          <EntitySet Name="Data_HareketsizUrun" EntityType="Self.Data_HareketsizUrun" />
-          <EntitySet Name="Data_PlasTop" EntityType="Self.Data_PlasTop" />
-          <EntitySet Name="Data_SonGelenler" EntityType="Self.Data_SonGelenler" />
-          <EntitySet Name="Data_StokDeger" EntityType="Self.Data_StokDeger" />
-          <EntitySet Name="Data_StokList" EntityType="Self.Data_StokList" />
-          <EntitySet Name="Data_VerilenCekler" EntityType="Self.Data_VerilenCekler" />
+          <EntitySet Name="data_alinancekler" EntityType="Self.data_alinancekler" />
+          <EntitySet Name="data_ecscari" EntityType="Self.data_ecscari" />
+          <EntitySet Name="data_ecstutar" EntityType="Self.data_ecstutar" />
+          <EntitySet Name="data_ecsurunler" EntityType="Self.data_ecsurunler" />
+          <EntitySet Name="data_faaliyet" EntityType="Self.data_faaliyet" />
+          <EntitySet Name="data_fiyatdegisen" EntityType="Self.data_fiyatdegisen" />
+          <EntitySet Name="data_hareketsizurun" EntityType="Self.data_hareketsizurun" />
+          <EntitySet Name="data_plastop" EntityType="Self.data_plastop" />
+          <EntitySet Name="data_songelenler" EntityType="Self.data_songelenler" />
+          <EntitySet Name="data_stokdeger" EntityType="Self.data_stokdeger" />
+          <EntitySet Name="data_stoklist" EntityType="Self.data_stoklist" />
+          <EntitySet Name="data_verilencekler" EntityType="Self.data_verilencekler" />
           <AssociationSet Name="FK_Data_CariBilgi_Data_CariList" Association="Self.FK_Data_CariBilgi_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_CariBilgi" EntitySet="Data_CariBilgi" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_caribilgi" EntitySet="data_caribilgi" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_CariDetay_Data_CariList" Association="Self.FK_Data_CariDetay_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_CariDetay" EntitySet="Data_CariDetay" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_caridetay" EntitySet="data_caridetay" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_GecList_Data_CariList" Association="Self.FK_Data_GecList_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_GecList" EntitySet="Data_GecList" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_geclist" EntitySet="data_geclist" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_GecSipList_Data_CariList" Association="Self.FK_Data_GecSipList_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_GecSipList" EntitySet="Data_GecSipList" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_getsiplist" EntitySet="data_getsiplist" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_GecTahsilat_Data_CariList" Association="Self.FK_Data_GecTahsilat_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_GecTahsilat" EntitySet="Data_GecTahsilat" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_gectahsilat" EntitySet="data_gectahsilat" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_SatFat_Data_CariList" Association="Self.FK_Data_SatFat_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_SatFat" EntitySet="Data_SatFat" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_satfat" EntitySet="data_satfat" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_Tahsilat_Data_CariList" Association="Self.FK_Data_Tahsilat_Data_CariList">
-            <End Role="Data_CariList" EntitySet="Data_CariList" />
-            <End Role="Data_Tahsilat" EntitySet="Data_Tahsilat" />
+            <End Role="data_carilist" EntitySet="data_carilist" />
+            <End Role="data_tahsilat" EntitySet="data_tahsilat" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_SatFatDet_Data_SatFat" Association="Self.FK_Data_SatFatDet_Data_SatFat">
-            <End Role="Data_SatFat" EntitySet="Data_SatFat" />
-            <End Role="Data_SatFatDet" EntitySet="Data_SatFatDet" />
+            <End Role="data_satfat" EntitySet="data_satfat" />
+            <End Role="data_satfatdet" EntitySet="data_satfatdet" />
           </AssociationSet>
           <AssociationSet Name="FK_Data_TahsDet_Data_Tahsilat" Association="Self.FK_Data_TahsDet_Data_Tahsilat">
-            <End Role="Data_Tahsilat" EntitySet="Data_Tahsilat" />
-            <End Role="Data_TahsDet" EntitySet="Data_TahsDet" />
+            <End Role="data_tahsilat" EntitySet="data_tahsilat" />
+            <End Role="data_tahsdet" EntitySet="data_tahsdet" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -1567,10 +1567,10 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DbSahaSatisTakipModelStoreContainer" CdmEntityContainer="DbSahaSatisTakipEntities">
-          <EntitySetMapping Name="Data_CariBilgi">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_CariBilgi">
-              <MappingFragment StoreEntitySet="Data_CariBilgi">
+        <EntityContainerMapping StorageEntityContainer="DbSahaSatisTakipModelStoreContainer" CdmEntityContainer="DbDatabase">
+          <EntitySetMapping Name="data_caribilgi">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_caribilgi">
+              <MappingFragment StoreEntitySet="data_caribilgi">
                 <ScalarProperty Name="RESIM" ColumnName="RESIM" />
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="ADRESFATURA" ColumnName="ADRESFATURA" />
@@ -1591,9 +1591,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_CariDetay">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_CariDetay">
-              <MappingFragment StoreEntitySet="Data_CariDetay">
+          <EntitySetMapping Name="data_caridetay">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_caridetay">
+              <MappingFragment StoreEntitySet="data_caridetay">
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="BELGENO" ColumnName="BELGENO" />
                 <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
@@ -1612,9 +1612,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_CariList">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_CariList">
-              <MappingFragment StoreEntitySet="Data_CariList">
+          <EntitySetMapping Name="data_carilist">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_carilist">
+              <MappingFragment StoreEntitySet="data_carilist">
                 <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
                 <ScalarProperty Name="KOD5" ColumnName="KOD5" />
                 <ScalarProperty Name="IND" ColumnName="IND" />
@@ -1629,9 +1629,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_GecList">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_GecList">
-              <MappingFragment StoreEntitySet="Data_GecList">
+          <EntitySetMapping Name="data_geclist">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_geclist">
+              <MappingFragment StoreEntitySet="data_geclist">
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="FIRMANO" ColumnName="FIRMANO" />
@@ -1659,9 +1659,24 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_GecSipList">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_GecSipList">
-              <MappingFragment StoreEntitySet="Data_GecSipList">
+          <EntitySetMapping Name="data_gectahsilat">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_gectahsilat">
+              <MappingFragment StoreEntitySet="data_gectahsilat">
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="BAKIYE" ColumnName="BAKIYE" />
+                <ScalarProperty Name="SONSATISTARIHI" ColumnName="SONSATISTARIHI" />
+                <ScalarProperty Name="SONTAHSILATTARIHI" ColumnName="SONTAHSILATTARIHI" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="data_getsiplist">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_getsiplist">
+              <MappingFragment StoreEntitySet="data_getsiplist">
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="FIRMANO" ColumnName="FIRMANO" />
@@ -1687,24 +1702,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_GecTahsilat">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_GecTahsilat">
-              <MappingFragment StoreEntitySet="Data_GecTahsilat">
-                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
-                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
-                <ScalarProperty Name="IND" ColumnName="IND" />
-                <ScalarProperty Name="BAKIYE" ColumnName="BAKIYE" />
-                <ScalarProperty Name="SONSATISTARIHI" ColumnName="SONSATISTARIHI" />
-                <ScalarProperty Name="SONTAHSILATTARIHI" ColumnName="SONTAHSILATTARIHI" />
-                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
-                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
-                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Data_SatFat">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_SatFat">
-              <MappingFragment StoreEntitySet="Data_SatFat">
+          <EntitySetMapping Name="data_satfat">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_satfat">
+              <MappingFragment StoreEntitySet="data_satfat">
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
@@ -1721,9 +1721,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_SatFatDet">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_SatFatDet">
-              <MappingFragment StoreEntitySet="Data_SatFatDet">
+          <EntitySetMapping Name="data_satfatdet">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_satfatdet">
+              <MappingFragment StoreEntitySet="data_satfatdet">
                 <ScalarProperty Name="FIRMATIPI" ColumnName="FIRMATIPI" />
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
@@ -1747,9 +1747,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_TahsDet">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_TahsDet">
-              <MappingFragment StoreEntitySet="Data_TahsDet">
+          <EntitySetMapping Name="data_tahsdet">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_tahsdet">
+              <MappingFragment StoreEntitySet="data_tahsdet">
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="BELGEIND" ColumnName="BELGEIND" />
                 <ScalarProperty Name="FIRMANO" ColumnName="FIRMANO" />
@@ -1774,9 +1774,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_Tahsilat">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_Tahsilat">
-              <MappingFragment StoreEntitySet="Data_Tahsilat">
+          <EntitySetMapping Name="data_tahsilat">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_tahsilat">
+              <MappingFragment StoreEntitySet="data_tahsilat">
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="BELGEIND" ColumnName="BELGEIND" />
                 <ScalarProperty Name="FIRMANO" ColumnName="FIRMANO" />
@@ -1813,9 +1813,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_AlinanCekler">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_AlinanCekler">
-              <MappingFragment StoreEntitySet="Data_AlinanCekler">
+          <EntitySetMapping Name="data_alinancekler">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_alinancekler">
+              <MappingFragment StoreEntitySet="data_alinancekler">
                 <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="IND" ColumnName="IND" />
@@ -1826,9 +1826,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_ECSCari">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_ECSCari">
-              <MappingFragment StoreEntitySet="Data_ECSCari">
+          <EntitySetMapping Name="data_ecscari">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_ecscari">
+              <MappingFragment StoreEntitySet="data_ecscari">
                 <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
                 <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
                 <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
@@ -1839,9 +1839,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_ECSTutar">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_ECSTutar">
-              <MappingFragment StoreEntitySet="Data_ECSTutar">
+          <EntitySetMapping Name="data_ecstutar">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_ecstutar">
+              <MappingFragment StoreEntitySet="data_ecstutar">
                 <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
                 <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
                 <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
@@ -1851,9 +1851,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_ECSUrunler">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_ECSUrunler">
-              <MappingFragment StoreEntitySet="Data_ECSUrunler">
+          <EntitySetMapping Name="data_ecsurunler">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_ecsurunler">
+              <MappingFragment StoreEntitySet="data_ecsurunler">
                 <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
                 <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
                 <ScalarProperty Name="SATILANMIKTAR" ColumnName="SATILANMIKTAR" />
@@ -1864,9 +1864,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_Faaliyet">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_Faaliyet">
-              <MappingFragment StoreEntitySet="Data_Faaliyet">
+          <EntitySetMapping Name="data_faaliyet">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_faaliyet">
+              <MappingFragment StoreEntitySet="data_faaliyet">
                 <ScalarProperty Name="BELGENO" ColumnName="BELGENO" />
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
@@ -1880,9 +1880,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_FiyatDegisen">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_FiyatDegisen">
-              <MappingFragment StoreEntitySet="Data_FiyatDegisen">
+          <EntitySetMapping Name="data_fiyatdegisen">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_fiyatdegisen">
+              <MappingFragment StoreEntitySet="data_fiyatdegisen">
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
                 <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
@@ -1900,9 +1900,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_HareketsizUrun">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_HareketsizUrun">
-              <MappingFragment StoreEntitySet="Data_HareketsizUrun">
+          <EntitySetMapping Name="data_hareketsizurun">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_hareketsizurun">
+              <MappingFragment StoreEntitySet="data_hareketsizurun">
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
                 <ScalarProperty Name="KARTINACILMATARIHI" ColumnName="KARTINACILMATARIHI" />
@@ -1914,18 +1914,18 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_PlasTop">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_PlasTop">
-              <MappingFragment StoreEntitySet="Data_PlasTop">
+          <EntitySetMapping Name="data_plastop">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_plastop">
+              <MappingFragment StoreEntitySet="data_plastop">
                 <ScalarProperty Name="KOD" ColumnName="KOD" />
                 <ScalarProperty Name="toplamSiparis" ColumnName="toplamSiparis" />
                 <ScalarProperty Name="toplamTahsilat" ColumnName="toplamTahsilat" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_SonGelenler">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_SonGelenler">
-              <MappingFragment StoreEntitySet="Data_SonGelenler">
+          <EntitySetMapping Name="data_songelenler">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_songelenler">
+              <MappingFragment StoreEntitySet="data_songelenler">
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
                 <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
@@ -1943,9 +1943,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_StokDeger">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_StokDeger">
-              <MappingFragment StoreEntitySet="Data_StokDeger">
+          <EntitySetMapping Name="data_stokdeger">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_stokdeger">
+              <MappingFragment StoreEntitySet="data_stokdeger">
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
                 <ScalarProperty Name="STATUS" ColumnName="STATUS" />
@@ -1970,9 +1970,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_StokList">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_StokList">
-              <MappingFragment StoreEntitySet="Data_StokList">
+          <EntitySetMapping Name="data_stoklist">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_stoklist">
+              <MappingFragment StoreEntitySet="data_stoklist">
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
                 <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
@@ -1988,9 +1988,9 @@ warning 6002: The table/view 'DbSahaSatisTakip.dbo.Data_VerilenCekler' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_VerilenCekler">
-            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.Data_VerilenCekler">
-              <MappingFragment StoreEntitySet="Data_VerilenCekler">
+          <EntitySetMapping Name="data_verilencekler">
+            <EntityTypeMapping TypeName="DbSahaSatisTakipModel.data_verilencekler">
+              <MappingFragment StoreEntitySet="data_verilencekler">
                 <ScalarProperty Name="ISLEMTARIHI" ColumnName="ISLEMTARIHI" />
                 <ScalarProperty Name="VADE" ColumnName="VADE" />
                 <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />

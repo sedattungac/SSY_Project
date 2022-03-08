@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_ECSTutar
+    public partial class data_ecstutar
     {
         public string TUTAR { get; set; }
         public string STOKKODU { get; set; }

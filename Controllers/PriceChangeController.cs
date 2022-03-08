@@ -9,11 +9,11 @@ namespace SSY_Project.Controllers
 {
     public class PriceChangeController : Controller
     {
-        DbSahaSatisTakipEntities db = new DbSahaSatisTakipEntities();
+        DbDatabase db = new DbDatabase();
         // GET: PriceChange
         public ActionResult Index()
         {
-            var value = db.Data_FiyatDegisen.OrderByDescending(x => x.IND).ToList();
+            var value = db.data_fiyatdegisen.OrderByDescending(x => x.IND).ToList();
             return View(value);
         }
     }

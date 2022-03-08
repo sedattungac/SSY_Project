@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_ECSUrunler
+    public partial class data_ecsurunler
     {
         public string STOKKODU { get; set; }
         public string MALINCINSI { get; set; }

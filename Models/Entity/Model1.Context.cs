@@ -13,10 +13,10 @@ namespace SSY_Project.Models.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DbSahaSatisTakipEntities : DbContext
+    public partial class DbDatabase : DbContext
     {
-        public DbSahaSatisTakipEntities()
-            : base("name=DbSahaSatisTakipEntities")
+        public DbDatabase()
+            : base("name=DbDatabase")
         {
         }
     
@@ -25,28 +25,28 @@ namespace SSY_Project.Models.Entity
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Data_CariBilgi> Data_CariBilgi { get; set; }
-        public virtual DbSet<Data_CariDetay> Data_CariDetay { get; set; }
-        public virtual DbSet<Data_CariList> Data_CariList { get; set; }
-        public virtual DbSet<Data_GecList> Data_GecList { get; set; }
-        public virtual DbSet<Data_GecSipList> Data_GecSipList { get; set; }
-        public virtual DbSet<Data_GecTahsilat> Data_GecTahsilat { get; set; }
-        public virtual DbSet<Data_SatFat> Data_SatFat { get; set; }
-        public virtual DbSet<Data_SatFatDet> Data_SatFatDet { get; set; }
-        public virtual DbSet<Data_TahsDet> Data_TahsDet { get; set; }
-        public virtual DbSet<Data_Tahsilat> Data_Tahsilat { get; set; }
+        public virtual DbSet<data_caribilgi> data_caribilgi { get; set; }
+        public virtual DbSet<data_caridetay> data_caridetay { get; set; }
+        public virtual DbSet<data_carilist> data_carilist { get; set; }
+        public virtual DbSet<data_geclist> data_geclist { get; set; }
+        public virtual DbSet<data_gectahsilat> data_gectahsilat { get; set; }
+        public virtual DbSet<data_getsiplist> data_getsiplist { get; set; }
+        public virtual DbSet<data_satfat> data_satfat { get; set; }
+        public virtual DbSet<data_satfatdet> data_satfatdet { get; set; }
+        public virtual DbSet<data_tahsdet> data_tahsdet { get; set; }
+        public virtual DbSet<data_tahsilat> data_tahsilat { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Data_AlinanCekler> Data_AlinanCekler { get; set; }
-        public virtual DbSet<Data_ECSCari> Data_ECSCari { get; set; }
-        public virtual DbSet<Data_ECSTutar> Data_ECSTutar { get; set; }
-        public virtual DbSet<Data_ECSUrunler> Data_ECSUrunler { get; set; }
-        public virtual DbSet<Data_Faaliyet> Data_Faaliyet { get; set; }
-        public virtual DbSet<Data_FiyatDegisen> Data_FiyatDegisen { get; set; }
-        public virtual DbSet<Data_HareketsizUrun> Data_HareketsizUrun { get; set; }
-        public virtual DbSet<Data_PlasTop> Data_PlasTop { get; set; }
-        public virtual DbSet<Data_SonGelenler> Data_SonGelenler { get; set; }
-        public virtual DbSet<Data_StokDeger> Data_StokDeger { get; set; }
-        public virtual DbSet<Data_StokList> Data_StokList { get; set; }
-        public virtual DbSet<Data_VerilenCekler> Data_VerilenCekler { get; set; }
+        public virtual DbSet<data_alinancekler> data_alinancekler { get; set; }
+        public virtual DbSet<data_ecscari> data_ecscari { get; set; }
+        public virtual DbSet<data_ecstutar> data_ecstutar { get; set; }
+        public virtual DbSet<data_ecsurunler> data_ecsurunler { get; set; }
+        public virtual DbSet<data_faaliyet> data_faaliyet { get; set; }
+        public virtual DbSet<data_fiyatdegisen> data_fiyatdegisen { get; set; }
+        public virtual DbSet<data_hareketsizurun> data_hareketsizurun { get; set; }
+        public virtual DbSet<data_plastop> data_plastop { get; set; }
+        public virtual DbSet<data_songelenler> data_songelenler { get; set; }
+        public virtual DbSet<data_stokdeger> data_stokdeger { get; set; }
+        public virtual DbSet<data_stoklist> data_stoklist { get; set; }
+        public virtual DbSet<data_verilencekler> data_verilencekler { get; set; }
     }
 }

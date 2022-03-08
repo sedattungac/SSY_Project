@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_GecTahsilat
+    public partial class data_gectahsilat
     {
         public string FIRMAADI { get; set; }
         public string KOD5 { get; set; }
@@ -24,6 +24,6 @@ namespace SSY_Project.Models.Entity
         public string PERSONELNO { get; set; }
         public string GTARIH { get; set; }
     
-        public virtual Data_CariList Data_CariList { get; set; }
+        public virtual data_carilist data_carilist { get; set; }
     }
 }

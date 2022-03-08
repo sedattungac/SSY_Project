@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_TahsDet
+    public partial class data_tahsdet
     {
         public string IND { get; set; }
         public string BELGEIND { get; set; }
@@ -36,6 +36,6 @@ namespace SSY_Project.Models.Entity
         public string PERSONELNO { get; set; }
         public string GTARIH { get; set; }
     
-        public virtual Data_Tahsilat Data_Tahsilat { get; set; }
+        public virtual data_tahsilat data_tahsilat { get; set; }
     }
 }

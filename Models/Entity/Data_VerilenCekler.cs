@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_VerilenCekler
+    public partial class data_verilencekler
     {
         public string ISLEMTARIHI { get; set; }
         public string VADE { get; set; }

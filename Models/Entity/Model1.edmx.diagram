@@ -4,30 +4,30 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3302a17d37de43ab97613895acf5ddc7" Name="Diagram1">
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_CariBilgi" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_CariDetay" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_CariList" Width="1.5" PointX="0.75" PointY="19.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_GecList" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_GecSipList" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_GecTahsilat" Width="1.5" PointX="3" PointY="25.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_SatFat" Width="1.5" PointX="3" PointY="29.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_SatFatDet" Width="1.5" PointX="5.25" PointY="29.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_TahsDet" Width="1.5" PointX="5.25" PointY="35.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_Tahsilat" Width="1.5" PointX="3" PointY="35.125" IsExpanded="true" />
+      <Diagram DiagramId="26b1657a731c467f996d27859856d52a" Name="Diagram1">
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_caribilgi" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_caridetay" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_carilist" Width="1.5" PointX="0.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_geclist" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_gectahsilat" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_getsiplist" Width="1.5" PointX="3" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_satfat" Width="1.5" PointX="3" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_satfatdet" Width="1.5" PointX="5.25" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_tahsdet" Width="1.5" PointX="5.25" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_tahsilat" Width="1.5" PointX="3" PointY="35.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DbSahaSatisTakipModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_AlinanCekler" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_ECSCari" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_ECSTutar" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_ECSUrunler" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_Faaliyet" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_FiyatDegisen" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_HareketsizUrun" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_PlasTop" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_SonGelenler" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_StokDeger" Width="1.5" PointX="11.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_StokList" Width="1.5" PointX="5.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbSahaSatisTakipModel.Data_VerilenCekler" Width="1.5" PointX="11.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_alinancekler" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_ecscari" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_ecstutar" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_ecsurunler" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_faaliyet" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_fiyatdegisen" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_hareketsizurun" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_plastop" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_songelenler" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_stokdeger" Width="1.5" PointX="11.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_stoklist" Width="1.5" PointX="5.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbSahaSatisTakipModel.data_verilencekler" Width="1.5" PointX="11.75" PointY="11.75" IsExpanded="true" />
         <AssociationConnector Association="DbSahaSatisTakipModel.FK_Data_CariBilgi_Data_CariList" ManuallyRouted="false" />
         <AssociationConnector Association="DbSahaSatisTakipModel.FK_Data_CariDetay_Data_CariList" ManuallyRouted="false" />
         <AssociationConnector Association="DbSahaSatisTakipModel.FK_Data_GecList_Data_CariList" ManuallyRouted="false" />

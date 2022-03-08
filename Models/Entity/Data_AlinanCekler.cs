@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_AlinanCekler
+    public partial class data_alinancekler
     {
         public string FIRMAADI { get; set; }
         public string TARIH { get; set; }

@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_SonGelenler
+    public partial class data_songelenler
     {
         public string IND { get; set; }
         public string STOKKODU { get; set; }

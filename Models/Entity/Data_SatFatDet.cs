@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_SatFatDet
+    public partial class data_satfatdet
     {
         public string FIRMATIPI { get; set; }
         public string IND { get; set; }
@@ -35,6 +35,6 @@ namespace SSY_Project.Models.Entity
         public string STOKIND { get; set; }
         public string GTARIH { get; set; }
     
-        public virtual Data_SatFat Data_SatFat { get; set; }
+        public virtual data_satfat data_satfat { get; set; }
     }
 }

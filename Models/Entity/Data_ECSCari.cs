@@ -12,7 +12,7 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_ECSCari
+    public partial class data_ecscari
     {
         public string TUTAR { get; set; }
         public string FIRMAADI { get; set; }
