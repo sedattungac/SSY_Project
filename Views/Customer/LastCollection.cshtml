@@ -1,48 +1,45 @@
 ﻿@using SSY_Project.Models.Entity
-@model List<data_satfat>
+@model List<data_gectahsilat>
 @{
     ViewBag.Title = "CustomerList";
     Layout = "~/Views/Shared/_ProjectLayout.cshtml";
 }
-
 <div class="mt-5 card">
     <div class="card-header">
-        <h3 class="card-title">Satış Faturaları Listesi</h3>
+        <h3 class="card-title">Geçmiş Tahsilat Listesi</h3>
     </div>
     <br />
     <div class="mt-3 row d-flex justify-content-center">
         <a class="btn btn-primary" href="/Customer/Index"><i class="fas fa-users"></i> Cari Listesi</a> &nbsp;
         <a class="btn btn-primary" href="/Customer/CustomerDetail/@ViewBag.id"><i class="fas fa-users"></i> Cari Detayı</a> &nbsp;
         <a class="btn btn-primary" href="/Customer/CustomerInfo/@ViewBag.id"><i class="fas fa-info"></i> Cari Bilgi</a> &nbsp;
-        <a class="btn btn-primary" href="/Customer/LastCollection/@ViewBag.id"><i class="fas fa-edit "></i> Eski Tahsilatlar</a> &nbsp;
+        <a class="btn btn-primary" href="/Customer/OldBillofSale/@ViewBag.id"><i class="fas fa-file "></i> Eski Satış Faturaları</a> &nbsp;
     </div>
-    <hr />
+        <hr />
     <!-- /.card-header -->
     <div class="card-body">
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>TARIH</th>
-                    <th>FIRMAKODU</th>
                     <th>FIRMAADI</th>
-                    <th>BELGENO</th>
                     <th>KOD5</th>
+                    <th>BAKIYE</th>
+                    <th>SONSATISTARIHI</th>
+                    <th>SONTAHSILATTARIHI</th>
                     <th>UNVAN</th>
-                
+                    <th>ACTION</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var customer in Model)
                 {
                     <tr>
-                        <td>@customer.TARIH</td>
-                        <td>@customer.FIRMAKODU</td>
                         <td>@customer.FIRMAADI</td>
-                        <td>@customer.BELGENO</td>
                         <td>@customer.KOD5</td>
+                        <td>@customer.BAKIYE</td>
+                        <td>@customer.SONSATISTARIHI</td>
+                        <td>@customer.SONTAHSILATTARIHI</td>
                         <td>@customer.UNVAN</td>
-                        
-
                     </tr>
 
 
