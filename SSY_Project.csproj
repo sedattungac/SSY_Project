@@ -2767,6 +2767,9 @@
     <Content Include="Views\RecentArrivals\Index.cshtml" />
     <Content Include="Views\ImmobileProduct\Index.cshtml" />
     <Content Include="Views\ECS\Index.cshtml" />
+    <Content Include="Views\ECS\Total.cshtml" />
+    <Content Include="Views\ECS\Product.cshtml" />
+    <Content Include="Views\Customer\CustomerInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

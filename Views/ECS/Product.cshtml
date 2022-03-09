@@ -1,5 +1,5 @@
 ﻿@using SSY_Project.Models.Entity
-@model List<data_ecscari>
+@model List<data_ecsurunler>
 @{
     ViewBag.Title = "CustomerList";
     Layout = "~/Views/Shared/_ProjectLayout.cshtml";
@@ -7,7 +7,7 @@
 
 <div class="mt-5 card">
     <div class="card-header">
-        <h3 class="card-title">ECSCari Listesi</h3>
+        <h3 class="card-title">ECSÜrünler Listesi</h3>
     </div>
     <!--<br />-->
     @*<div class="col-11 row d-flex justify-content-center">
@@ -24,11 +24,11 @@
             <thead>
                 <tr>
 
-                    <th>FİRMA ADI</th>
-                    <th>TUTAR</th>
-                    <th>KOD5</th>
-                    <th>UNVAN</th>
-                    <th>PERSONELNO</th>
+                    <th>STOK KODU</th>
+                    <th>MALIN CINSI</th>
+                    <th>SATILAN MIKTAR</th>
+                    <th>KOD1</th>
+                    <th>BIRIM</th>
 
                 </tr>
             </thead>
@@ -37,10 +37,11 @@
                 {
                     <tr>
 
-                        <td>@customer.FIRMAADI</td>
-                        <td>@customer.TUTAR</td>
-                        <td>@customer.UNVAN</td>
-                        <td>@customer.PERSONELNO</td>
+                        <td>@customer.STOKKODU</td>
+                        <td>@customer.MALINCINSI</td>
+                        <td>@customer.SATILANMIKTAR</td>
+                        <td>@customer.KOD1</td>
+                        <td>@customer.BIRIM</td>
 
 
                     </tr>

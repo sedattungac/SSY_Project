@@ -17,9 +17,9 @@ namespace SSY_Project.Controllers
             var customerList = db.data_carilist.ToList();
             return View(customerList);
         }
-        public ActionResult CustomerList()
+        public ActionResult CustomerInfo(string id)
         {
-            var customerList = db.data_carilist.ToList();
+            var customerList = db.data_caribilgi.Where(x=>x.FIRMAKODU==id).ToList();
             return View(customerList);
         }
         public ActionResult CustomerDetail(string id)

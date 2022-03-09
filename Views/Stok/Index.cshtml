@@ -14,25 +14,29 @@
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>#</th>
-                    <th>S.Fiyat1</th>
-                    <th>Malın Cinsi</th>
+
+                    <th>STOK KODU</th>
+                    <th>MALIN CİNSİ</th>
                     <th>KOD5</th>
+                    <th>ENVANTER</th>
+                    <th>SATISFIYAT1</th>
+                    <th>BARCODE</th>
+                    <th>BIRIMADI</th>
                     <th>KOD1</th>
-                    <th>KDV</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var stok in Model)
                 {
                     <tr>
-
-                        <td>@stok.IND</td>
-                        <td>@stok.SATISFIYATI1</td>
+                        <td>@stok.STOKKODU</td>
                         <td>@stok.MALINCINSI</td>
                         <td>@stok.KOD5</td>
+                        <td>@stok.ENVANTER</td>
+                        <td>@stok.SATISFIYATI1</td>
+                        <td>@stok.BARCODE</td>
+                        <td>@stok.BIRIMADI</td>
                         <td>@stok.KOD1</td>
-                        <td>@stok.KDVGRUBU</td>
                     </tr>
                 }
             </tbody>

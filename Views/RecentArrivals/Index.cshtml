@@ -15,12 +15,16 @@
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>#</th>
                     <th>STOK KODU</th>
                     <th>MALIN CİNSİ</th>
                     <th>KOD5</th>
+                    <th>MALIYET</th>
+                    <th>ENVANTER</th>
+                    <th>SATISFIYATI1</th>
+                    <th>BARCODE</th>
+                    <th>BIRIMADI</th>
+                    <th>KARTINACILMATARIHI</th>
                     <th>KOD1</th>
-                    <th>SATIŞ FİYATI</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,12 +32,16 @@
                 {
                     <tr>
 
-                        <td>@sira</td>
                         <td>@recentArrival.STOKKODU</td>
                         <td>@recentArrival.MALINCINSI</td>
                         <td>@recentArrival.KOD5</td>
-                        <td>@recentArrival.KOD1</td>
+                        <td>@recentArrival.MALIYET</td>
+                        <td>@recentArrival.ENVANTER</td>
                         <td>@recentArrival.SATISFIYATI1</td>
+                        <td>@recentArrival.BARCODE</td>
+                        <td>@recentArrival.BIRIMADI</td>
+                        <td>@recentArrival.KARTINACILMATARIHI</td>
+                        <td>@recentArrival.KOD1</td>
                     </tr>
                     sira++;
                 }

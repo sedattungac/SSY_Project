@@ -3,7 +3,6 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_ProjectLayout.cshtml";
-    int sira = 1;
 }
 
 <div class="mt-5 card">
@@ -15,26 +14,24 @@
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>#</th>
+
                     <th>MALIN CİNSİ</th>
-                    <th>KOD5</th>
                     <th>KARTIN AÇILMA TARİHİ</th>
-                    <th>FİYAT DEĞİŞTİRME TARİHİ</th>
-                    <th>MALİYET</th>
+                    <th>SATISFIYATI1</th>
+                    <th>KOD5</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var data_FiyatDegisen in Model)
+                @foreach (var data_hareketsizurun in Model)
                 {
                     <tr>
-                        <td>@sira</td>
-                        <td>@data_FiyatDegisen.MALINCINSI</td>
-                        <td>@data_FiyatDegisen.KOD5</td>
-                        <td>@data_FiyatDegisen.KARTINACILMATARIHI</td>
-                        <td>@data_FiyatDegisen.GTARIH</td>
-                        <td>@data_FiyatDegisen.MALIYET</td>
+
+                        <td>@data_hareketsizurun.MALINCINSI</td>
+                        <td>@data_hareketsizurun.KARTINACILMATARIHI</td>
+                        <td>@data_hareketsizurun.SATISFIYATI1</td>
+                        <td>@data_hareketsizurun.KOD5</td>
                     </tr>
-                    sira++;
+
                 }
             </tbody>
 

@@ -23,15 +23,12 @@
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>CRIND</th>
-                    <th>Firma Adı</th>
+                    <th>FIRMAADI</th>
                     <th>KOD5</th>
-                    <th>Bakiye</th>
+                    <th>BAKIYE</th>
                     <th>SONSATISTARIHI</th>
                     <th>SONTAHSILATTARIHI</th>
                     <th>UNVAN</th>
-                    <th>FIRMATIPI</th>
-                    <th>PERSONELNO</th>
                     <th>ACTION</th>
                 </tr>
             </thead>
@@ -39,24 +36,20 @@
                 @foreach (var customer in Model)
                 {
                     <tr>
-                        <td>@customer.IND</td>
                         <td>@customer.FIRMAADI</td>
                         <td>@customer.KOD5</td>
                         <td>@customer.BAKIYE</td>
                         <td>@customer.SONSATISTARIHI</td>
                         <td>@customer.SONTAHSILATTARIHI</td>
                         <td>@customer.UNVAN</td>
-                        <td>@customer.FIRMATIPI</td>
-                        <td>@customer.PERSONELNO</td>
                         <td>
-
                             <div class="dropdown-left">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Actions
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="/Customer/CustomerDetail/@customer.IND">Cari Detay </a>
-                                    <a class="dropdown-item" href="#">Cari Bilgileri</a>
+                                    <a class="dropdown-item" href="/Customer/CustomerInfo/@customer.IND">Cari Bilgileri</a>
                                     <a class="dropdown-item" href="/Customer/OldBillofSale/@customer.IND">Eski Satış Faturaları</a>
                                     <a class="dropdown-item" href="#">Eski Tahsilatlar</a>
 

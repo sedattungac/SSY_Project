@@ -1,0 +1,87 @@
+﻿@using SSY_Project.Models.Entity
+@model List<data_caribilgi>
+@{
+    ViewBag.Title = "CustomerInfo";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+
+<div class="mt-5 card">
+    <div class="card-header">
+        <h3 class="card-title">Cari Bilgi Sayfası</h3>
+    </div>
+    <!-- /.card-header -->
+    <br />
+    <div class="col-11 row d-flex justify-content-center">
+            <a class="btn btn-primary" href="">BUTTON1</a> &nbsp;
+            <a class="btn btn-primary" href="">BUTTON2</a> &nbsp;
+            <a class="btn btn-primary" href="">BUTTON3</a> &nbsp;
+            <a class="btn btn-primary" href="">BUTTON4</a> &nbsp;
+
+        </div>
+    <hr />
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>RESİM</th>
+                    <th>ADRES FATURA</th>
+                    <th>ISTIHBARAT</th>
+                    <th>SATISYAPILMASIN</th>
+                    <th>BAKIYE</th>
+                    <th>FIRMAKODU</th>
+                    <th>YETKILI</th>
+                    <th>VERGIDAIRESI</th>
+                    <th>VERGINO</th>
+                    <th>YGSM</th>
+                    <th>EMAIL</th>
+                    <th>UNVAN</th>
+                    <th>KOD5</th>
+                    <th>KREDILIMITI</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in Model)
+                {
+                    <tr>
+
+                        <td>@customer.RESIM</td>
+                        <td>@customer.ADRESFATURA</td>
+                        <td>@customer.ISTIHBARAT</td>
+                        <td>@customer.SATISYAPILMASIN</td>
+                        <td>@customer.BAKIYE</td>
+                        <td>@customer.FIRMAKODU</td>
+                        <td>@customer.YETKILI</td>
+                        <td>@customer.VERGIDAIRESI</td>
+                        <td>@customer.VERGINO</td>
+                        <td>@customer.YGSM</td>
+                        <td>@customer.EMAIL</td>
+                        <td>@customer.UNVAN</td>
+                        <td>@customer.KOD5</td>
+                        <td>@customer.KREDILIMITI</td>
+                        @*<td>
+
+                                <div class="dropdown-left">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Actions
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="/Customer/CustomerDetail/">Cari Detay </a>
+                                        <a class="dropdown-item" href="#">Cari Bilgileri</a>
+                                        <a class="dropdown-item" href="#">Eski Satış Faturaları</a>
+                                        <a class="dropdown-item" href="#">Eski Tahsilatlar</a>
+
+                                    </div>
+                                </div>
+
+                            </td>*@
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+
+
+
