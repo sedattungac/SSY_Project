@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_ProjectLayout.cshtml";
-   
+
 }
 
 <div class="mt-5 card">
@@ -15,36 +15,36 @@
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                
+
                     <th>STOK KODU</th>
-                    <th>MALIN CİNSİ</th>
-                    <th>KOD5</th>
-                    <th>MALİYET</th>
-                    <th>ENVANTER</th>
-                    <th>SATISFIYATI1</th>
                     <th>BARCODE</th>
-                    <th>BIRIMADI</th>
-                    <th>FİYAT DEĞİŞTİRME TARİHİ</th>
+                    <th>MALIN CİNSİ</th>
+                    <th>BİRİM</th>
+                    <th>ENVANTER</th>
+                    <th>1. SATIŞ FİYATI</th>
+                    <th>FİYAT DEĞİŞTİM</th>
                     <th>KOD1</th>
+                    <th>KOD5</th>
+
                 </tr>
             </thead>
             <tbody>
                 @foreach (var stok in Model)
                 {
                     <tr>
-                        
+
                         <td>@stok.STOKKODU</td>
+                        <td>@stok.BARCODE</td>
                         <td>@stok.MALINCINSI</td>
-                        <td>@stok.KOD5</td>
-                        <td>@stok.MALIYET</td>
+                        <td>@stok.BIRIMADI</td>
                         <td>@stok.ENVANTER</td>
                         <td>@stok.SATISFIYATI1</td>
-                        <td>@stok.BARCODE</td>
-                        <td>@stok.BIRIMADI</td>
                         <td>@stok.FIYATDEGISMETARIHI1</td>
                         <td>@stok.KOD1</td>
+                        <td>@stok.KOD5</td>
+
                     </tr>
-                  
+
                 }
             </tbody>
 

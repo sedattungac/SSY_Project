@@ -25,10 +25,9 @@
                 <tr>
 
                     <th>FİRMA ADI</th>
+                    <th>UNVAN</th>
                     <th>TUTAR</th>
                     <th>KOD5</th>
-                    <th>UNVAN</th>
-                    <th>PERSONELNO</th>
 
                 </tr>
             </thead>
@@ -36,13 +35,10 @@
                 @foreach (var customer in Model)
                 {
                     <tr>
-
                         <td>@customer.FIRMAADI</td>
-                        <td>@customer.TUTAR</td>
                         <td>@customer.UNVAN</td>
-                        <td>@customer.PERSONELNO</td>
-
-
+                        <td>@customer.TUTAR</td>
+                        <td>@customer.KOD5</td>
                     </tr>
 
 

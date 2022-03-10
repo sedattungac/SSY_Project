@@ -23,12 +23,10 @@
             <thead>
                 <tr>
                     <th>TARIH</th>
-                    <th>FIRMAKODU</th>
-                    <th>FIRMAADI</th>
-                    <th>BELGENO</th>
-                    <th>KOD5</th>
-                    <th>UNVAN</th>
-                
+                    <th>BELGE NO</th>
+                    <th>TUTAR</th>
+                    <th>DETAY</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -36,12 +34,11 @@
                 {
                     <tr>
                         <td>@customer.TARIH</td>
-                        <td>@customer.FIRMAKODU</td>
-                        <td>@customer.FIRMAADI</td>
                         <td>@customer.BELGENO</td>
-                        <td>@customer.KOD5</td>
-                        <td>@customer.UNVAN</td>
-                        
+                        <td>@customer.TUTAR</td>
+
+                        <td><a class="btn btn-primary " href="/Report/Details/@customer.data_satfatdet.EVRAKNO"><i class="fas fa-file"></i> Detay</a></td>
+
 
                     </tr>
 

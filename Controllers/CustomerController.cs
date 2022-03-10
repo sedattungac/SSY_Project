@@ -37,7 +37,7 @@ namespace SSY_Project.Controllers
         }
         public ActionResult LastCollection(string id)
         {
-            var value = db.data_gectahsilat.Where(x => x.IND == id).ToList();
+            var value = db.data_tahsilat.Where(x => x.IND == id).ToList();
             ViewBag.id = id;
             return View(value);
         }
