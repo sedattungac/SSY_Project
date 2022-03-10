@@ -1,7 +1,7 @@
 ﻿@using SSY_Project.Models.Entity
-@model List<data_satfat>
+@model List<data_satfatdet>
 @{
-    ViewBag.Title = "CustomerList";
+    ViewBag.Title = "OldBillofSaleDetail";
     Layout = "~/Views/Shared/_ProjectLayout.cshtml";
 }
 
@@ -24,7 +24,16 @@
                 <tr>
                     <th>TARIH</th>
                     <th>BELGE NO</th>
-                    <th>TUTAR</th>
+                    <th>STOK KODU</th>
+                    <th>MALIN CİNSİ</th>
+                    <th>KDV</th>
+                    <th>GERÇEK TOPLAM</th>
+                    <th>KDV TOPLAMI</th>
+                    <th>KDV DAHİL TOPLAMI</th>
+                    <th>BİRİM FİYAT</th>
+                    <th>BİRİM</th>
+                    <th>MİKTAR</th>
+                    <th>KOD5</th>
                     <th>DETAY</th>
 
                 </tr>
@@ -35,9 +44,17 @@
                     <tr>
                         <td>@customer.TARIH</td>
                         <td>@customer.BELGENO</td>
-                        <td>@customer.TUTAR</td>
-
-                        <td><a class="btn btn-primary " href="/Customer/OldBillofSaleDetail/@customer.IND"><i class="fas fa-file"></i> Detay</a></td>
+                        <td>@customer.STOKKODU</td>
+                        <td>@customer.MALINCINSI</td>
+                        <td>@customer.KDV</td>
+                        <td>@customer.GERCEKTOPLAM</td>
+                        <td>@customer.KDVTOPLAMI</td>
+                        <td>@customer.KDVDAHILTOPLAM</td>
+                        <td>@customer.BIRIMFIYAT</td>
+                        <td>@customer.BIRIM</td>
+                        <td>@customer.MIKTAR</td>
+                        <td>@customer.KOD5</td>
+                        <td><a class="btn btn-primary " href="/Customer/OldBillofSaleDetail/@customer.IND"><i class="fas fa-eye"></i> Detay</a></td>
 
 
                     </tr>

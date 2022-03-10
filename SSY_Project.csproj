@@ -2772,6 +2772,8 @@
     <Content Include="Views\ECS\Product.cshtml" />
     <Content Include="Views\Customer\CustomerInfo.cshtml" />
     <Content Include="Views\Customer\LastCollection.cshtml" />
+    <Content Include="Views\Customer\LastCollectionDetail.cshtml" />
+    <Content Include="Views\Customer\OldBillofSaleDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

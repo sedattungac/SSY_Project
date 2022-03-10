@@ -31,13 +31,25 @@ namespace SSY_Project.Controllers
         }
         public ActionResult OldBillofSale(string id)
         {
-            var value = db.data_satfat.Where(x => x.FIRMAKODU == id).ToList();
+            var value = db.data_satfat.Where(x => x.IND == id).ToList();
+            ViewBag.id = id;
+            return View(value);
+        }
+        public ActionResult OldBillofSaleDetail(string id)
+        {
+            var value = db.data_satfatdet.Where(x => x.FIRMAKODU == id).ToList();
             ViewBag.id = id;
             return View(value);
         }
         public ActionResult LastCollection(string id)
         {
             var value = db.data_tahsilat.Where(x => x.IND == id).ToList();
+            ViewBag.id = id;
+            return View(value);
+        }
+        public ActionResult LastCollectionDetail(string id)
+        {
+            var value = db.data_tahsdet.Where(x => x.BELGEIND == id).ToList();
             ViewBag.id = id;
             return View(value);
         }
