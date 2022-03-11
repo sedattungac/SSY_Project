@@ -19,31 +19,31 @@ namespace SSY_Project.Controllers
         }
         public ActionResult CustomerInfo(string id)
         {
-            var customerList = db.data_caribilgi.Where(x => x.FIRMAKODU == id).ToList();
+            var customerList = db.data_caribilgi.Where(x => x.IND == id).ToList();
             ViewBag.id = id;
             return View(customerList);
         }
         public ActionResult CustomerDetail(string id)
         {
-            var value = db.data_caridetay.Where(x => x.FIRMAKODU == id).ToList();
+            var value = db.data_caridetay.Where(x => x.IND == id).ToList();
             ViewBag.id = id;
             return View(value);
         }
         public ActionResult OldBillofSale(string id)
         {
-            var value = db.data_satfat.Where(x => x.IND == id).ToList();
+            var value = db.data_satfat.Where(x => x.CARIIND == id).ToList();
             ViewBag.id = id;
             return View(value);
         }
         public ActionResult OldBillofSaleDetail(string id)
         {
-            var value = db.data_satfatdet.Where(x => x.FIRMAKODU == id).ToList();
+            var value = db.data_satfatdet.Where(x => x.CARIIND == id).ToList();
             ViewBag.id = id;
             return View(value);
         }
         public ActionResult LastCollection(string id)
         {
-            var value = db.data_tahsilat.Where(x => x.IND == id).ToList();
+            var value = db.data_tahsilat.Where(x => x.FIRMANO == id).ToList();
             ViewBag.id = id;
             return View(value);
         }

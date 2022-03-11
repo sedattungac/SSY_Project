@@ -7,7 +7,7 @@
 
 <div class="mt-5 card">
     <div class="card-header">
-        <h3 class="card-title">Satış Faturaları Listesi</h3>
+        <h3 class="card-title">Satış Fatura Detayları </h3>
     </div>
     <br />
     <div class="mt-3 row d-flex justify-content-center">
@@ -22,19 +22,12 @@
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>TARIH</th>
-                    <th>BELGE NO</th>
-                    <th>STOK KODU</th>
                     <th>MALIN CİNSİ</th>
-                    <th>KDV</th>
-                    <th>GERÇEK TOPLAM</th>
-                    <th>KDV TOPLAMI</th>
-                    <th>KDV DAHİL TOPLAMI</th>
-                    <th>BİRİM FİYAT</th>
-                    <th>BİRİM</th>
                     <th>MİKTAR</th>
-                    <th>KOD5</th>
-                    <th>DETAY</th>
+                    <th>BİRİM</th>
+                    <th>BİRİM FİYAT</th>
+                    <th>KDV</th>
+                    <th>KDV DAHİL TOPLAMI</th>
 
                 </tr>
             </thead>
@@ -42,19 +35,12 @@
                 @foreach (var customer in Model)
                 {
                     <tr>
-                        <td>@customer.TARIH</td>
-                        <td>@customer.BELGENO</td>
-                        <td>@customer.STOKKODU</td>
                         <td>@customer.MALINCINSI</td>
-                        <td>@customer.KDV</td>
-                        <td>@customer.GERCEKTOPLAM</td>
-                        <td>@customer.KDVTOPLAMI</td>
-                        <td>@customer.KDVDAHILTOPLAM</td>
-                        <td>@customer.BIRIMFIYAT</td>
-                        <td>@customer.BIRIM</td>
                         <td>@customer.MIKTAR</td>
-                        <td>@customer.KOD5</td>
-                        <td><a class="btn btn-primary " href="/Customer/OldBillofSaleDetail/@customer.IND"><i class="fas fa-eye"></i> Detay</a></td>
+                        <td>@customer.BIRIM</td>
+                        <td>@customer.BIRIMFIYAT</td>
+                        <td>@customer.KDV</td>
+                        <td>@customer.KDVDAHILTOPLAM</td>
 
 
                     </tr>
