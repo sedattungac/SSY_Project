@@ -23,7 +23,7 @@
             <thead>
                 <tr>
                     <th>RESİM</th>
-                    <th>ADRES FATURA</th>
+                    <th>ADRES </th>
                     <th>İSTİHBARAT</th>
                     <th>SATIŞ YAPILMASIN</th>
                     <th>BAKİYE</th>
@@ -42,14 +42,22 @@
                         <td>@customer.RESIM</td>
                         <td>@customer.ADRESFATURA</td>
                         <td>@customer.ISTIHBARAT</td>
-                        <td>@customer.SATISYAPILMASIN</td>
-                        <td>@customer.BAKIYE</td>
+                        @if (customer.SATISYAPILMASIN == true)
+                        {
+                            <td>Satış Yapılmasın</td>
+                        }
+                        else
+                        {
+                            <td>Satış Yapılsın</td>
+                        }
+
+                        <td>@customer.BAKIYE ₺</td>
                         <td>@customer.YETKILI</td>
                         <td>@customer.VERGIDAIRESI</td>
                         <td>@customer.VERGINO</td>
                         <td>@customer.YGSM</td>
                         <td>@customer.EMAIL</td>
-                     
+
                     </tr>
                 }
             </tbody>

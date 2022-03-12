@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="u0524050_db638Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="u0524050_db638Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6002: The table/view 'u0524050_db638.dbo.Data_AlinanCekler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Data_AlinanCekler">
@@ -51,8 +51,8 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_CariBilgi' does not have a
           <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ADRESFATURA" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="ISTIHBARAT" Type="varchar" MaxLength="5000" Nullable="false" />
-          <Property Name="SATISYAPILMASIN" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="BAKIYE" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="SATISYAPILMASIN" Type="bit" Nullable="false" />
+          <Property Name="BAKIYE" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="FIRMAKODU" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="YETKILI" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="VERGIDAIRESI" Type="varchar" MaxLength="255" Nullable="false" />
@@ -78,8 +78,8 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_CariBilgi' does not have a
           <Property Name="ISLEMIZAHAT" Type="varchar" MaxLength="255" />
           <Property Name="BELGEIZAHAT" Type="varchar" MaxLength="255" />
           <Property Name="MIKTAR" Type="varchar" MaxLength="255" />
-          <Property Name="ALACAK" Type="varchar" MaxLength="255" />
-          <Property Name="BORC" Type="varchar" MaxLength="255" />
+          <Property Name="ALACAK" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BORC" Type="decimal" Precision="18" Scale="2" />
           <Property Name="CARIIND" Type="varchar" MaxLength="50" />
           <Property Name="KOD5" Type="varchar" MaxLength="50" />
           <Property Name="AB" Type="varchar" MaxLength="50" />
@@ -93,7 +93,7 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_CariBilgi' does not have a
           <Property Name="FIRMAADI" Type="varchar" MaxLength="255" />
           <Property Name="KOD5" Type="varchar" MaxLength="255" />
           <Property Name="IND" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="BAKIYE" Type="varchar" MaxLength="255" />
+          <Property Name="BAKIYE" Type="decimal" Precision="18" Scale="2" />
           <Property Name="SONSATISTARIHI" Type="varchar" MaxLength="255" />
           <Property Name="SONTAHSILATTARIHI" Type="varchar" MaxLength="255" />
           <Property Name="UNVAN" Type="varchar" MaxLength="500" />
@@ -406,7 +406,7 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_SatFat' does not have a pr
           <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="CARIIND" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="IPTAL" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="TUTAR" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TUTAR" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="UNVAN" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="PERSONELNO" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="FIRMATIPI" Type="varchar" MaxLength="500" Nullable="false" />
@@ -447,13 +447,13 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_SatFatDet' does not have a
           <Property Name="KDV" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="GERCEKTOPLAM" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="KDVTOPLAMI" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="KDVDAHILTOPLAM" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="BIRIMFIYAT" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="KDVDAHILTOPLAM" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="BIRIMFIYAT" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="CARIIND" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="EVRAKNO" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="BIRIM" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="MIKTAR" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MIKTAR" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="STOKIND" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -607,8 +607,8 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_TahsDet' does not have a p
           <Property Name="SONBAKIYE" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="KOD5" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="STATUS" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="TLBORC" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="TLALACAK" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="TLBORC" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TLALACAK" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="TLBAKIYE" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="PARABIRIMI" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="UNVAN" Type="varchar" MaxLength="250" Nullable="false" />
@@ -656,9 +656,9 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_Tahsilat' does not have a 
           <Property Name="KOD5" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="STATUS" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="GSMNO" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="TLBORC" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="TLALACAK" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="TLBAKIYE" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TLBORC" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TLALACAK" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TLBAKIYE" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="PARABIRIMI" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="UNVAN" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="PERSONELNO" Type="varchar" MaxLength="255" Nullable="false" />
@@ -1074,8 +1074,7 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
     FROM [dbo].[Data_VerilenCekler] AS [Data_VerilenCekler]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="u0524050_db638Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1092,8 +1091,8 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
           <Property Name="ISLEMIZAHAT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="BELGEIZAHAT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="MIKTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="ALACAK" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="BORC" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ALACAK" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BORC" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="CARIIND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="AB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -1107,7 +1106,7 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
           <Property Name="FIRMAADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="KOD5" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BAKIYE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BAKIYE" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="SONSATISTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="SONTAHSILATTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
@@ -1168,8 +1167,8 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
           <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ADRESFATURA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ISTIHBARAT" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SATISYAPILMASIN" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BAKIYE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISYAPILMASIN" Type="Boolean" Nullable="false" />
+          <Property Name="BAKIYE" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="FIRMAKODU" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="YETKILI" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="VERGIDAIRESI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1464,7 +1463,7 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
           <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CARIIND" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="IPTAL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TUTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TUTAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PERSONELNO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="FIRMATIPI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1502,14 +1501,14 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
           <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KDV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GERCEKTOPLAM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KDVTOPLAMI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KDVDAHILTOPLAM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BIRIMFIYAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KDVTOPLAMI" Type="String" Nullable="false" Unicode="false" FixedLength="false" MaxLength="255" />
+          <Property Name="KDVDAHILTOPLAM" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="BIRIMFIYAT" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="CARIIND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="EVRAKNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="BIRIM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MIKTAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MIKTAR" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="STOKIND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -1655,8 +1654,8 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
           <Property Name="SONBAKIYE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KOD5" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="STATUS" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TLBORC" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TLALACAK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TLBORC" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="TLALACAK" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="TLBAKIYE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PARABIRIMI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="UNVAN" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1702,9 +1701,9 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
           <Property Name="KOD5" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="STATUS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GSMNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TLBORC" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TLALACAK" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TLBAKIYE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TLBORC" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="TLALACAK" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="TLBAKIYE" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="PARABIRIMI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="UNVAN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PERSONELNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />

@@ -32,10 +32,12 @@
             <tbody>
                 @foreach (var customer in Model)
                 {
+                    var date = Convert.ToDateTime(customer.TARIH);
+                    var tutar = Convert.ToDecimal(customer.TUTAR);
                     <tr>
-                        <td>@customer.TARIH</td>
+                        <td>@date.ToShortDateString()</td>
                         <td>@customer.BELGENO</td>
-                        <td>@String.Format("{0:0.00}",customer.TUTAR)</td>
+                        <td>@String.Format("{0:C}", tutar)</td>
 
                         <td><a class="btn btn-primary " href="/Customer/OldBillofSaleDetail/@customer.IND"><i class="fas fa-file"></i> Detay</a></td>
 

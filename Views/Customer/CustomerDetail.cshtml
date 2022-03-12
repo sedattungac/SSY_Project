@@ -34,13 +34,14 @@
             <tbody>
                 @foreach (var customer in Model)
                 {
+                    var date = Convert.ToDateTime(customer.TARIH);
                     <tr>
 
-                        <td>@customer.TARIH</td>
+                        <td>@date.ToShortDateString()</td>
                         <td>@customer.BELGENO</td>
                         <td>@customer.ISLEMIZAHAT</td>
-                        <td>@customer.ALACAK</td>
-                        <td>@customer.BORC</td>
+                        <td>@customer.ALACAK ₺</td>
+                        <td>@customer.BORC ₺</td>
                     </tr>
                 }
             </tbody>

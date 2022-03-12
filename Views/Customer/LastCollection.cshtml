@@ -21,41 +21,28 @@
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>FİRMA ADI</th>
-                    <th>ÜNVAN</th>
+
                     <th>TARİH</th>
                     <th>EVRAK NO</th>
-                    <th>ÖDEME TARİHİ</th>
-                    <th>KREDİ LİMİTİ</th>
-                    <th>RİSK LİMİTİ</th>
-                    <th>SON BAKİYE</th>
-                    <th>GSM</th>
                     <th>BORÇ</th>
                     <th>ALACAK</th>
                     <th>BAKİYE</th>
                     <th>PARA BİRİMİ</th>
-                    <th>KOD5</th>
                     <th>DETAY</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var customer in Model)
                 {
+                    var date = Convert.ToDateTime(customer.TARIH);
                 <tr>
-                    <td>@customer.FIRMAADI</td>
-                    <td>@customer.UNVAN</td>
-                    <td>@customer.TARIH</td>
+                    <td>@date.ToShortDateString()</td>
                     <td>@customer.EVRAKNO</td>
-                    <td>@customer.ODEMETARIHI</td>
-                    <td>@customer.KREDILIMITI</td>
-                    <td>@customer.RISKLIMITI</td>
-                    <td>@customer.SONBAKIYE</td>
-                    <td>@customer.GSMNO</td>
-                    <td>@customer.TLBORC</td>
-                    <td>@customer.TLALACAK</td>
-                    <td>@customer.TLBAKIYE</td>
+                    <td>@customer.TLBORC ₺</td>
+                    <td>@customer.TLALACAK ₺</td>
+                    <td>@customer.TLBAKIYE ₺</td>
                     <td>@customer.PARABIRIMI</td>
-                    <td>@customer.KOD5</td>
+
                     <td><a class="btn btn-primary" href="/Customer/LastCollectionDetail/@customer.BELGEIND"><i class="fas fa-eye"></i> Detay</a></td>
                 </tr>
 

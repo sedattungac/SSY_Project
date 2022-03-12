@@ -37,7 +37,7 @@ namespace SSY_Project.Controllers
         }
         public ActionResult OldBillofSaleDetail(string id)
         {
-            var value = db.Data_SatFatDet.Where(x => x.CARIIND == id).ToList();
+            var value = db.Data_SatFatDet.Where(x => x.EVRAKNO == id).ToList();
             ViewBag.id = id;
             return View(value);
         }

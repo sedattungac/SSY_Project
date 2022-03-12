@@ -23,8 +23,8 @@ namespace SSY_Project.Models.Entity
         public string ISLEMIZAHAT { get; set; }
         public string BELGEIZAHAT { get; set; }
         public string MIKTAR { get; set; }
-        public string ALACAK { get; set; }
-        public string BORC { get; set; }
+        public Nullable<decimal> ALACAK { get; set; }
+        public Nullable<decimal> BORC { get; set; }
         public string CARIIND { get; set; }
         public string KOD5 { get; set; }
         public string AB { get; set; }

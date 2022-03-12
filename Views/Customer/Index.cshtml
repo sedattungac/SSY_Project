@@ -24,20 +24,22 @@
             <thead>
                 <tr>
                     <th>FİRMA ADI</th>
-                    <th>KOD5</th>
-                    <th>BAKİYE</th>
                     <th>ÜNVAN</th>
+                    <th>BAKİYE</th>
+                    <th>KOD5</th>
                     <th>ACTION</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var customer in Model)
                 {
+                    var bakiye = Convert.ToDecimal(customer.BAKIYE);
                     <tr>
                         <td>@customer.FIRMAADI</td>
-                        <td>@customer.KOD5</td>
-                        <td>@customer.BAKIYE</td>
                         <td>@customer.UNVAN</td>
+                        <td>@String.Format("{0:C}", bakiye)</td>
+                        <td>@customer.KOD5</td>
+
                         <td>
                             <div class="dropdown-left">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
