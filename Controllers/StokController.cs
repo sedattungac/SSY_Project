@@ -9,11 +9,11 @@ namespace SSY_Project.Controllers
 {
     public class StokController : Controller
     {
-        DbDatabase db = new DbDatabase();
+        u0524050_db638Entities4 db = new u0524050_db638Entities4();
         // GET: Stok
         public ActionResult Index()
         {
-            var stokList = db.data_stoklist.ToList();
+            var stokList = db.Data_StokList.ToList();
             return View(stokList);
         }
     }

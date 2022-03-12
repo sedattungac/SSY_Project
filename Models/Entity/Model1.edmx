@@ -65,9 +65,11 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_CariBilgi' does not have a
           <Property Name="PERSONELNO" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'u0524050_db638.dbo.Data_CariDetay' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="Data_CariDetay">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TARIH" Type="varchar" MaxLength="255" />
           <Property Name="BELGENO" Type="varchar" MaxLength="255" />
           <Property Name="FIRMAKODU" Type="varchar" MaxLength="255" />
@@ -83,13 +85,14 @@ warning 6013: The table/view 'u0524050_db638.dbo.Data_CariDetay' does not have a
           <Property Name="AB" Type="varchar" MaxLength="50" />
           <Property Name="UNVAN" Type="varchar" MaxLength="500" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'u0524050_db638.dbo.Data_CariList' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        </EntityType>
         <EntityType Name="Data_CariList">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
           <Property Name="FIRMAADI" Type="varchar" MaxLength="255" />
           <Property Name="KOD5" Type="varchar" MaxLength="255" />
-          <Property Name="IND" Type="varchar" MaxLength="255" />
+          <Property Name="IND" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="BAKIYE" Type="varchar" MaxLength="255" />
           <Property Name="SONSATISTARIHI" Type="varchar" MaxLength="255" />
           <Property Name="SONTAHSILATTARIHI" Type="varchar" MaxLength="255" />
@@ -98,7 +101,7 @@ warning 6013: The table/view 'u0524050_db638.dbo.Data_CariList' does not have a 
           <Property Name="STATUS" Type="varchar" MaxLength="50" />
           <Property Name="PERSONELNO" Type="varchar" MaxLength="50" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
-        </EntityType>-->
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'u0524050_db638.dbo.Data_ECSCari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Data_ECSCari">
@@ -723,6 +726,8 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="u0524050_db638ModelStoreContainer">
+          <EntitySet Name="Data_CariDetay" EntityType="Self.Data_CariDetay" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_CariList" EntityType="Self.Data_CariList" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_AlinanCekler" EntityType="Self.Data_AlinanCekler" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -1074,6 +1079,43 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="u0524050_db638Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Data_CariDetay">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BELGENO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FIRMAKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ISLEMIZAHAT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BELGEIZAHAT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="MIKTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ALACAK" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BORC" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CARIIND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Data_CariList">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="FIRMAADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="KOD5" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BAKIYE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SONSATISTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SONTAHSILATTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FIRMATIPI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PERSONELNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -1686,7 +1728,9 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
           <Property Name="STATUS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DbData" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="u0524050_db638Entities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Data_CariDetay" EntityType="Self.Data_CariDetay" />
+          <EntitySet Name="Data_CariList" EntityType="Self.Data_CariList" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Data_AlinanCekler" EntityType="Self.Data_AlinanCekler" />
           <EntitySet Name="Data_CariBilgi" EntityType="Self.Data_CariBilgi" />
@@ -1755,7 +1799,46 @@ warning 6002: The table/view 'u0524050_db638.dbo.Data_VerilenCekler' does not ha
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="u0524050_db638ModelStoreContainer" CdmEntityContainer="DbData">
+        <EntityContainerMapping StorageEntityContainer="u0524050_db638ModelStoreContainer" CdmEntityContainer="u0524050_db638Entities4">
+          <EntitySetMapping Name="Data_CariDetay">
+            <EntityTypeMapping TypeName="u0524050_db638Model.Data_CariDetay">
+              <MappingFragment StoreEntitySet="Data_CariDetay">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="BELGENO" ColumnName="BELGENO" />
+                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="ISLEMIZAHAT" ColumnName="ISLEMIZAHAT" />
+                <ScalarProperty Name="BELGEIZAHAT" ColumnName="BELGEIZAHAT" />
+                <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
+                <ScalarProperty Name="ALACAK" ColumnName="ALACAK" />
+                <ScalarProperty Name="BORC" ColumnName="BORC" />
+                <ScalarProperty Name="CARIIND" ColumnName="CARIIND" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="AB" ColumnName="AB" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_CariList">
+            <EntityTypeMapping TypeName="u0524050_db638Model.Data_CariList">
+              <MappingFragment StoreEntitySet="Data_CariList">
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="BAKIYE" ColumnName="BAKIYE" />
+                <ScalarProperty Name="SONSATISTARIHI" ColumnName="SONSATISTARIHI" />
+                <ScalarProperty Name="SONTAHSILATTARIHI" ColumnName="SONTAHSILATTARIHI" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="FIRMATIPI" ColumnName="FIRMATIPI" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="u0524050_db638Model.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">

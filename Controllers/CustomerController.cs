@@ -10,46 +10,46 @@ namespace SSY_Project.Controllers
     public class CustomerController : Controller
     {
 
-        DbDatabase db = new DbDatabase();
+        u0524050_db638Entities4 db = new u0524050_db638Entities4();
         // GET: Customer
         public ActionResult Index()
         {
-            var customerList = db.data_carilist.ToList();
+            var customerList = db.Data_CariList.ToList();
             return View(customerList);
         }
         public ActionResult CustomerInfo(string id)
         {
-            var customerList = db.data_caribilgi.Where(x => x.IND == id).ToList();
+            var customerList = db.Data_CariBilgi.Where(x => x.IND == id).ToList();
             ViewBag.id = id;
             return View(customerList);
         }
         public ActionResult CustomerDetail(string id)
         {
-            var value = db.data_caridetay.Where(x => x.IND == id).ToList();
+            var value = db.Data_CariDetay.Where(x => x.IND == id).ToList();
             ViewBag.id = id;
             return View(value);
         }
         public ActionResult OldBillofSale(string id)
         {
-            var value = db.data_satfat.Where(x => x.CARIIND == id).ToList();
+            var value = db.Data_SatFat.Where(x => x.CARIIND == id).ToList();
             ViewBag.id = id;
             return View(value);
         }
         public ActionResult OldBillofSaleDetail(string id)
         {
-            var value = db.data_satfatdet.Where(x => x.CARIIND == id).ToList();
+            var value = db.Data_SatFatDet.Where(x => x.CARIIND == id).ToList();
             ViewBag.id = id;
             return View(value);
         }
         public ActionResult LastCollection(string id)
         {
-            var value = db.data_tahsilat.Where(x => x.FIRMANO == id).ToList();
+            var value = db.Data_Tahsilat.Where(x => x.FIRMANO == id).ToList();
             ViewBag.id = id;
             return View(value);
         }
         public ActionResult LastCollectionDetail(string id)
         {
-            var value = db.data_tahsdet.Where(x => x.BELGEIND == id).ToList();
+            var value = db.Data_TahsDet.Where(x => x.BELGEIND == id).ToList();
             ViewBag.id = id;
             return View(value);
         }

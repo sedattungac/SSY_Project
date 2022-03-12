@@ -9,11 +9,11 @@ namespace SSY_Project.Controllers
 {
     public class ImmobileProductController : Controller
     {
-        DbDatabase db = new DbDatabase();
+        u0524050_db638Entities4 db = new u0524050_db638Entities4();
         // GET: ImmobileProduct
         public ActionResult Index()
         {
-            var value = db.data_hareketsizurun.ToList();
+            var value = db.Data_HareketsizUrun.ToList();
             return View(value);
         }
     }

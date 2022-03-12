@@ -9,11 +9,11 @@ namespace SSY_Project.Controllers
 {
     public class RecentArrivalsController : Controller
     {
-        DbDatabase db = new DbDatabase();
+        u0524050_db638Entities4 db = new u0524050_db638Entities4();
         // GET: RecentArrivals
         public ActionResult Index()
         {
-            var value = db.data_songelenler.OrderByDescending(x => x.IND).ToList();
+            var value = db.Data_SonGelenler.OrderByDescending(x => x.IND).ToList();
             return View(value);
         }
     }
