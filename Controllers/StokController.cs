@@ -9,7 +9,7 @@ namespace SSY_Project.Controllers
 {
     public class StokController : Controller
     {
-        u0524050_db638Entities4 db = new u0524050_db638Entities4();
+        DatabaseEntities db = new DatabaseEntities();
         // GET: Stok
         public ActionResult Index()
         {

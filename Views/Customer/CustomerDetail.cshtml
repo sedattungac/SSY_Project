@@ -35,14 +35,16 @@
                 @foreach (var customer in Model)
                 {
                     var date = Convert.ToDateTime(customer.TARIH);
-                    <tr>
+                    var alacak = Convert.ToDecimal(customer.ALACAK);
+                    var borc = Convert.ToDecimal(customer.BORC);
+                <tr>
 
-                        <td>@date.ToShortDateString()</td>
-                        <td>@customer.BELGENO</td>
-                        <td>@customer.ISLEMIZAHAT</td>
-                        <td>@customer.ALACAK ₺</td>
-                        <td>@customer.BORC ₺</td>
-                    </tr>
+                    <td>@date.ToShortDateString()</td>
+                    <td>@customer.BELGENO</td>
+                    <td>@customer.ISLEMIZAHAT</td>
+                    <td>@String.Format("{0:C}", alacak)</td>
+                    <td>@String.Format("{0:C}", borc)</td>
+                </tr>
                 }
             </tbody>
 
