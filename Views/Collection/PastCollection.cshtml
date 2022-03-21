@@ -1,0 +1,50 @@
+﻿@using SSY_Project.Models.Entity
+@model List<Data_GecTahsilat>
+@{
+    ViewBag.Title = "PastCollection";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+
+<div class="mt-5 card">
+    <div class="card-header">
+        <h3 class="card-title">Geçmiş Tahsilat Listesi</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+
+                    <th>FİRMA ADI</th>
+                    <th>ÜNVAN</th>
+                    <th>SON SATIŞ TARİHİ</th>
+                    <th>SON TAHSİLAT TARİHİ</th>
+                    <th>BAKİYE</th>
+                    <th>KOD 5</th>
+                    @*<th>DETAY</th>*@
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var collection in Model)
+                {
+                    //var date = Convert.ToDateTime(collection.SONSATISTARIHI);
+                    var date2 = Convert.ToDateTime(collection.SONTAHSILATTARIHI);
+                    <tr>
+
+                        <td>@collection.FIRMAADI</td>
+                        <td>@collection.UNVAN</td>
+                        @*<td>@date.ToShortDateString()</td>*@
+                        <td>@collection.SONSATISTARIHI</td>
+                        <td>@date2.ToShortDateString()</td>
+                        <td>@collection.BAKIYE ₺</td>
+                        <td>@collection.KOD5</td>
+
+                        @*<td><a class="btn btn-primary" href="/Customer/LastCollectionDetail/@customer.BELGEIND"><i class="fas fa-eye"></i> Detay</a></td>*@
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>

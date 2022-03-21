@@ -154,7 +154,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_ECSUrunler' does not have 
           </Key>
           <Property Name="STOKKODU" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="SATILANMIKTAR" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SATILANMIKTAR" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="IND" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="KOD1" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="BIRIM" Type="varchar" MaxLength="255" Nullable="false" />
@@ -664,6 +664,19 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <Property Name="PERSONELNO" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Data_Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="FOTO_URL" Type="nvarchar" MaxLength="300" />
+          <Property Name="USERNAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="PASSWORD" Type="nvarchar" MaxLength="30" />
+          <Property Name="PERSONELNO" Type="nvarchar" MaxLength="3" />
+          <Property Name="GSM" Type="nvarchar" MaxLength="13" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="100" />
+          <Property Name="STATUS" Type="bit" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_VerilenCekler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Data_VerilenCekler">
@@ -687,6 +700,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_VerilenCekler' does not ha
         <EntityContainer Name="u0524050_dbFB1ModelStoreContainer">
           <EntitySet Name="Data_CariDetay" EntityType="Self.Data_CariDetay" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_CariList" EntityType="Self.Data_CariList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_Users" EntityType="Self.Data_Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_AlinanCekler" EntityType="Self.Data_AlinanCekler" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Data_AlinanCekler].[FIRMAADI] AS [FIRMAADI], 
@@ -1138,7 +1152,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_VerilenCekler' does not ha
           </Key>
           <Property Name="STOKKODU" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SATILANMIKTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATILANMIKTAR" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
           <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KOD1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="BIRIM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1661,6 +1675,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_VerilenCekler' does not ha
           <EntitySet Name="Data_VerilenCekler" EntityType="Self.Data_VerilenCekler" />
           <EntitySet Name="Data_CariDetay" EntityType="u0524050_dbFB1Model.Data_CariDetay" />
           <EntitySet Name="Data_CariList" EntityType="u0524050_dbFB1Model.Data_CariList" />
+          <EntitySet Name="Data_Users" EntityType="u0524050_dbFB1Model.Data_Users" />
         </EntityContainer>
         <EntityType Name="Data_CariDetay">
           <Key>
@@ -1698,6 +1713,19 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_VerilenCekler' does not ha
           <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PERSONELNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Data_Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="FOTO_URL" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="USERNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PASSWORD" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PERSONELNO" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="GSM" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2125,6 +2153,20 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_VerilenCekler' does not ha
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="KOD5" ColumnName="KOD5" />
                 <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_Users">
+            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_Users">
+              <MappingFragment StoreEntitySet="Data_Users">
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="GSM" ColumnName="GSM" />
+                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="FOTO_URL" ColumnName="FOTO_URL" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

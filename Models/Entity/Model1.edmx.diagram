@@ -27,6 +27,7 @@
         <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_VerilenCekler" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_CariDetay" Width="1.5" PointX="0.75" PointY="14.75" />
         <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_CariList" Width="1.5" PointX="2.75" PointY="14.75" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Users" Width="1.5" PointX="15.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

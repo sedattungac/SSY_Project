@@ -47,5 +47,6 @@ namespace SSY_Project.Models.Entity
         public virtual DbSet<Data_VerilenCekler> Data_VerilenCekler { get; set; }
         public virtual DbSet<Data_CariDetay> Data_CariDetay { get; set; }
         public virtual DbSet<Data_CariList> Data_CariList { get; set; }
+        public virtual DbSet<Data_Users> Data_Users { get; set; }
     }
 }

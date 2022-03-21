@@ -15,24 +15,25 @@ namespace SSY_Project.Controllers
         {
             return View();
         }
-        //[HttpPost]
-        //public ActionResult Index(Data_CariBilgi cari)
-        //{
-        //    DbSahaSatisTakipEntities c = new DbSahaSatisTakipEntities();
-        //    var admininfo = c.Data_CariBilgi.FirstOrDefault(x => x.YETKILI == cari.YETKILI
-        //      && x.SIFRE == p.SIFRE);
-        //    if (admininfo != null)
-        //    {
-        //        FormsAuthentication.SetAuthCookie(admininfo.EMAIL, false);
-        //        Session["EMAIL"] = admininfo.EMAIL.ToString();
-        //        return RedirectToAction("Welcome", "Login");
-        //    }
-        //    else
-        //    {
-        //        return RedirectToAction("Index", "Login");
-        //    }
+        [HttpPost]
+        public ActionResult Index(Data_Users cari)
+        {
+            DatabaseEntities db = new DatabaseEntities();
+            var admininfo = db.Data_Users.FirstOrDefault(x => x.EMAIL == cari.EMAIL
+              && x.PASSWORD == cari.PASSWORD);
+            if (admininfo != null)
+            {
+                FormsAuthentication.SetAuthCookie(admininfo.EMAIL, false);
+                Session["EMAIL"] = admininfo.EMAIL.ToString();
+                return RedirectToAction("Index", "Welcome");
+            }
+            else
+            {
+                ViewBag.alert = "Mail ya da parolanız hatalı!";
+                return View("Index");
+            }
 
-        //}
+        }
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();

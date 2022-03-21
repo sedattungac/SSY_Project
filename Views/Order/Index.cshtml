@@ -1,0 +1,49 @@
+﻿@using SSY_Project.Models.Entity
+@model List<Data_GecSipList>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+
+<div class="mt-5 card">
+    <div class="card-header">
+        <h3 class="card-title">Geçmiş Sipariş Listesi</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    @*tarih malın cinsi satış fiyatı1 kdvdahil miktar toplamkdv aratoplam genel toplam*@
+                    <th>TARİH</th>
+                    <th>MALIN CİNSİ</th>
+                    <th>1. SATIŞ FIYATI</th>
+                    <th>KDV DAHİL</th>
+                    <th>MİKTAR</th>
+                    <th>TOPLAM KDV</th>
+                    <th>ARA TOPLAM</th>
+                    <th>GENEL TOPLAM</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model)
+                {
+                    <tr>
+                        <td>@order.TARIH</td>
+                        <td>@order.MALINCINSI</td>
+                        <td>@order.SATISFIYATI1</td>
+                        <td>@order.KDVDAHIL</td>
+                        <td>@order.MIKTAR</td>
+                        <td>@order.TOPLAMKDV</td>
+                        <td>@order.ARATOPLAM</td>
+                        <td>@order.GENELTOPLAM</td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+
