@@ -22,7 +22,7 @@
                     <th>BİRİM</th>
                     <th>ENVANTER</th>
                     <th>1. SATIŞ FİYATI</th>
-                    <th>FİYAT DEĞİŞTİM</th>
+                    <th>F. DEĞİŞİM TARİHİ</th>
                     <th>KOD1</th>
                     <th>KOD5</th>
 
@@ -31,6 +31,8 @@
             <tbody>
                 @foreach (var stok in Model)
                 {
+                    var date = Convert.ToDateTime(stok.FIYATDEGISMETARIHI1);
+
                     <tr>
 
                         <td>@stok.STOKKODU</td>
@@ -39,7 +41,9 @@
                         <td>@stok.BIRIMADI</td>
                         <td>@stok.ENVANTER</td>
                         <td>@stok.SATISFIYATI1</td>
-                        <td>@stok.FIYATDEGISMETARIHI1</td>
+                        @*<td>@stok.FIYATDEGISMETARIHI1</td>*@
+                        <td>@date.ToShortDateString()</td>
+
                         <td>@stok.KOD1</td>
                         <td>@stok.KOD5</td>
 

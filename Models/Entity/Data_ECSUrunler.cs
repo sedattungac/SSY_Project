@@ -16,7 +16,7 @@ namespace SSY_Project.Models.Entity
     {
         public string STOKKODU { get; set; }
         public string MALINCINSI { get; set; }
-        public string SATILANMIKTAR { get; set; }
+        public decimal SATILANMIKTAR { get; set; }
         public string IND { get; set; }
         public string KOD1 { get; set; }
         public string BIRIM { get; set; }

@@ -14,14 +14,14 @@
     <div class="card-body">
         <table id="example1" class="table table-bordered table-striped">
             <thead>
-                <tr>
+                <tr style="text-align:center;">
                     <th>STOK KODU</th>
                     <th>BARCODE</th>
                     <th>MALIN CİNSİ</th>
                     <th>BİRİM</th>
                     <th>ENVANTER</th>
-                    <th>1. SATIŞ FİYATI</th>
-                    <th>KARTINACILMATARIHI</th>
+                    <th>SATIŞ FİYATI</th>
+                    <th>KART AÇILMA TARİHİ</th>
                     <th>KOD1</th>
                     <th>KOD5</th>
 
@@ -30,14 +30,16 @@
             <tbody>
                 @foreach (var recentArrival in Model)
                 {
-                    <tr>
+                    var date = Convert.ToDateTime(recentArrival.KARTINACILMATARIHI);
+                    <tr style="text-align:center;">
                         <td>@recentArrival.STOKKODU</td>
                         <td>@recentArrival.BARCODE</td>
                         <td>@recentArrival.MALINCINSI</td>
                         <td>@recentArrival.BIRIMADI</td>
                         <td>@recentArrival.ENVANTER</td>
-                        <td>@recentArrival.SATISFIYATI1</td>
-                        <td>@recentArrival.KARTINACILMATARIHI</td>
+                        <td>@recentArrival.SATISFIYATI1 ₺</td>
+                        @*<td>@recentArrival.KARTINACILMATARIHI</td>*@
+                        <td>@date.ToShortDateString()</td>
                         <td>@recentArrival.KOD1</td>
                         <td>@recentArrival.KOD5</td>
 

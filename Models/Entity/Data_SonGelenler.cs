@@ -20,9 +20,9 @@ namespace SSY_Project.Models.Entity
         public string KOD5 { get; set; }
         public string MALIYET { get; set; }
         public string KDVGRUBU { get; set; }
-        public string ENVANTER { get; set; }
+        public decimal ENVANTER { get; set; }
         public string STATUS { get; set; }
-        public string SATISFIYATI1 { get; set; }
+        public decimal SATISFIYATI1 { get; set; }
         public string BARCODE { get; set; }
         public string BIRIMADI { get; set; }
         public string KARTINACILMATARIHI { get; set; }

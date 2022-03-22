@@ -13,14 +13,14 @@
     <div class="card-body">
         <table id="example1" class="table table-bordered table-striped">
             <thead>
-                <tr>
+                <tr style="text-align:center;">
 
                     <th>STOK KODU</th>
                     <th>BARCODE</th>
                     <th>MALIN CİNSİ</th>
                     <th>BİRİM</th>
                     <th>ENVANTER</th>
-                    <th>1. SATIŞ FIYATI</th>
+                    <th>SATIŞ FIYATI</th>
                     <th>KOD1</th>
                     <th>KOD5</th>
 
@@ -29,13 +29,16 @@
             <tbody>
                 @foreach (var stok in Model)
                 {
-                    <tr>
+                    //var satisfiyati = Convert.ToDecimal(stok.SATISFIYATI1);
+
+                    <tr style="text-align:center;">
                         <td>@stok.STOKKODU</td>
                         <td>@stok.BARCODE</td>
                         <td>@stok.MALINCINSI</td>
                         <td>@stok.BIRIMADI</td>
                         <td>@stok.ENVANTER</td>
-                        <td>@stok.SATISFIYATI1</td>
+                        @*<td>@String.Format("{0:C}", satisfiyati) ₺</td>*@
+                        <td>@stok.SATISFIYATI1 ₺</td>
                         <td>@stok.KOD1</td>
                         <td>@stok.KOD5</td>
 

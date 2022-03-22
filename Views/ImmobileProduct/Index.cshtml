@@ -11,12 +11,12 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-        <table id="example1" class="table table-bordered table-striped">
+        <table id="example1" class="table table-bordered table-striped" style="text-align:center;">
             <thead>
                 <tr>
 
                     <th>MALIN CİNSİ</th>
-                    <th>SATISFIYATI1</th>
+                    <th>SATIŞ FİYATI</th>
                     <th>SON SATIŞ TARİHİ</th>
                     <th>KOD5</th>
                 </tr>
@@ -24,11 +24,12 @@
             <tbody>
                 @foreach (var data_hareketsizurun in Model)
                 {
+                    var date = Convert.ToDateTime(data_hareketsizurun.KARTINACILMATARIHI);
                     <tr>
 
                         <td>@data_hareketsizurun.MALINCINSI</td>
-                        <td>@data_hareketsizurun.SATISFIYATI1</td>
-                        <td>@data_hareketsizurun.KARTINACILMATARIHI</td>
+                        <td>@data_hareketsizurun.SATISFIYATI1 ₺</td>
+                        <td>@date.ToShortDateString()</td>
                         <td>@data_hareketsizurun.KOD5</td>
                     </tr>
 

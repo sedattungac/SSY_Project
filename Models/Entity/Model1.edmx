@@ -133,7 +133,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_ECSTutar' does not have a 
             <PropertyRef Name="KOD1" />
             <PropertyRef Name="GTARIH" />
           </Key>
-          <Property Name="TUTAR" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TUTAR" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="STOKKODU" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="IND" Type="varchar" MaxLength="500" Nullable="false" />
@@ -154,7 +154,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_ECSUrunler' does not have 
           </Key>
           <Property Name="STOKKODU" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="SATILANMIKTAR" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="SATILANMIKTAR" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="IND" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="KOD1" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="BIRIM" Type="varchar" MaxLength="255" Nullable="false" />
@@ -362,7 +362,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_HareketsizUrun' does not h
           <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="MALINCINSI" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="KARTINACILMATARIHI" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="SATISFIYATI2" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="MALIYET" Type="varchar" MaxLength="50" Nullable="false" />
@@ -482,9 +482,9 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_SonGelenler' does not have
           <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="MALIYET" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="KDVGRUBU" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ENVANTER" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ENVANTER" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="STATUS" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="BARCODE" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="BIRIMADI" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="KARTINACILMATARIHI" Type="varchar" MaxLength="100" Nullable="false" />
@@ -559,9 +559,9 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_StokList' does not have a 
           <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="KOD5" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="KDVGRUBU" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ENVANTER" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ENVANTER" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="STATUS" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="BARCODE" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="BIRIMADI" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="KOD1" Type="varchar" MaxLength="50" />
@@ -668,7 +668,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FOTO_URL" Type="nvarchar" MaxLength="300" />
           <Property Name="USERNAME" Type="nvarchar" MaxLength="30" />
           <Property Name="PASSWORD" Type="nvarchar" MaxLength="30" />
@@ -1133,7 +1133,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_VerilenCekler' does not ha
             <PropertyRef Name="KOD1" />
             <PropertyRef Name="GTARIH" />
           </Key>
-          <Property Name="TUTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TUTAR" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="STOKKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="IND" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1152,7 +1152,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_VerilenCekler' does not ha
           </Key>
           <Property Name="STOKKODU" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SATILANMIKTAR" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="SATILANMIKTAR" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KOD1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="BIRIM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1348,7 +1348,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_VerilenCekler' does not ha
           <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MALINCINSI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KARTINACILMATARIHI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SATISFIYATI1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="SATISFIYATI2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MALIYET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1460,9 +1460,9 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_VerilenCekler' does not ha
           <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MALIYET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KDVGRUBU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ENVANTER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ENVANTER" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SATISFIYATI1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="BARCODE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="BIRIMADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KARTINACILMATARIHI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1533,9 +1533,9 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_VerilenCekler' does not ha
           <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KOD5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KDVGRUBU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ENVANTER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ENVANTER" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SATISFIYATI1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SATISFIYATI1" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="BARCODE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="BIRIMADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />

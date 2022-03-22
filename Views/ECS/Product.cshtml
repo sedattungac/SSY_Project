@@ -22,31 +22,29 @@
     <div class="card-body">
         <table id="example1" class="table table-bordered table-striped">
             <thead>
-                <tr>
+                <tr style="text-align:center">
 
                     <th>STOK KODU</th>
                     <th>MALIN CINSI</th>
                     <th>SATILAN MIKTAR</th>
                     <th>BIRIM</th>
                     <th>KOD1</th>
-
-
                 </tr>
             </thead>
             <tbody>
                 @foreach (var customer in Model)
                 {
-                <tr>
+                    <tr style="text-align:center">
 
-                    <td>@customer.STOKKODU</td>
-                    <td>@customer.MALINCINSI</td>
-                    <td>@customer.SATILANMIKTAR</td>
-                    <td>@customer.BIRIM</td>
-                    <td>@customer.KOD1</td>
+                        <td>@customer.STOKKODU</td>
+                        <td>@customer.MALINCINSI</td>
+                        <td>@customer.SATILANMIKTAR</td>
+                        <td>@customer.BIRIM</td>
+                        <td>@customer.KOD1</td>
 
 
 
-                </tr>
+                    </tr>
 
 
                 }

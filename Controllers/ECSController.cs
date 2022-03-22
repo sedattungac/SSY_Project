@@ -21,13 +21,13 @@ namespace SSY_Project.Controllers
         //data_ecstutar
         public ActionResult Total()
         {
-            var value = db.Data_ECSTutar.ToList();
+            var value = db.Data_ECSTutar.OrderByDescending(x => x.TUTAR).ToList();
             return View(value);
         }
         //data_ecsurunler
         public ActionResult Product()
         {
-            var value = db.Data_ECSUrunler.ToList();
+            var value = db.Data_ECSUrunler.OrderByDescending(x => x.SATILANMIKTAR).ToList();
             return View(value);
         }
     }
