@@ -17,7 +17,7 @@ namespace SSY_Project.Models.Entity
         public string FIRMAADI { get; set; }
         public string KOD5 { get; set; }
         public string IND { get; set; }
-        public Nullable<decimal> BAKIYE { get; set; }
+        public string BAKIYE { get; set; }
         public string SONSATISTARIHI { get; set; }
         public string SONTAHSILATTARIHI { get; set; }
         public string UNVAN { get; set; }

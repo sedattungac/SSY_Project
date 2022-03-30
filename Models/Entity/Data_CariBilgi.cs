@@ -19,7 +19,7 @@ namespace SSY_Project.Models.Entity
         public string ADRESFATURA { get; set; }
         public string ISTIHBARAT { get; set; }
         public bool SATISYAPILMASIN { get; set; }
-        public decimal BAKIYE { get; set; }
+        public string BAKIYE { get; set; }
         public string FIRMAKODU { get; set; }
         public string YETKILI { get; set; }
         public string VERGIDAIRESI { get; set; }

@@ -17,7 +17,7 @@ namespace SSY_Project.Models.Entity
         public string IND { get; set; }
         public string MALINCINSI { get; set; }
         public string KARTINACILMATARIHI { get; set; }
-        public decimal SATISFIYATI1 { get; set; }
+        public string SATISFIYATI1 { get; set; }
         public string SATISFIYATI2 { get; set; }
         public string KOD5 { get; set; }
         public string MALIYET { get; set; }

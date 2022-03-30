@@ -28,9 +28,9 @@ namespace SSY_Project.Models.Entity
         public string SONBAKIYE { get; set; }
         public string KOD5 { get; set; }
         public string STATUS { get; set; }
-        public decimal TLBORC { get; set; }
-        public decimal TLALACAK { get; set; }
-        public decimal TLBAKIYE { get; set; }
+        public string TLBORC { get; set; }
+        public string TLALACAK { get; set; }
+        public string TLBAKIYE { get; set; }
         public string PARABIRIMI { get; set; }
         public string UNVAN { get; set; }
         public string PERSONELNO { get; set; }

@@ -25,13 +25,13 @@ namespace SSY_Project.Models.Entity
         public string KDV { get; set; }
         public string GERCEKTOPLAM { get; set; }
         public string KDVTOPLAMI { get; set; }
-        public decimal KDVDAHILTOPLAM { get; set; }
-        public decimal BIRIMFIYAT { get; set; }
+        public string KDVDAHILTOPLAM { get; set; }
+        public string BIRIMFIYAT { get; set; }
         public string CARIIND { get; set; }
         public string KOD5 { get; set; }
         public string EVRAKNO { get; set; }
         public string BIRIM { get; set; }
-        public decimal MIKTAR { get; set; }
+        public string MIKTAR { get; set; }
         public string STOKIND { get; set; }
         public string GTARIH { get; set; }
     }

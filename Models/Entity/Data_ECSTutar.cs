@@ -14,7 +14,7 @@ namespace SSY_Project.Models.Entity
     
     public partial class Data_ECSTutar
     {
-        public decimal TUTAR { get; set; }
+        public string TUTAR { get; set; }
         public string STOKKODU { get; set; }
         public string MALINCINSI { get; set; }
         public string IND { get; set; }

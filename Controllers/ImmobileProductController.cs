@@ -13,7 +13,7 @@ namespace SSY_Project.Controllers
         // GET: ImmobileProduct
         public ActionResult Index()
         {
-            var value = db.Data_HareketsizUrun.ToList();
+            var value = db.Data_HareketsizUrun.OrderByDescending(x=>x.KARTINACILMATARIHI).ToList();
             return View(value);
         }
     }
