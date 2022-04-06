@@ -33,11 +33,11 @@
             <tbody>
                 @foreach (var customer in Model)
                 {
-                    var bakiye = Convert.ToDecimal(customer.BAKIYE);
+                   
                     <tr>
                         <td>@customer.FIRMAADI</td>
                         <td>@customer.UNVAN</td>
-                        <td>@String.Format("{0:C}", bakiye)</td>
+                        <td>@customer.BAKIYE ₺</td>
                         <td>@customer.KOD5</td>
 
                         <td>

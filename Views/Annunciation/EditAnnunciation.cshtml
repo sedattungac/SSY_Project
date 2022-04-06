@@ -1,0 +1,28 @@
+﻿@model SSY_Project.Models.Entity.Data_Duyurular
+
+@{
+    ViewBag.Title = "EditAnnunciation";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+
+<br />
+<h2>Duyuru Güncelleme</h2>
+<br />
+@using (Html.BeginForm("EditAnnunciation", "Annunciation", FormMethod.Post))
+{
+    <div style="color:black;" class="form-group">
+        @Html.HiddenFor(x => x.ID)
+
+        @Html.Label("Duyuru Konu")
+        @Html.TextBoxFor(x => x.KONU, new { @class = "form-control" })
+        <br />
+        @Html.Label("Duyuru İçerik")
+        @Html.TextAreaFor(x => x.ICERIK, 3, 20, new { @class = "form-control" })
+        <br />
+
+    </div>
+    <button class="btn btn-warning" id="Btn1">Güncelle</button>
+
+
+}
+

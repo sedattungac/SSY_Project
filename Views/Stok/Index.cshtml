@@ -29,15 +29,15 @@
             <tbody>
                 @foreach (var stok in Model)
                 {
-                    var satisfiyati = Convert.ToDecimal(stok.SATISFIYATI1);
-                    <tr style="text-align:center;">
+                                      <tr style="text-align:center;">
                         <td>@stok.STOKKODU</td>
                         <td>@stok.BARCODE</td>
                         <td>@stok.MALINCINSI</td>
                         <td>@stok.BIRIMADI</td>
                         <td>@stok.ENVANTER</td>
-                        <td>@String.Format("{0:C}", satisfiyati) ₺</td>
-                        @*<td>@stok.SATISFIYATI1 ₺</td>*@
+                        @*<td> @stok.ENVANTER.Substring(0, stok.ENVANTER.Substring(0, 10).LastIndexOf(".")),@stok.ENVANTER.Split('.').Last().Substring(0, 2)</td>
+                        <td>@stok.SATISFIYATI1.Split('.')[0],@stok.SATISFIYATI1.Split('.').Last().Substring(0, 2) </td>*@
+                        <td>@stok.SATISFIYATI1 ₺</td>
                         <td>@stok.KOD1</td>
                         <td>@stok.KOD5</td>
 

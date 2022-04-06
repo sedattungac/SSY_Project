@@ -10,6 +10,7 @@ namespace SSY_Project.Controllers
 {
     public class LoginController : Controller
     {
+        DatabaseEntities db = new DatabaseEntities();
         // GET: Login
         public ActionResult Index()
         {
@@ -18,13 +19,16 @@ namespace SSY_Project.Controllers
         [HttpPost]
         public ActionResult Index(Data_Users cari)
         {
-            DatabaseEntities db = new DatabaseEntities();
+
             var admininfo = db.Data_Users.FirstOrDefault(x => x.EMAIL == cari.EMAIL
               && x.PASSWORD == cari.PASSWORD);
             if (admininfo != null)
             {
                 FormsAuthentication.SetAuthCookie(admininfo.EMAIL, false);
                 Session["EMAIL"] = admininfo.EMAIL.ToString();
+                Session["USERNAME"] = admininfo.USERNAME.ToString();
+                Session["FOTOURL"] = admininfo.FOTO_URL.ToString();
+
                 return RedirectToAction("Index", "Welcome");
             }
             else
@@ -33,6 +37,12 @@ namespace SSY_Project.Controllers
                 return View("Index");
             }
 
+        }
+        public PartialViewResult Logo()
+        {
+            var logo = db.Data_Firma.Select(x => x.FIRMAADI).FirstOrDefault();
+            ViewBag.logo = logo;
+            return PartialView();
         }
         public ActionResult LogOut()
         {

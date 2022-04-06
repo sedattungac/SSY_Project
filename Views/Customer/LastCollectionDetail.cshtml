@@ -11,9 +11,9 @@
     <br />
     <div class="mt-3 row d-flex justify-content-center">
         @*<a class="btn btn-primary" href="/Customer/Index"><i class="fas fa-users"></i> Cari Listesi</a> &nbsp;
-        <a class="btn btn-primary" href="/Customer/CustomerDetail/@ViewBag.id"><i class="fas fa-users"></i> Cari Detayı</a> &nbsp;
-        <a class="btn btn-primary" href="/Customer/CustomerInfo/@ViewBag.id"><i class="fas fa-info"></i> Cari Bilgi</a> &nbsp;
-        <a class="btn btn-primary" href="/Customer/OldBillofSale/@ViewBag.id"><i class="fas fa-file "></i> Eski Satış Faturaları</a> &nbsp;*@
+            <a class="btn btn-primary" href="/Customer/CustomerDetail/@ViewBag.id"><i class="fas fa-users"></i> Cari Detayı</a> &nbsp;
+            <a class="btn btn-primary" href="/Customer/CustomerInfo/@ViewBag.id"><i class="fas fa-info"></i> Cari Bilgi</a> &nbsp;
+            <a class="btn btn-primary" href="/Customer/OldBillofSale/@ViewBag.id"><i class="fas fa-file "></i> Eski Satış Faturaları</a> &nbsp;*@
         <button class="btn btn-danger" id="Button2" onclick='javascript: history.go(-1)'><i class="fas fa-arrow-left"></i> Geri Dön</button>
     </div>
     <hr />
@@ -30,9 +30,13 @@
             <tbody>
                 @foreach (var customer in Model)
                 {
+                    var borc = Convert.ToDecimal(customer.TLBORC);
+                    var alacak = Convert.ToDecimal(customer.TLALACAK);
                     <tr>
                         <td>@customer.TLBORC ₺</td>
+                        @*<td> @String.Format("{0:C}", borc)</td>*@
                         <td>@customer.TLALACAK ₺</td>
+                        @*<td> @String.Format("{0:C}", alacak)</td>*@
                         <td>@customer.PARABIRIMI</td>
 
                     </tr>

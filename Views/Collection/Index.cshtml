@@ -26,17 +26,24 @@
             <tbody>
                 @foreach (var customer in Model)
                 {
-                    var date = Convert.ToDateTime(customer.TARIH);
-                    <tr>
-                        <td>@date.ToShortDateString()</td>
-                        <td>@customer.EVRAKNO</td>
-                        <td>@customer.TLBORC ₺</td>
-                        <td>@customer.TLALACAK ₺</td>
-                        <td>@customer.TLBAKIYE ₺</td>
-                        <td>@customer.PARABIRIMI</td>
+                    var borc = Convert.ToDecimal(customer.TLBORC);
+                    var alacak = Convert.ToDecimal(customer.TLALACAK);
+                    var bakiye = Convert.ToDecimal(customer.TLBAKIYE);
 
-                        @*<td><a class="btn btn-primary" href="/Customer/LastCollectionDetail/@customer.BELGEIND"><i class="fas fa-eye"></i> Detay</a></td>*@
-                    </tr>
+                    var date = Convert.ToDateTime(customer.TARIH);
+                <tr>
+                    <td>@date.ToShortDateString()</td>
+                    <td>@customer.EVRAKNO</td>
+                    @*<td>@customer.TLBORC ₺</td>*@
+                    <td> @String.Format("{0:C}", borc)</td>
+                    @*<td>@customer.TLALACAK ₺</td>*@
+                    <td> @String.Format("{0:C}", alacak)</td>
+                    @*<td>@customer.TLBAKIYE ₺</td>*@
+                    <td> @String.Format("{0:C}", bakiye)</td>
+                    <td>@customer.PARABIRIMI</td>
+
+                    @*<td><a class="btn btn-primary" href="/Customer/LastCollectionDetail/@customer.BELGEIND"><i class="fas fa-eye"></i> Detay</a></td>*@
+                </tr>
 
 
                 }

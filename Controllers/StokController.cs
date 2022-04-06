@@ -13,6 +13,8 @@ namespace SSY_Project.Controllers
         // GET: Stok
         public ActionResult Index()
         {
+            ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
+            ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
             var stokList = db.Data_StokList.ToList();
             return View(stokList);
         }

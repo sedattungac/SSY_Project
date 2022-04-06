@@ -12,17 +12,13 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_CariDetay
+    public partial class Data_Duyurular
     {
-        public string TARIH { get; set; }
-        public string BELGENO { get; set; }
-        public string ISLEMIZAHAT { get; set; }
-        public string BELGEIZAHAT { get; set; }
-        public string ALACAK { get; set; }
-        public string BORC { get; set; }
-        public string CARIIND { get; set; }
-        public string AB { get; set; }
-        public string KOD5 { get; set; }
+        public string KONU { get; set; }
+        public string ICERIK { get; set; }
+        public string GONDEREN { get; set; }
+        public string ALICI { get; set; }
+        public Nullable<System.DateTime> TARIH { get; set; }
         public int ID { get; set; }
     }
 }

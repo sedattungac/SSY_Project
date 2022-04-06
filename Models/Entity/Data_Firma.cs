@@ -12,17 +12,13 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_CariDetay
+    public partial class Data_Firma
     {
-        public string TARIH { get; set; }
-        public string BELGENO { get; set; }
-        public string ISLEMIZAHAT { get; set; }
-        public string BELGEIZAHAT { get; set; }
-        public string ALACAK { get; set; }
-        public string BORC { get; set; }
-        public string CARIIND { get; set; }
-        public string AB { get; set; }
-        public string KOD5 { get; set; }
         public int ID { get; set; }
+        public string FIRMAIND { get; set; }
+        public string DONEMIND { get; set; }
+        public string FIRMAADI { get; set; }
+        public string DONEM { get; set; }
+        public string LOGO { get; set; }
     }
 }

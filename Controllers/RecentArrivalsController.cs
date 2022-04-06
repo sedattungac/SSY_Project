@@ -13,6 +13,8 @@ namespace SSY_Project.Controllers
         // GET: RecentArrivals
         public ActionResult Index()
         {
+            ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
+            ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
             var value = db.Data_SonGelenler.OrderByDescending(x => x.IND).ToList();
             return View(value);
         }

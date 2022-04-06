@@ -1474,7 +1474,7 @@ Buttons.stripData = function ( str, config ) {
  * @static
  */
 Buttons.defaults = {
-	buttons: [ 'copy', 'excel', 'csv', 'pdf', 'print' ],
+	buttons: ['excel', 'pdf', 'print' ],
 	name: 'main',
 	tabIndex: 0,
 	dom: {

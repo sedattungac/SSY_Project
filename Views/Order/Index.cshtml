@@ -28,16 +28,36 @@
             <tbody>
                 @foreach (var order in Model)
                 {
-                    <tr>
-                        <td>@order.TARIH</td>
-                        <td>@order.MALINCINSI</td>
-                        <td>@order.SATISFIYATI1</td>
-                        <td>@order.KDVDAHIL</td>
-                        <td>@order.MIKTAR</td>
-                        <td>@order.TOPLAMKDV</td>
-                        <td>@order.ARATOPLAM</td>
-                        <td>@order.GENELTOPLAM</td>
 
+                    var tarih = Convert.ToDateTime(order.TARIH);
+                    var satisfiyati = Convert.ToDecimal(order.SATISFIYATI1);
+                    var toplamkdv = Convert.ToDecimal(order.TOPLAMKDV);
+                    var aratoplam = Convert.ToDecimal(order.ARATOPLAM);
+                    var geneltoplam = Convert.ToDecimal(order.GENELTOPLAM);
+
+
+                    <tr>
+                        <td>@tarih.ToShortDateString()</td>
+                        @*<td>@order.TARIH</td>*@
+                        <td>@order.MALINCINSI</td>
+                        @*<td>@order.SATISFIYATI1</td>*@
+                        <td>@String.Format("{0:C}", satisfiyati)</td>
+                        @if (order.KDVDAHIL == "True")
+                        {
+                            <td>Evet</td>
+                        }
+                        else
+                        {
+                            <td>Hayır</td>
+                        }
+                        @*<td>@order.KDVDAHIL</td>*@
+                        <td>@order.MIKTAR</td>
+                        @*<td>@order.TOPLAMKDV</td>*@
+                        <td>@String.Format("{0:C}", toplamkdv)</td>
+                        @*<td>@order.ARATOPLAM</td>*@
+                        <td>@String.Format("{0:C}", aratoplam)</td>
+                        @*<td>@order.GENELTOPLAM</td>*@
+                        <td>@String.Format("{0:C}", geneltoplam)</td>
                     </tr>
                 }
             </tbody>

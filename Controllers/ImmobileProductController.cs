@@ -13,6 +13,8 @@ namespace SSY_Project.Controllers
         // GET: ImmobileProduct
         public ActionResult Index()
         {
+            ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
+            ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
             var value = db.Data_HareketsizUrun.OrderByDescending(x=>x.KARTINACILMATARIHI).ToList();
             return View(value);
         }

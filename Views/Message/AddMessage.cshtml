@@ -1,0 +1,212 @@
+﻿@model SSY_Project.Models.Entity.Data_Mesajlar
+
+@{
+    ViewBag.Title = "AddMessage";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+
+<html>
+
+
+
+<body class="hold-transition sidebar-mini">
+
+
+    <!-- Content Header (Page header) -->
+
+    <section class="content-header">
+
+        <div class="container-fluid">
+
+            <div class="row mb-2">
+
+                <div>
+                    <div style="text-align:left">
+                        <h1>Yeni Mesaj Oluştur</h1>
+
+                    </div>
+                                   
+                </div>
+
+
+
+            </div>
+
+        </div><!-- /.container-fluid -->
+
+    </section>
+
+    <!-- Main content -->
+
+    <section class="content">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <a href="/Message/Inbox" class="btn btn-primary btn-block mb-3">Gelen Kutusu</a>
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <h3 class="card-title">Klasörler</h3>
+
+                            <div class="card-tools">
+
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+
+                                    <i class="fas fa-minus"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body p-0">
+
+                            <ul class="nav nav-pills flex-column">
+
+                                <li class="nav-item active">
+
+                                    <a href="/Message/Inbox/" class="nav-link">
+
+                                        <i class="fas fa-inbox"></i> Gelen Kutusu
+
+                                        <span class="badge bg-primary float-right">@ViewBag.d1</span>
+
+                                    </a>
+
+                                </li>
+
+                                <li class="nav-item">
+
+                                    <a href="/Message/SentMessage/" class="nav-link">
+
+                                        <i class="far fa-envelope"></i> Gönderilen Mesajlar
+                                        <span class="badge bg-olive float-right">@ViewBag.d2</span>
+
+                                    </a>
+
+                                </li>
+
+                                <li class="nav-item">
+
+                                    <a href="/Message/Recycle/" class="nav-link">
+
+                                        <i class="far fa-trash-alt"></i> Çöp Kutusu
+                                        <span class="badge bg-danger float-right">@ViewBag.d3</span>
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <!-- /.card-body -->
+
+                    </div>
+
+                    <!-- /.card -->
+                    <!-- /.card -->
+
+                </div>
+
+                <!-- /.col -->
+
+                <div class="col-md-9">
+
+                    <div class="card card-primary card-outline">
+
+                        <div class="card-header">
+                            <div style="text-align:left">
+                                <h3 class="card-title">Mesaj Yaz</h3>
+                            </div>
+
+
+                        </div>
+
+                        <!-- /.card-header -->
+                        <form class="form-group" method="post">
+
+                            <div class="card-body">
+
+                                <div class="form-group">
+
+                                    <input class="form-control" name="ALICI" placeholder="Kime:">
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <input class="form-control" name="KONU" placeholder="Konu:">
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <textarea id="compose-textarea" name="ICERIK" class="form-control" rows="8"> </textarea>
+
+                                </div>
+                                <div>
+
+                                    <div class="float-right">
+
+                                        <button type="submit" class="btn btn-primary"><i class="far fa-envelope"></i> Gönder</button>
+
+
+
+                                    </div>
+
+                                    <a href="/Mesaj/GelenMesajlar/" class="btn btn-default"><i class="fas fa-times"></i> Vazgeç</a>
+
+                                </div>
+
+
+
+
+                            </div>
+                        </form>
+                        <!-- /.card-body -->
+                        <!-- /.card-footer -->
+
+                    </div>
+
+                    <!-- /.card -->
+
+                </div>
+
+                <!-- /.col -->
+
+            </div>
+
+            <!-- /.row -->
+
+        </div><!-- /.container-fluid -->
+
+    </section>
+
+    <!-- /.content -->
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+
+
+
+    <script>
+        $(function () {
+
+            //Add text editor
+
+            $('#compose-textarea').summernote()
+
+        })</script>
+
+</body>
+
+</html>
+

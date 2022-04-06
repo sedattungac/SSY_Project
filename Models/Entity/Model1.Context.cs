@@ -25,7 +25,6 @@ namespace SSY_Project.Models.Entity
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Data_CariDetay> Data_CariDetay { get; set; }
         public virtual DbSet<Data_CariList> Data_CariList { get; set; }
         public virtual DbSet<Data_Users> Data_Users { get; set; }
         public virtual DbSet<Data_AlinanCekler> Data_AlinanCekler { get; set; }
@@ -48,5 +47,9 @@ namespace SSY_Project.Models.Entity
         public virtual DbSet<Data_TahsDet> Data_TahsDet { get; set; }
         public virtual DbSet<Data_Tahsilat> Data_Tahsilat { get; set; }
         public virtual DbSet<Data_VerilenCekler> Data_VerilenCekler { get; set; }
+        public virtual DbSet<Data_CariDetay> Data_CariDetay { get; set; }
+        public virtual DbSet<Data_Duyurular> Data_Duyurular { get; set; }
+        public virtual DbSet<Data_Firma> Data_Firma { get; set; }
+        public virtual DbSet<Data_Mesajlar> Data_Mesajlar { get; set; }
     }
 }

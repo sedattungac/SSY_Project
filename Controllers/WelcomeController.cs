@@ -20,8 +20,9 @@ namespace SSY_Project.Controllers
             ViewBag.adminad = adminad;
             var adminmail = db.Data_Users.Where(x => x.EMAIL == mail).Select(y => y.EMAIL).FirstOrDefault();
             ViewBag.adminmail = adminmail;
-            var firma = db.Data_Users.Where(x => x.EMAIL == mail).Select(y => y.STATUS).FirstOrDefault();
+            var firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
             ViewBag.firma = firma;
+            ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
             return View(degerler);
         }
     }

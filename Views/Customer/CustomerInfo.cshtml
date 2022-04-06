@@ -37,6 +37,8 @@
             <tbody>
                 @foreach (var customer in Model)
                 {
+                    var bakiye = Convert.ToDecimal(customer.BAKIYE);
+
                     <tr>
 
                         <td>@customer.RESIM</td>
@@ -51,7 +53,9 @@
                             <td>Satış Yapılsın</td>
                         }
 
-                        <td>@customer.BAKIYE ₺</td>
+                        @*<td>@customer.BAKIYE ₺</td>*@
+                        <td> @String.Format("{0:C}", bakiye)</td>
+
                         <td>@customer.YETKILI</td>
                         <td>@customer.VERGIDAIRESI</td>
                         <td>@customer.VERGINO</td>
