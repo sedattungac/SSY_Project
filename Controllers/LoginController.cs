@@ -38,12 +38,7 @@ namespace SSY_Project.Controllers
             }
 
         }
-        public PartialViewResult Logo()
-        {
-            var logo = db.Data_Firma.Select(x => x.FIRMAADI).FirstOrDefault();
-            ViewBag.logo = logo;
-            return PartialView();
-        }
+       
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();

@@ -172,6 +172,7 @@
     <Compile Include="Controllers\AnnunciationController.cs" />
     <Compile Include="Controllers\CollectionController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\ECSController.cs" />
     <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\ImmobileProductController.cs" />
@@ -2390,6 +2391,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\indir-removebg-preview.png" />
     <Content Include="Image\logoanasayfa2.png" />
     <Content Include="Models\Entity\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -2810,7 +2812,13 @@
     <Content Include="Views\Annunciation\Index.cshtml" />
     <Content Include="Views\Annunciation\AddAnnunciation.cshtml" />
     <Content Include="Views\Annunciation\EditAnnunciation.cshtml" />
-    <Content Include="Views\Login\Logo.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Dashboard\Statistic.cshtml" />
+    <Content Include="Views\Dashboard\AreaChart.cshtml" />
+    <Content Include="Views\Dashboard\PieChart.cshtml" />
+    <Content Include="Views\Dashboard\BarChart.cshtml" />
+    <Content Include="Views\Dashboard\DonutChart.cshtml" />
+    <Content Include="Views\Dashboard\Weather.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
