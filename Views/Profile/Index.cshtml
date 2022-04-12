@@ -5,225 +5,142 @@
     Layout = "~/Views/Shared/_ProjectLayout.cshtml";
 }
 
+<div class="wrapper">
 
-<!DOCTYPE html>
+    <section class="content-header">
 
-<html>
+        <div class="container-fluid">
 
+            <div class="row mb-2">
 
+                <div class="col-sm-6">
 
-<body class="hold-transition sidebar-mini">
-
-    <div class="wrapper">
-
-        <!-- Navbar -->
-        <!-- /.navbar -->
-        <!-- Content Wrapper. Contains page content -->
-        <!-- Content Header (Page header) -->
-
-        <section class="content-header">
-
-            <div class="container-fluid">
-
-                <div class="row mb-2">
-
-                    <div class="col-sm-6">
-
-                        <h1>Profilim</h1>
-
-                    </div>
-
-
+                    <h1>Profilim</h1>
 
                 </div>
 
-            </div><!-- /.container-fluid -->
+            </div>
 
-        </section>
+        </div>
 
-        <!-- Main content -->
-
-        <section class="content">
-
-            <div class="container-fluid">
-
-                <div class="row">
-
-                    <div class="col-md-3">
-
-                        <!-- Profile Image -->
-
-                        <div class="card card-primary card-outline">
-
-                            <div class="card-body box-profile">
-
-                                <div class="text-center">
-
-                                    <img class="profile-user-img img-fluid img-circle" style=""
-                                         src="@ViewBag.image"
-                                         alt="User profile picture">
-
-                                </div>
+    </section>
 
 
+    <section class="content">
 
-                                <h3 class="profile-username text-center">@ViewBag.firma</h3>
+        <div class="container-fluid">
 
-                                <p class="text-muted text-center">@ViewBag.m</p>
+            <div class="row">
 
-                                <ul class="list-group list-group-unbordered mb-3">
+                <div class="col-md-3">
 
-                                    @*<li class="list-group-item">
 
-                                            <b>Toplam Satış:</b> <a class="float-right">@ViewBag.toplamsatis</a>
+                    <div class="card card-primary card-outline">
 
-                                        </li>*@
+                        <div class="card-body box-profile">
 
-                                    @*<li class="list-group-item">
+                            <div class="text-center">
 
-                                            <b>Toplam Satış Tutar:</b> <a class="float-right">@ViewBag.toplamtutar ₺</a>
-
-                                        </li>
-
-                                        <li class="list-group-item">
-
-                                            <b>Toplam Ürün Sayısı:</b> <a class="float-right">@ViewBag.toplamurunsayisi</a>
-
-                                        </li>*@
-
-                                </ul>
-
+                                <img class="profile-user-img img-fluid img-circle" style=""
+                                     src="@ViewBag.image"
+                                     alt="User profile picture">
 
                             </div>
 
-                            <!-- /.card-body -->
+                            <h3 class="profile-username text-center">@ViewBag.firma</h3>
+
+                            <p class="text-muted text-center">@ViewBag.m</p>
+
+                            <ul class="list-group list-group-unbordered mb-3">
+
+                                @*<li class="list-group-item">
+
+                                        <b>Toplam Satış:</b> <a class="float-right">@ViewBag.toplamsatis</a>
+
+                                    </li>*@
+
+                                @*<li class="list-group-item">
+
+                                        <b>Toplam Satış Tutar:</b> <a class="float-right">@ViewBag.toplamtutar ₺</a>
+
+                                    </li>
+
+                                    <li class="list-group-item">
+
+                                        <b>Toplam Ürün Sayısı:</b> <a class="float-right">@ViewBag.toplamurunsayisi</a>
+
+                                    </li>*@
+
+                            </ul>
 
                         </div>
-
-                        <!-- /.card -->
-                        <!-- About Me Box -->
-
-                        <div class="card card-primary">
-
-                            <div class="card-header">
-
-                                <h3 class="card-title">Hakkımda</h3>
-
-                            </div>
-
-                            <!-- /.card-header -->
-
-
-
-                            <div class="card-body">
-
-                                <strong><i class="fas fa-user-tie"></i> Ünvan</strong>
-                              
-                                    <p class="text-muted">
-
-                                        Firma
-
-                                    </p>
-                               
-
-                                <hr>
-
-                                <strong><i class="fas fa-user-alt mr-1"></i> Yetkili</strong>
-
-                                <p class="text-muted">@ViewBag.firmaadres</p>
-
-                                <hr>
-
-                                <strong><i class="fas fa-phone"></i> Telefon</strong>
-
-
-                                <p class="text-muted">@ViewBag.firmatelefon</p>
-
-                                <hr>
-
-                                <strong><i class="fas fa-envelope "></i> Mail </strong>
-
-                                <p class="text-muted">@ViewBag.firmamail</p>
-
-                                <hr>
-
-                            </div>
-
-                            <!-- /.card-body -->
-
-                        </div>
-
-                        <!-- /.card -->
 
                     </div>
 
-                    <!-- /.col -->
+                    <div class="card card-primary">
 
-                    <div class="col-md-9">
+                        <div class="card-header">
 
-                        <div class="card">
-
-                            <div class="card-header p-2">
-
-                                <ul class="nav nav-pills">
-
-
-
-                                    <li class="nav-item"><a class="nav-link active" href="#settings" data-toggle="tab">Profil Bilgilerini Düzenle</a></li>
-
-
-                                </ul>
-
-                            </div><!-- /.card-header -->
-
-                            <div class="card-body">
-
-                                <div class="tab-content">
-
-
-
-                                    <div class="tab-pane" id="settings activity">
-
-
-                                        @Html.Action("Edit", "Profile")
-                                    </div>
-
-                                    <!-- /.tab-pane -->
-
-                                </div>
-
-                                <!-- /.tab-content -->
-
-                            </div><!-- /.card-body -->
+                            <h3 class="card-title">Hakkımda</h3>
 
                         </div>
 
-                        <!-- /.nav-tabs-custom -->
+                        <div class="card-body">
+                            <strong><i class="fas fa-user-tie"></i> Ünvan</strong>
+                            <p class="text-muted">Firma</p>
+                            <hr>
+                            <strong><i class="fas fa-user-alt mr-1"></i> Yetkili</strong>
+                            <p class="text-muted">@ViewBag.firmaadres</p>
+                            <hr>
+                            <strong><i class="fas fa-phone"></i> Telefon</strong>
+                            <p class="text-muted">@ViewBag.firmatelefon</p>
+                            <hr>
+                            <strong><i class="fas fa-envelope "></i> Mail </strong>
+                            <p class="text-muted">@ViewBag.firmamail</p>
+                            <hr>
+                        </div>
 
                     </div>
-
-                    <!-- /.col -->
 
                 </div>
 
-                <!-- /.row -->
+                <div class="col-md-9">
 
-            </div><!-- /.container-fluid -->
+                    <div class="card">
 
-        </section>
+                        <div class="card-header p-2">
 
-        <!-- /.content -->
+                            <ul class="nav nav-pills">
+                                <li class="nav-item"><a class="nav-link active" href="#settings" data-toggle="tab">Profil Bilgilerini Düzenle</a></li>
+                            </ul>
 
-    </div>
+                        </div>
 
-    <!-- /.content-wrapper -->
-    <!-- /.control-sidebar -->
-    <!-- ./wrapper -->
-    <!-- jQuery -->
+                        <div class="card-body">
+
+                            <div class="tab-content">
+
+                                <div class="active tab-pane" id="settings activity">
+                                    @Html.Action("Edit", "Profile")
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
 
 
 
-</body>
 
-</html>
 

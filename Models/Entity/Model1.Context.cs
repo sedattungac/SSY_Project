@@ -31,11 +31,7 @@ namespace SSY_Project.Models.Entity
         public virtual DbSet<Data_Mesajlar> Data_Mesajlar { get; set; }
         public virtual DbSet<Data_Users> Data_Users { get; set; }
         public virtual DbSet<Data_CariBilgi> Data_CariBilgi { get; set; }
-        public virtual DbSet<Data_ECSCari> Data_ECSCari { get; set; }
-        public virtual DbSet<Data_ECSTutar> Data_ECSTutar { get; set; }
-        public virtual DbSet<Data_ECSUrunler> Data_ECSUrunler { get; set; }
         public virtual DbSet<Data_FiyatDegisen> Data_FiyatDegisen { get; set; }
-        public virtual DbSet<Data_GecList> Data_GecList { get; set; }
         public virtual DbSet<Data_GecSipList> Data_GecSipList { get; set; }
         public virtual DbSet<Data_GecTahsilat> Data_GecTahsilat { get; set; }
         public virtual DbSet<Data_HareketsizUrun> Data_HareketsizUrun { get; set; }
@@ -43,8 +39,12 @@ namespace SSY_Project.Models.Entity
         public virtual DbSet<Data_SatFat> Data_SatFat { get; set; }
         public virtual DbSet<Data_SatFatDet> Data_SatFatDet { get; set; }
         public virtual DbSet<Data_SonGelenler> Data_SonGelenler { get; set; }
-        public virtual DbSet<Data_StokList> Data_StokList { get; set; }
         public virtual DbSet<Data_TahsDet> Data_TahsDet { get; set; }
         public virtual DbSet<Data_Tahsilat> Data_Tahsilat { get; set; }
+        public virtual DbSet<Data_ECSTutar> Data_ECSTutar { get; set; }
+        public virtual DbSet<Data_ECSUrunler> Data_ECSUrunler { get; set; }
+        public virtual DbSet<Data_ECSCari> Data_ECSCari { get; set; }
+        public virtual DbSet<Data_Extre> Data_Extre { get; set; }
+        public virtual DbSet<Data_StokList> Data_StokList { get; set; }
     }
 }

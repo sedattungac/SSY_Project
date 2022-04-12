@@ -14,12 +14,11 @@ namespace SSY_Project.Models.Entity
     
     public partial class Data_ECSCari
     {
-        public string TUTAR { get; set; }
+        public int IND { get; set; }
+        public Nullable<decimal> TUTAR { get; set; }
         public string FIRMAADI { get; set; }
         public string FIRMAKODU { get; set; }
-        public string KOD5 { get; set; }
         public string UNVAN { get; set; }
-        public string PERSONELNO { get; set; }
         public string GTARIH { get; set; }
     }
 }

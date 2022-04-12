@@ -18,7 +18,6 @@ namespace SSY_Project.Models.Entity
         public string KOD5 { get; set; }
         public string IND { get; set; }
         public string BAKIYE { get; set; }
-        public string SONSATISTARIHI { get; set; }
         public string SONTAHSILATTARIHI { get; set; }
         public string UNVAN { get; set; }
         public string PERSONELNO { get; set; }

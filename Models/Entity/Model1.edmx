@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="u0524050_dbFB1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="u0524050_dbFB1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_CariBilgi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Data_CariBilgi">
@@ -72,77 +72,57 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_CariBilgi' does not have a
           <Property Name="TARIH" Type="datetime" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_ECSCari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Data_ECSCari">
           <Key>
-            <PropertyRef Name="TUTAR" />
-            <PropertyRef Name="FIRMAADI" />
-            <PropertyRef Name="FIRMAKODU" />
-            <PropertyRef Name="KOD5" />
-            <PropertyRef Name="UNVAN" />
-            <PropertyRef Name="PERSONELNO" />
-            <PropertyRef Name="GTARIH" />
+            <PropertyRef Name="IND" />
           </Key>
-          <Property Name="TUTAR" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="FIRMAADI" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="FIRMAKODU" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="KOD5" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="UNVAN" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="PERSONELNO" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="GTARIH" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="IND" Type="int" Nullable="false" />
+          <Property Name="TUTAR" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="FIRMAADI" Type="varchar" MaxLength="255" />
+          <Property Name="FIRMAKODU" Type="varchar" MaxLength="255" />
+          <Property Name="UNVAN" Type="varchar" MaxLength="255" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="255" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_ECSTutar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Data_ECSTutar">
           <Key>
-            <PropertyRef Name="TUTAR" />
-            <PropertyRef Name="STOKKODU" />
-            <PropertyRef Name="MALINCINSI" />
             <PropertyRef Name="IND" />
-            <PropertyRef Name="KOD1" />
-            <PropertyRef Name="GTARIH" />
           </Key>
-          <Property Name="TUTAR" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="STOKKODU" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="IND" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="KOD1" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IND" Type="int" Nullable="false" />
+          <Property Name="TUTAR" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="STOKKODU" Type="varchar" MaxLength="255" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_ECSUrunler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Data_ECSUrunler">
           <Key>
-            <PropertyRef Name="STOKKODU" />
-            <PropertyRef Name="MALINCINSI" />
-            <PropertyRef Name="SATILANMIKTAR" />
             <PropertyRef Name="IND" />
-            <PropertyRef Name="KOD1" />
-            <PropertyRef Name="BIRIM" />
-            <PropertyRef Name="GTARIH" />
           </Key>
-          <Property Name="STOKKODU" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="SATILANMIKTAR" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="IND" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="KOD1" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="BIRIM" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IND" Type="int" Nullable="false" />
+          <Property Name="STOKKODU" Type="varchar" MaxLength="500" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" />
+          <Property Name="CIKAN" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="GTARIH" Type="varchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6013: The table/view 'u0524050_dbFB1.dbo.Data_Extre' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Extre' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Data_Extre">
-          <Property Name="FIRMANO" Type="nvarchar" MaxLength="50" />
+          <Key>
+            <PropertyRef Name="FIRMANO" />
+          </Key>
+          <Property Name="FIRMANO" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BASLIKPARABIRIMI" Type="nvarchar" MaxLength="50" />
           <Property Name="EVRAKTIPI" Type="nvarchar" MaxLength="50" />
           <Property Name="TARIH" Type="nvarchar" MaxLength="50" />
+          <Property Name="BELGEIZAHAT" Type="nvarchar" MaxLength="50" />
+          <Property Name="ISLEMIZAHAT" Type="nvarchar" MaxLength="50" />
           <Property Name="BELGENO" Type="nvarchar" MaxLength="50" />
           <Property Name="BORC" Type="nvarchar" MaxLength="50" />
           <Property Name="ALACAK" Type="nvarchar" MaxLength="50" />
           <Property Name="BAKIYE" Type="nvarchar" MaxLength="50" />
           <Property Name="BELGEIND" Type="nvarchar" MaxLength="50" />
           <Property Name="PARABIRIMI" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
+          <Property Name="GTARIH" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Data_Firma">
           <Key>
             <PropertyRef Name="ID" />
@@ -185,60 +165,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_FiyatDegisen' does not hav
           <Property Name="FIYATDEGISMETARIHI1" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="KOD1" Type="varchar" MaxLength="50" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_GecList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_GecList">
-          <Key>
-            <PropertyRef Name="IND" />
-            <PropertyRef Name="TARIH" />
-            <PropertyRef Name="FIRMANO" />
-            <PropertyRef Name="STOKKODU" />
-            <PropertyRef Name="MALINCINSI" />
-            <PropertyRef Name="FIRMAKODU" />
-            <PropertyRef Name="FIRMAADI" />
-            <PropertyRef Name="EVRAKCINSI" />
-            <PropertyRef Name="SATISFIYATI1" />
-            <PropertyRef Name="SBIRIMADI" />
-            <PropertyRef Name="SMIKTAR" />
-            <PropertyRef Name="BIRIMADI" />
-            <PropertyRef Name="KDVDAHIL" />
-            <PropertyRef Name="BARCODE" />
-            <PropertyRef Name="EVRAKNO" />
-            <PropertyRef Name="KDV" />
-            <PropertyRef Name="CIKAN" />
-            <PropertyRef Name="MIKTAR" />
-            <PropertyRef Name="BIRIMMALIYET" />
-            <PropertyRef Name="BIRIMFIYAT" />
-            <PropertyRef Name="TOPLAMKDV" />
-            <PropertyRef Name="ARATOPLAM" />
-            <PropertyRef Name="GENELTOPLAM" />
-            <PropertyRef Name="GTARIH" />
-          </Key>
-          <Property Name="IND" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="TARIH" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="FIRMANO" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="STOKKODU" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="MALINCINSI" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="FIRMAKODU" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="FIRMAADI" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="EVRAKCINSI" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="SBIRIMADI" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="SMIKTAR" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="BIRIMADI" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="KDVDAHIL" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="BARCODE" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="EVRAKNO" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="KDV" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="CIKAN" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="MIKTAR" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="BIRIMMALIYET" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="BIRIMFIYAT" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="TOPLAMKDV" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="ARATOPLAM" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="GENELTOPLAM" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="GTARIH" Type="varchar" MaxLength="250" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_GecSipList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -298,7 +224,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_GecTahsilat' does not have
             <PropertyRef Name="KOD5" />
             <PropertyRef Name="IND" />
             <PropertyRef Name="BAKIYE" />
-            <PropertyRef Name="SONSATISTARIHI" />
             <PropertyRef Name="SONTAHSILATTARIHI" />
             <PropertyRef Name="UNVAN" />
             <PropertyRef Name="PERSONELNO" />
@@ -308,7 +233,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_GecTahsilat' does not have
           <Property Name="KOD5" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="BAKIYE" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="SONSATISTARIHI" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="SONTAHSILATTARIHI" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="UNVAN" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="PERSONELNO" Type="varchar" MaxLength="500" Nullable="false" />
@@ -471,34 +395,21 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_SonGelenler' does not have
           <Property Name="KOD1" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_StokList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Data_StokList">
           <Key>
-            <PropertyRef Name="IND" />
             <PropertyRef Name="STOKKODU" />
-            <PropertyRef Name="MALINCINSI" />
-            <PropertyRef Name="KOD5" />
-            <PropertyRef Name="KDVGRUBU" />
-            <PropertyRef Name="ENVANTER" />
-            <PropertyRef Name="STATUS" />
-            <PropertyRef Name="SATISFIYATI1" />
-            <PropertyRef Name="BARCODE" />
-            <PropertyRef Name="BIRIMADI" />
           </Key>
-          <Property Name="IND" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="STOKKODU" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="KOD5" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="KDVGRUBU" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ENVANTER" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="STATUS" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="BARCODE" Type="varchar" MaxLength="200" Nullable="false" />
-          <Property Name="BIRIMADI" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MALINCINSI" Type="varchar" MaxLength="500" />
+          <Property Name="KOD5" Type="varchar" MaxLength="100" />
+          <Property Name="KDVGRUBU" Type="varchar" MaxLength="50" />
+          <Property Name="ENVANTER" Type="varchar" MaxLength="50" />
+          <Property Name="STATUS" Type="varchar" MaxLength="50" />
+          <Property Name="SATISFIYATI1" Type="varchar" MaxLength="50" />
+          <Property Name="BARCODE" Type="varchar" MaxLength="200" />
+          <Property Name="BIRIMADI" Type="varchar" MaxLength="50" />
           <Property Name="KOD1" Type="varchar" MaxLength="50" />
           <Property Name="GTARIH" Type="varchar" MaxLength="50" />
-          <Property Name="ADET" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_TahsDet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -613,8 +524,12 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
         <EntityContainer Name="u0524050_dbFB1ModelStoreContainer">
           <EntitySet Name="Data_CariList" EntityType="Self.Data_CariList" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_Duyurular" EntityType="Self.Data_Duyurular" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_ECSCari" EntityType="Self.Data_ECSCari" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_ECSTutar" EntityType="Self.Data_ECSTutar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_ECSUrunler" EntityType="Self.Data_ECSUrunler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_Firma" EntityType="Self.Data_Firma" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_Mesajlar" EntityType="Self.Data_Mesajlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_StokList" EntityType="Self.Data_StokList" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_Users" EntityType="Self.Data_Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_CariBilgi" EntityType="Self.Data_CariBilgi" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -637,37 +552,22 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
     [Data_CariBilgi].[GTARIH] AS [GTARIH]
     FROM [dbo].[Data_CariBilgi] AS [Data_CariBilgi]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_ECSCari" EntityType="Self.Data_ECSCari" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="Data_Extre" EntityType="Self.Data_Extre" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Data_ECSCari].[TUTAR] AS [TUTAR], 
-    [Data_ECSCari].[FIRMAADI] AS [FIRMAADI], 
-    [Data_ECSCari].[FIRMAKODU] AS [FIRMAKODU], 
-    [Data_ECSCari].[KOD5] AS [KOD5], 
-    [Data_ECSCari].[UNVAN] AS [UNVAN], 
-    [Data_ECSCari].[PERSONELNO] AS [PERSONELNO], 
-    [Data_ECSCari].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_ECSCari] AS [Data_ECSCari]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Data_ECSTutar" EntityType="Self.Data_ECSTutar" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Data_ECSTutar].[TUTAR] AS [TUTAR], 
-    [Data_ECSTutar].[STOKKODU] AS [STOKKODU], 
-    [Data_ECSTutar].[MALINCINSI] AS [MALINCINSI], 
-    [Data_ECSTutar].[IND] AS [IND], 
-    [Data_ECSTutar].[KOD1] AS [KOD1], 
-    [Data_ECSTutar].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_ECSTutar] AS [Data_ECSTutar]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Data_ECSUrunler" EntityType="Self.Data_ECSUrunler" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Data_ECSUrunler].[STOKKODU] AS [STOKKODU], 
-    [Data_ECSUrunler].[MALINCINSI] AS [MALINCINSI], 
-    [Data_ECSUrunler].[SATILANMIKTAR] AS [SATILANMIKTAR], 
-    [Data_ECSUrunler].[IND] AS [IND], 
-    [Data_ECSUrunler].[KOD1] AS [KOD1], 
-    [Data_ECSUrunler].[BIRIM] AS [BIRIM], 
-    [Data_ECSUrunler].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_ECSUrunler] AS [Data_ECSUrunler]</DefiningQuery>
+    [Data_Extre].[FIRMANO] AS [FIRMANO], 
+    [Data_Extre].[BASLIKPARABIRIMI] AS [BASLIKPARABIRIMI], 
+    [Data_Extre].[EVRAKTIPI] AS [EVRAKTIPI], 
+    [Data_Extre].[TARIH] AS [TARIH], 
+    [Data_Extre].[BELGEIZAHAT] AS [BELGEIZAHAT], 
+    [Data_Extre].[ISLEMIZAHAT] AS [ISLEMIZAHAT], 
+    [Data_Extre].[BELGENO] AS [BELGENO], 
+    [Data_Extre].[BORC] AS [BORC], 
+    [Data_Extre].[ALACAK] AS [ALACAK], 
+    [Data_Extre].[BAKIYE] AS [BAKIYE], 
+    [Data_Extre].[BELGEIND] AS [BELGEIND], 
+    [Data_Extre].[PARABIRIMI] AS [PARABIRIMI], 
+    [Data_Extre].[GTARIH] AS [GTARIH]
+    FROM [dbo].[Data_Extre] AS [Data_Extre]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="Data_FiyatDegisen" EntityType="Self.Data_FiyatDegisen" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -686,34 +586,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
     [Data_FiyatDegisen].[KOD1] AS [KOD1], 
     [Data_FiyatDegisen].[GTARIH] AS [GTARIH]
     FROM [dbo].[Data_FiyatDegisen] AS [Data_FiyatDegisen]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Data_GecList" EntityType="Self.Data_GecList" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Data_GecList].[IND] AS [IND], 
-    [Data_GecList].[TARIH] AS [TARIH], 
-    [Data_GecList].[FIRMANO] AS [FIRMANO], 
-    [Data_GecList].[STOKKODU] AS [STOKKODU], 
-    [Data_GecList].[MALINCINSI] AS [MALINCINSI], 
-    [Data_GecList].[FIRMAKODU] AS [FIRMAKODU], 
-    [Data_GecList].[FIRMAADI] AS [FIRMAADI], 
-    [Data_GecList].[EVRAKCINSI] AS [EVRAKCINSI], 
-    [Data_GecList].[SATISFIYATI1] AS [SATISFIYATI1], 
-    [Data_GecList].[SBIRIMADI] AS [SBIRIMADI], 
-    [Data_GecList].[SMIKTAR] AS [SMIKTAR], 
-    [Data_GecList].[BIRIMADI] AS [BIRIMADI], 
-    [Data_GecList].[KDVDAHIL] AS [KDVDAHIL], 
-    [Data_GecList].[BARCODE] AS [BARCODE], 
-    [Data_GecList].[EVRAKNO] AS [EVRAKNO], 
-    [Data_GecList].[KDV] AS [KDV], 
-    [Data_GecList].[CIKAN] AS [CIKAN], 
-    [Data_GecList].[MIKTAR] AS [MIKTAR], 
-    [Data_GecList].[BIRIMMALIYET] AS [BIRIMMALIYET], 
-    [Data_GecList].[BIRIMFIYAT] AS [BIRIMFIYAT], 
-    [Data_GecList].[TOPLAMKDV] AS [TOPLAMKDV], 
-    [Data_GecList].[ARATOPLAM] AS [ARATOPLAM], 
-    [Data_GecList].[GENELTOPLAM] AS [GENELTOPLAM], 
-    [Data_GecList].[GTARIH] AS [GTARIH]
-    FROM [dbo].[Data_GecList] AS [Data_GecList]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="Data_GecSipList" EntityType="Self.Data_GecSipList" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -747,7 +619,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
     [Data_GecTahsilat].[KOD5] AS [KOD5], 
     [Data_GecTahsilat].[IND] AS [IND], 
     [Data_GecTahsilat].[BAKIYE] AS [BAKIYE], 
-    [Data_GecTahsilat].[SONSATISTARIHI] AS [SONSATISTARIHI], 
     [Data_GecTahsilat].[SONTAHSILATTARIHI] AS [SONTAHSILATTARIHI], 
     [Data_GecTahsilat].[UNVAN] AS [UNVAN], 
     [Data_GecTahsilat].[PERSONELNO] AS [PERSONELNO], 
@@ -832,23 +703,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
     [Data_SonGelenler].[GTARIH] AS [GTARIH]
     FROM [dbo].[Data_SonGelenler] AS [Data_SonGelenler]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Data_StokList" EntityType="Self.Data_StokList" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Data_StokList].[IND] AS [IND], 
-    [Data_StokList].[STOKKODU] AS [STOKKODU], 
-    [Data_StokList].[MALINCINSI] AS [MALINCINSI], 
-    [Data_StokList].[KOD5] AS [KOD5], 
-    [Data_StokList].[KDVGRUBU] AS [KDVGRUBU], 
-    [Data_StokList].[ENVANTER] AS [ENVANTER], 
-    [Data_StokList].[STATUS] AS [STATUS], 
-    [Data_StokList].[SATISFIYATI1] AS [SATISFIYATI1], 
-    [Data_StokList].[BARCODE] AS [BARCODE], 
-    [Data_StokList].[BIRIMADI] AS [BIRIMADI], 
-    [Data_StokList].[KOD1] AS [KOD1], 
-    [Data_StokList].[GTARIH] AS [GTARIH], 
-    [Data_StokList].[ADET] AS [ADET]
-    FROM [dbo].[Data_StokList] AS [Data_StokList]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="Data_TahsDet" EntityType="Self.Data_TahsDet" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Data_TahsDet].[IND] AS [IND], 
@@ -901,8 +755,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
     FROM [dbo].[Data_Tahsilat] AS [Data_Tahsilat]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="u0524050_dbFB1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1007,58 +860,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <Property Name="PERSONELNO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_ECSCari">
-          <Key>
-            <PropertyRef Name="TUTAR" />
-            <PropertyRef Name="FIRMAADI" />
-            <PropertyRef Name="FIRMAKODU" />
-            <PropertyRef Name="KOD5" />
-            <PropertyRef Name="UNVAN" />
-            <PropertyRef Name="PERSONELNO" />
-            <PropertyRef Name="GTARIH" />
-          </Key>
-          <Property Name="TUTAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="FIRMAADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="FIRMAKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KOD5" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="UNVAN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PERSONELNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="GTARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Data_ECSTutar">
-          <Key>
-            <PropertyRef Name="TUTAR" />
-            <PropertyRef Name="STOKKODU" />
-            <PropertyRef Name="MALINCINSI" />
-            <PropertyRef Name="IND" />
-            <PropertyRef Name="KOD1" />
-            <PropertyRef Name="GTARIH" />
-          </Key>
-          <Property Name="TUTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="STOKKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IND" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KOD1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Data_ECSUrunler">
-          <Key>
-            <PropertyRef Name="STOKKODU" />
-            <PropertyRef Name="MALINCINSI" />
-            <PropertyRef Name="SATILANMIKTAR" />
-            <PropertyRef Name="IND" />
-            <PropertyRef Name="KOD1" />
-            <PropertyRef Name="BIRIM" />
-            <PropertyRef Name="GTARIH" />
-          </Key>
-          <Property Name="STOKKODU" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SATILANMIKTAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IND" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KOD1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BIRIM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
         <EntityType Name="Data_FiyatDegisen">
           <Key>
             <PropertyRef Name="IND" />
@@ -1088,58 +889,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <Property Name="FIYATDEGISMETARIHI1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="Data_GecList">
-          <Key>
-            <PropertyRef Name="IND" />
-            <PropertyRef Name="TARIH" />
-            <PropertyRef Name="FIRMANO" />
-            <PropertyRef Name="STOKKODU" />
-            <PropertyRef Name="MALINCINSI" />
-            <PropertyRef Name="FIRMAKODU" />
-            <PropertyRef Name="FIRMAADI" />
-            <PropertyRef Name="EVRAKCINSI" />
-            <PropertyRef Name="SATISFIYATI1" />
-            <PropertyRef Name="SBIRIMADI" />
-            <PropertyRef Name="SMIKTAR" />
-            <PropertyRef Name="BIRIMADI" />
-            <PropertyRef Name="KDVDAHIL" />
-            <PropertyRef Name="BARCODE" />
-            <PropertyRef Name="EVRAKNO" />
-            <PropertyRef Name="KDV" />
-            <PropertyRef Name="CIKAN" />
-            <PropertyRef Name="MIKTAR" />
-            <PropertyRef Name="BIRIMMALIYET" />
-            <PropertyRef Name="BIRIMFIYAT" />
-            <PropertyRef Name="TOPLAMKDV" />
-            <PropertyRef Name="ARATOPLAM" />
-            <PropertyRef Name="GENELTOPLAM" />
-            <PropertyRef Name="GTARIH" />
-          </Key>
-          <Property Name="IND" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TARIH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="FIRMANO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="STOKKODU" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MALINCINSI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="FIRMAKODU" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="FIRMAADI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="EVRAKCINSI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SATISFIYATI1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SBIRIMADI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SMIKTAR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BIRIMADI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KDVDAHIL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BARCODE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="EVRAKNO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KDV" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CIKAN" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MIKTAR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BIRIMMALIYET" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BIRIMFIYAT" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TOPLAMKDV" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ARATOPLAM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="GENELTOPLAM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="GTARIH" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="Data_GecSipList">
           <Key>
@@ -1195,7 +944,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
             <PropertyRef Name="KOD5" />
             <PropertyRef Name="IND" />
             <PropertyRef Name="BAKIYE" />
-            <PropertyRef Name="SONSATISTARIHI" />
             <PropertyRef Name="SONTAHSILATTARIHI" />
             <PropertyRef Name="UNVAN" />
             <PropertyRef Name="PERSONELNO" />
@@ -1205,7 +953,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="BAKIYE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SONSATISTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="SONTAHSILATTARIHI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="UNVAN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PERSONELNO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1346,33 +1093,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_StokList">
-          <Key>
-            <PropertyRef Name="IND" />
-            <PropertyRef Name="STOKKODU" />
-            <PropertyRef Name="MALINCINSI" />
-            <PropertyRef Name="KOD5" />
-            <PropertyRef Name="KDVGRUBU" />
-            <PropertyRef Name="ENVANTER" />
-            <PropertyRef Name="STATUS" />
-            <PropertyRef Name="SATISFIYATI1" />
-            <PropertyRef Name="BARCODE" />
-            <PropertyRef Name="BIRIMADI" />
-          </Key>
-          <Property Name="IND" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="STOKKODU" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KOD5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KDVGRUBU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ENVANTER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SATISFIYATI1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BARCODE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BIRIMADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ADET" Type="Int32" />
-        </EntityType>
         <EntityType Name="Data_TahsDet">
           <Key>
             <PropertyRef Name="IND" />
@@ -1473,11 +1193,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <EntitySet Name="Data_Mesajlar" EntityType="Self.Data_Mesajlar" />
           <EntitySet Name="Data_Users" EntityType="Self.Data_Users" />
           <EntitySet Name="Data_CariBilgi" EntityType="Self.Data_CariBilgi" />
-          <EntitySet Name="Data_ECSCari" EntityType="Self.Data_ECSCari" />
-          <EntitySet Name="Data_ECSTutar" EntityType="Self.Data_ECSTutar" />
-          <EntitySet Name="Data_ECSUrunler" EntityType="Self.Data_ECSUrunler" />
           <EntitySet Name="Data_FiyatDegisen" EntityType="Self.Data_FiyatDegisen" />
-          <EntitySet Name="Data_GecList" EntityType="Self.Data_GecList" />
           <EntitySet Name="Data_GecSipList" EntityType="Self.Data_GecSipList" />
           <EntitySet Name="Data_GecTahsilat" EntityType="Self.Data_GecTahsilat" />
           <EntitySet Name="Data_HareketsizUrun" EntityType="Self.Data_HareketsizUrun" />
@@ -1485,10 +1201,79 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <EntitySet Name="Data_SatFat" EntityType="Self.Data_SatFat" />
           <EntitySet Name="Data_SatFatDet" EntityType="Self.Data_SatFatDet" />
           <EntitySet Name="Data_SonGelenler" EntityType="Self.Data_SonGelenler" />
-          <EntitySet Name="Data_StokList" EntityType="Self.Data_StokList" />
           <EntitySet Name="Data_TahsDet" EntityType="Self.Data_TahsDet" />
           <EntitySet Name="Data_Tahsilat" EntityType="Self.Data_Tahsilat" />
+          <EntitySet Name="Data_ECSTutar" EntityType="u0524050_dbFB1Model.Data_ECSTutar" />
+          <EntitySet Name="Data_ECSUrunler" EntityType="u0524050_dbFB1Model.Data_ECSUrunler" />
+          <EntitySet Name="Data_ECSCari" EntityType="u0524050_dbFB1Model.Data_ECSCari" />
+          <EntitySet Name="Data_Extre" EntityType="u0524050_dbFB1Model.Data_Extre" />
+          <EntitySet Name="Data_StokList" EntityType="u0524050_dbFB1Model.Data_StokList" />
         </EntityContainer>
+        <EntityType Name="Data_ECSTutar">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="IND" Type="Int32" Nullable="false" />
+          <Property Name="TUTAR" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="STOKKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Data_ECSUrunler">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="IND" Type="Int32" Nullable="false" />
+          <Property Name="STOKKODU" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CIKAN" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Data_ECSCari">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="IND" Type="Int32" Nullable="false" />
+          <Property Name="TUTAR" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="FIRMAADI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FIRMAKODU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="UNVAN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Data_Extre">
+          <Key>
+            <PropertyRef Name="FIRMANO" />
+          </Key>
+          <Property Name="FIRMANO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BASLIKPARABIRIMI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EVRAKTIPI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BELGEIZAHAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ISLEMIZAHAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BELGENO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BORC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ALACAK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BAKIYE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BELGEIND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PARABIRIMI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Data_StokList">
+          <Key>
+            <PropertyRef Name="STOKKODU" />
+          </Key>
+          <Property Name="STOKKODU" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="KOD5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="KDVGRUBU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ENVANTER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SATISFIYATI1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BARCODE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="BIRIMADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1586,44 +1371,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_ECSCari">
-            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_ECSCari">
-              <MappingFragment StoreEntitySet="Data_ECSCari">
-                <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
-                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
-                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
-                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
-                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
-                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
-                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Data_ECSTutar">
-            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_ECSTutar">
-              <MappingFragment StoreEntitySet="Data_ECSTutar">
-                <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
-                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
-                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
-                <ScalarProperty Name="IND" ColumnName="IND" />
-                <ScalarProperty Name="KOD1" ColumnName="KOD1" />
-                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Data_ECSUrunler">
-            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_ECSUrunler">
-              <MappingFragment StoreEntitySet="Data_ECSUrunler">
-                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
-                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
-                <ScalarProperty Name="SATILANMIKTAR" ColumnName="SATILANMIKTAR" />
-                <ScalarProperty Name="IND" ColumnName="IND" />
-                <ScalarProperty Name="KOD1" ColumnName="KOD1" />
-                <ScalarProperty Name="BIRIM" ColumnName="BIRIM" />
-                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Data_FiyatDegisen">
             <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_FiyatDegisen">
               <MappingFragment StoreEntitySet="Data_FiyatDegisen">
@@ -1640,36 +1387,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
                 <ScalarProperty Name="BIRIMADI" ColumnName="BIRIMADI" />
                 <ScalarProperty Name="FIYATDEGISMETARIHI1" ColumnName="FIYATDEGISMETARIHI1" />
                 <ScalarProperty Name="KOD1" ColumnName="KOD1" />
-                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Data_GecList">
-            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_GecList">
-              <MappingFragment StoreEntitySet="Data_GecList">
-                <ScalarProperty Name="IND" ColumnName="IND" />
-                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
-                <ScalarProperty Name="FIRMANO" ColumnName="FIRMANO" />
-                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
-                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
-                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
-                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
-                <ScalarProperty Name="EVRAKCINSI" ColumnName="EVRAKCINSI" />
-                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
-                <ScalarProperty Name="SBIRIMADI" ColumnName="SBIRIMADI" />
-                <ScalarProperty Name="SMIKTAR" ColumnName="SMIKTAR" />
-                <ScalarProperty Name="BIRIMADI" ColumnName="BIRIMADI" />
-                <ScalarProperty Name="KDVDAHIL" ColumnName="KDVDAHIL" />
-                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
-                <ScalarProperty Name="EVRAKNO" ColumnName="EVRAKNO" />
-                <ScalarProperty Name="KDV" ColumnName="KDV" />
-                <ScalarProperty Name="CIKAN" ColumnName="CIKAN" />
-                <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
-                <ScalarProperty Name="BIRIMMALIYET" ColumnName="BIRIMMALIYET" />
-                <ScalarProperty Name="BIRIMFIYAT" ColumnName="BIRIMFIYAT" />
-                <ScalarProperty Name="TOPLAMKDV" ColumnName="TOPLAMKDV" />
-                <ScalarProperty Name="ARATOPLAM" ColumnName="ARATOPLAM" />
-                <ScalarProperty Name="GENELTOPLAM" ColumnName="GENELTOPLAM" />
                 <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1709,7 +1426,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
                 <ScalarProperty Name="KOD5" ColumnName="KOD5" />
                 <ScalarProperty Name="IND" ColumnName="IND" />
                 <ScalarProperty Name="BAKIYE" ColumnName="BAKIYE" />
-                <ScalarProperty Name="SONSATISTARIHI" ColumnName="SONSATISTARIHI" />
                 <ScalarProperty Name="SONTAHSILATTARIHI" ColumnName="SONTAHSILATTARIHI" />
                 <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
                 <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
@@ -1805,25 +1521,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Data_StokList">
-            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_StokList">
-              <MappingFragment StoreEntitySet="Data_StokList">
-                <ScalarProperty Name="IND" ColumnName="IND" />
-                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
-                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
-                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
-                <ScalarProperty Name="KDVGRUBU" ColumnName="KDVGRUBU" />
-                <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
-                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
-                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
-                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
-                <ScalarProperty Name="BIRIMADI" ColumnName="BIRIMADI" />
-                <ScalarProperty Name="KOD1" ColumnName="KOD1" />
-                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
-                <ScalarProperty Name="ADET" ColumnName="ADET" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Data_TahsDet">
             <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_TahsDet">
               <MappingFragment StoreEntitySet="Data_TahsDet">
@@ -1879,6 +1576,76 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Data_ECSTutar">
+            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_ECSTutar">
+              <MappingFragment StoreEntitySet="Data_ECSTutar">
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_ECSUrunler">
+            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_ECSUrunler">
+              <MappingFragment StoreEntitySet="Data_ECSUrunler">
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+                <ScalarProperty Name="CIKAN" ColumnName="CIKAN" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_ECSCari">
+            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_ECSCari">
+              <MappingFragment StoreEntitySet="Data_ECSCari">
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+                <ScalarProperty Name="UNVAN" ColumnName="UNVAN" />
+                <ScalarProperty Name="FIRMAKODU" ColumnName="FIRMAKODU" />
+                <ScalarProperty Name="FIRMAADI" ColumnName="FIRMAADI" />
+                <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+                <ScalarProperty Name="IND" ColumnName="IND" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_Extre">
+            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_Extre">
+              <MappingFragment StoreEntitySet="Data_Extre">
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+                <ScalarProperty Name="PARABIRIMI" ColumnName="PARABIRIMI" />
+                <ScalarProperty Name="BELGEIND" ColumnName="BELGEIND" />
+                <ScalarProperty Name="BAKIYE" ColumnName="BAKIYE" />
+                <ScalarProperty Name="ALACAK" ColumnName="ALACAK" />
+                <ScalarProperty Name="BORC" ColumnName="BORC" />
+                <ScalarProperty Name="BELGENO" ColumnName="BELGENO" />
+                <ScalarProperty Name="ISLEMIZAHAT" ColumnName="ISLEMIZAHAT" />
+                <ScalarProperty Name="BELGEIZAHAT" ColumnName="BELGEIZAHAT" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="EVRAKTIPI" ColumnName="EVRAKTIPI" />
+                <ScalarProperty Name="BASLIKPARABIRIMI" ColumnName="BASLIKPARABIRIMI" />
+                <ScalarProperty Name="FIRMANO" ColumnName="FIRMANO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_StokList">
+            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_StokList">
+              <MappingFragment StoreEntitySet="Data_StokList">
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+                <ScalarProperty Name="KOD1" ColumnName="KOD1" />
+                <ScalarProperty Name="BIRIMADI" ColumnName="BIRIMADI" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+                <ScalarProperty Name="KDVGRUBU" ColumnName="KDVGRUBU" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1894,7 +1661,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

@@ -12,18 +12,20 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_StokList
+    public partial class Data_Extre
     {
-        public string STOKKODU { get; set; }
-        public string MALINCINSI { get; set; }
-        public string KOD5 { get; set; }
-        public string KDVGRUBU { get; set; }
-        public string ENVANTER { get; set; }
-        public string STATUS { get; set; }
-        public string SATISFIYATI1 { get; set; }
-        public string BARCODE { get; set; }
-        public string BIRIMADI { get; set; }
-        public string KOD1 { get; set; }
+        public string FIRMANO { get; set; }
+        public string BASLIKPARABIRIMI { get; set; }
+        public string EVRAKTIPI { get; set; }
+        public string TARIH { get; set; }
+        public string BELGEIZAHAT { get; set; }
+        public string ISLEMIZAHAT { get; set; }
+        public string BELGENO { get; set; }
+        public string BORC { get; set; }
+        public string ALACAK { get; set; }
+        public string BAKIYE { get; set; }
+        public string BELGEIND { get; set; }
+        public string PARABIRIMI { get; set; }
         public string GTARIH { get; set; }
     }
 }

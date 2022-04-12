@@ -15,7 +15,7 @@ namespace SSY_Project.Controllers
         public ActionResult Index()
         {
             var mail = (string)Session["EMAIL"];
-            ViewBag.image= db.Data_Users.Where(x => x.EMAIL == mail).Select(y => y.FOTO_URL).FirstOrDefault();
+            ViewBag.image = db.Data_Users.Where(x => x.EMAIL == mail).Select(y => y.FOTO_URL).FirstOrDefault();
             ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
             ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
             return View();
@@ -31,28 +31,28 @@ namespace SSY_Project.Controllers
 
         }
         [HttpPost]
-        public ActionResult Edit(Data_Users user, HttpPostedFileBase ImageUrl)
+        public ActionResult EditProfile(Data_Users p, HttpPostedFileBase UrunGorsel)
         {
-            var userId = db.Data_Users.Find(user.ID);
-
-
+            var urn = db.Data_Users.Find(p.ID);
+            urn.EMAIL = p.EMAIL;
+            urn.PASSWORD = p.PASSWORD;
+            urn.USERNAME = p.USERNAME;
+            //urn.FOTO_URL = p.FOTO_URL;
             if (ModelState.IsValid)
             {
-                userId.EMAIL = user.EMAIL;
-                userId.GSM = user.GSM;
-                userId.PASSWORD = user.PASSWORD;
-                userId.USERNAME = user.USERNAME;
-                if (ImageUrl != null)
+                if (UrunGorsel != null)
                 {
-                    string dosyaadi = Path.GetFileName(ImageUrl.FileName);
+                    string dosyaadi = Path.GetFileName(UrunGorsel.FileName);
                     string yol = "/Image/" + dosyaadi;
-                    ImageUrl.SaveAs(Server.MapPath(yol));
-                    userId.FOTO_URL = yol;
+                    UrunGorsel.SaveAs(Server.MapPath(yol));
+                    urn.FOTO_URL = yol;
                 }
-
             }
             db.SaveChanges();
             return RedirectToAction("Index");
+
+
+
         }
     }
 }

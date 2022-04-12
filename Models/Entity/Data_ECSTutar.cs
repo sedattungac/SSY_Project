@@ -14,11 +14,10 @@ namespace SSY_Project.Models.Entity
     
     public partial class Data_ECSTutar
     {
-        public string TUTAR { get; set; }
+        public int IND { get; set; }
+        public Nullable<decimal> TUTAR { get; set; }
         public string STOKKODU { get; set; }
         public string MALINCINSI { get; set; }
-        public string IND { get; set; }
-        public string KOD1 { get; set; }
         public string GTARIH { get; set; }
     }
 }

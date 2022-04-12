@@ -33,7 +33,7 @@ namespace SSY_Project.Controllers
         {
             ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
             ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
-            var value = db.Data_ECSUrunler.OrderByDescending(x => x.SATILANMIKTAR).ToList();
+            var value = db.Data_ECSUrunler.OrderByDescending(x => x.CIKAN).ToList();
             return View(value);
         }
     }
