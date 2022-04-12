@@ -4,45 +4,30 @@
     Layout = "~/Views/Shared/_ProjectLayout.cshtml";
 }
 
-@Html.Partial("Weather","Dashboard")
+@Html.Partial("Weather", "Dashboard")
 <br />
 
-<div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"></div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {
-  "symbols": [
-    {
-      "proName": "BITSTAMP:BTCUSD",
-      "title": "Bitcoin"
-    },
-    {
-      "proName": "BITSTAMP:ETHUSD",
-      "title": "Ethereum"
-    },
-    {
-      "description": "Dolar",
-      "proName": "FX:USDTRY"
-    },
-    {
-      "description": "Euro",
-      "proName": "OANDA:EURTRY"
-    }
-  ],
-  "showSymbolLogo": true,
-  "colorTheme": "light",
-  "isTransparent": false,
-  "displayMode": "adaptive",
-  "locale": "tr"
-}
-    </script>
-</div>
+@Html.Partial("Economy", "Dashboard")
+
 
 
 
 @Html.Partial("Statistic", "Dasboard")
 
+
+<div class="row">
+    <!-- Left col -->
+    <section class="col-lg-6 float-left connectedSortable">
+        @Html.Partial("Chart", "Dashboard")
+
+    </section>
+    <section class="col-lg-6 float-right connectedSortable">
+        @Html.Partial("Chart2", "Dashboard")
+
+    </section>
+
+
+</div>
 <div class="row">
     <!-- Left col -->
     <section class="col-lg-6 float-left connectedSortable">

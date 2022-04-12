@@ -1,18 +1,12 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
+<!--<head>
     <title>Google Grafikler</title>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
-    <script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+    @*<script src="~/Scripts/jquery-3.4.1.min.js"></script>*@
+    <!--<script>
         $(document).ready(function () {
             $.ajax({
                 type: "POST",
@@ -42,22 +36,44 @@
             data.addRows(dataArray);
 
             var columnChartOptions = {
-                title: "Kategori Blog Statik Pie Grafik",
-                width: 1000,
-                height: 600,
+                title: "Kategori Blog Statik Pie Grafik Sedat",
+                width: 500,
+                height: 300,
                 bar: { groupWidth: "20%" },
             };
 
-            var columnChart = new google.visualization.PieChart(document
-                .getElementById('Piechart_div'));
+            var columnChart = new google.visualization.ColumnChart(document
+                .getElementById('chart_div'));
 
             columnChart.draw(data, columnChartOptions);
         }
     </script>
-</head>
+</head>-->
 <body>
-    <div id="Piechart_div"></div>
+    <div class="card card-warning">
+        <div class="card-header">
+            <h3 class="card-title">Pie Chart</h3>
+
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="card-body container float-left">
+            @*<div id="Piechart_div" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></div>*@
+            <div style="margin-left:0px;" class="float-left" id="chart_div"></div>
+
+
+        </div>
+        <!-- /.card-body -->
+    </div>
+    @*<div id="Piechart_div"></div>*@
 </body>
 </html>
+
 
 

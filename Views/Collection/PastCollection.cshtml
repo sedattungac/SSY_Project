@@ -17,7 +17,7 @@
 
                     <th>FİRMA ADI</th>
                     <th>ÜNVAN</th>
-                    <th>SON SATIŞ TARİHİ</th>
+                    @*<th>SON SATIŞ TARİHİ</th>*@
                     <th>SON TAHSİLAT TARİHİ</th>
                     <th>BAKİYE</th>
                     <th>KOD 5</th>
@@ -27,14 +27,14 @@
             <tbody>
                 @foreach (var collection in Model)
                 {
-                    var date = Convert.ToDateTime(collection.SONSATISTARIHI);
+                    //var date = Convert.ToDateTime(collection.SONSATISTARIHI);
                     var bakiye = Convert.ToDecimal(collection.BAKIYE);
                     var date2 = Convert.ToDateTime(collection.SONTAHSILATTARIHI);
                     <tr>
 
                         <td>@collection.FIRMAADI</td>
                         <td>@collection.UNVAN</td>
-                        <td>@date.ToShortDateString()</td>
+                        @*<td>@date.ToShortDateString()</td>*@
                         @*<td>@collection.SONSATISTARIHI</td>*@
                         <td>@date2.ToShortDateString()</td>
                         <td>@collection.BAKIYE ₺</td>

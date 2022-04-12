@@ -4,33 +4,28 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="647611892f1b486cabae7880703524c3" Name="Diagram1">
+      <Diagram DiagramId="54f5282ef9eb42ada7146cda8ab78f71" Name="Diagram1">
         <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_CariList" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Users" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_AlinanCekler" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_CariBilgi" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_ECSCari" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_ECSTutar" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_ECSUrunler" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Faaliyet" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_FiyatDegisen" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_GecList" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_GecSipList" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_GecTahsilat" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_HareketsizUrun" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_PlasTop" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_SatFat" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_SatFatDet" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Duyurular" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Firma" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Mesajlar" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Users" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_CariBilgi" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_ECSCari" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_ECSTutar" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_ECSUrunler" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_FiyatDegisen" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_GecList" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_GecSipList" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_GecTahsilat" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_HareketsizUrun" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_PlasTop" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_SatFat" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_SatFatDet" Width="1.5" PointX="8.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_SonGelenler" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_StokDeger" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_StokList" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_TahsDet" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Tahsilat" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_VerilenCekler" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_CariDetay" Width="1.5" PointX="0.625" PointY="12.125" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Duyurular" Width="1.5" PointX="3.375" PointY="15.75" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Firma" Width="1.5" PointX="15.375" PointY="4.75" />
-        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Mesajlar" Width="1.5" PointX="15.375" PointY="7.75" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_StokList" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_TahsDet" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="u0524050_dbFB1Model.Data_Tahsilat" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

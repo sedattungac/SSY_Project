@@ -27,14 +27,14 @@ namespace SSY_Project.Controllers
             ViewBag.id = id;
             return View(customerList);
         }
-        public ActionResult CustomerDetail(string id)
-        {
-            ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
-            ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
-            var value = db.Data_CariDetay.Where(x => x.CARIIND == id).ToList();
-            ViewBag.id = id;
-            return View(value);
-        }
+        //public ActionResult CustomerDetail(string id)
+        //{
+        //    ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
+        //    ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
+        //    var value = db.Data_CariDetay.Where(x => x.CARIIND == id).ToList();
+        //    ViewBag.id = id;
+        //    return View(value);
+        //}
         public ActionResult OldBillofSale(string id)
         {
             ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();

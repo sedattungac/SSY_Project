@@ -26,5 +26,6 @@ namespace SSY_Project.Models.Entity
         public string BIRIMADI { get; set; }
         public string KOD1 { get; set; }
         public string GTARIH { get; set; }
+        public Nullable<int> ADET { get; set; }
     }
 }

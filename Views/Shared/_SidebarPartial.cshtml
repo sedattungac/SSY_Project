@@ -1,7 +1,7 @@
 ﻿@{
     var kullaniciadi = Session["USERNAME"].ToString();
     var foto = Session["FOTOURL"].ToString();
-    
+
 }
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -12,7 +12,7 @@
         </a>*@
     <a href="index3.html" class="brand-link">
         <img src="@ViewBag.logo" alt="AdminLTE Logo" class="brand-image " style="opacity: .8">
-        <span class="brand-text font-weight-light">@ViewBag.firma</span>
+        <span translate="no" class="brand-text font-weight-light">@ViewBag.firma</span>
     </a>
 
     <!-- Sidebar -->
@@ -23,7 +23,7 @@
                 <img src="@foto" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">@kullaniciadi</a>
+                <a href="#" translate="no" class="d-block">@kullaniciadi</a>
             </div>
         </div>
 
@@ -42,19 +42,19 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="/Chart/Index" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Grafik 1</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="/Chart/Chart1" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Grafik 2</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="/Chart/Chart2" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Grafik 3</p>
                             </a>
@@ -177,56 +177,6 @@
                     </ul>
 
                 </li>
-
-                @*<li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-shopping-basket"></i>
-                            <p>
-                                Sipariş
-
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="/Order/AddOrder" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p> Yeni Sipariş</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/Order/Index" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p> Eski Siparişler</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                                Tahsilatlar
-
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="/Collection/Index" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p> Yeni Tahsilat</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/Collection/PastCollection" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p> Eski Tahsilatlar</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>*@
-
                 <li class="nav-item">
                     <a href="/Login/LogOut/" class="nav-link">
                         <i class="nav-icon fas fa-sign-out-alt"></i>

@@ -1,4 +1,5 @@
-﻿using SSY_Project.Models.Entity;
+﻿using SSY_Project.Models;
+using SSY_Project.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,9 +27,14 @@ namespace SSY_Project.Controllers
 
             return PartialView();
         }
+        public PartialViewResult Economy()
+        {
+
+            return PartialView();
+        }
         public PartialViewResult Statistic()
         {
-          
+
             return PartialView();
         }
         public PartialViewResult AreaChart()
@@ -51,5 +57,45 @@ namespace SSY_Project.Controllers
 
             return PartialView();
         }
+
+
+        public PartialViewResult Chart()
+        {
+            return PartialView();
+        }
+        public PartialViewResult Chart2()
+        {
+            return PartialView();
+        }
+
+        public ActionResult VisualizeResult()
+        {
+            return Json(categorylist(), JsonRequestBehavior.AllowGet);
+        }
+
+
+
+        public List<Chart> categorylist()
+        {
+            List<Chart> c = new List<Chart>();
+            c.Add(new Chart()
+            {
+                CategoryName = "Teknoloji",
+                BlogCount = 14
+            });
+            c.Add(new Chart()
+            {
+                CategoryName = "Spor",
+                BlogCount = 10
+            });
+            c.Add(new Chart()
+            {
+                CategoryName = "Kitap",
+                BlogCount = 16
+            });
+            return c;
+        }
+
+
     }
 }

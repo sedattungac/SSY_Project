@@ -171,6 +171,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AnnunciationController.cs" />
     <Compile Include="Controllers\CollectionController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\ECSController.cs" />
@@ -179,6 +180,8 @@
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\PriceChangeController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\QRController.cs" />
     <Compile Include="Controllers\RecentArrivalsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -189,13 +192,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Chart.cs" />
-    <Compile Include="Models\Entity\Data_AlinanCekler.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Class2.cs" />
     <Compile Include="Models\Entity\Data_CariBilgi.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Entity\Data_CariDetay.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\Data_CariList.cs">
@@ -211,9 +209,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\Data_ECSUrunler.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Entity\Data_Faaliyet.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\Data_Firma.cs">
@@ -249,9 +244,6 @@
     <Compile Include="Models\Entity\Data_SonGelenler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\Data_StokDeger.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Entity\Data_StokList.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -262,9 +254,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\Data_Users.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Entity\Data_VerilenCekler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\Model1.Context.cs">
@@ -2392,6 +2381,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Image\indir-removebg-preview.png" />
+    <Content Include="Image\logoanasayfa1.png" />
     <Content Include="Image\logoanasayfa2.png" />
     <Content Include="Models\Entity\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -2819,6 +2809,14 @@
     <Content Include="Views\Dashboard\BarChart.cshtml" />
     <Content Include="Views\Dashboard\DonutChart.cshtml" />
     <Content Include="Views\Dashboard\Weather.cshtml" />
+    <Content Include="Views\Dashboard\Chart.cshtml" />
+    <Content Include="Views\Dashboard\Chart2.cshtml" />
+    <Content Include="Views\Dashboard\Economy.cshtml" />
+    <Content Include="Views\Chart\Chart1.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\QR\Index.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

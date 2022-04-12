@@ -5,9 +5,9 @@ using System.Web;
 
 namespace SSY_Project.Models
 {
-    public class Chart
+    public class Class2
     {
-        public string CategoryName { get; set; }
-        public int BlogCount { get; set; }
+        public int Rating { get; set; }
+        public string BlogName { get; set; }
     }
 }
