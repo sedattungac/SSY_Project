@@ -28,6 +28,7 @@ namespace SSY_Project.Controllers
                 Session["EMAIL"] = admininfo.EMAIL.ToString();
                 Session["USERNAME"] = admininfo.USERNAME.ToString();
                 Session["FOTOURL"] = admininfo.FOTO_URL.ToString();
+                Session["PERSONELNO"] = admininfo.PERSONELNO.ToString();
 
                 return RedirectToAction("Index", "Welcome");
             }

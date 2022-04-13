@@ -272,17 +272,16 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_HareketsizUrun' does not h
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DURUM" Type="bit" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_PlasTop' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Data_PlasTop">
+        <EntityType Name="Data_PlasToplam">
           <Key>
-            <PropertyRef Name="KOD" />
-            <PropertyRef Name="toplamSiparis" />
-            <PropertyRef Name="toplamTahsilat" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="KOD" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="toplamSiparis" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="toplamTahsilat" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="PERSONELNO" Type="int" />
+          <Property Name="TSATIS" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TTAHSILAT" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PRIM" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="GTARIH" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_SatFat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -529,6 +528,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <EntitySet Name="Data_ECSUrunler" EntityType="Self.Data_ECSUrunler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_Firma" EntityType="Self.Data_Firma" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_Mesajlar" EntityType="Self.Data_Mesajlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Data_PlasToplam" EntityType="Self.Data_PlasToplam" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_StokList" EntityType="Self.Data_StokList" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_Users" EntityType="Self.Data_Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Data_CariBilgi" EntityType="Self.Data_CariBilgi" store:Type="Tables" store:Schema="dbo">
@@ -636,13 +636,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
     [Data_HareketsizUrun].[MALIYET] AS [MALIYET], 
     [Data_HareketsizUrun].[GTARIH] AS [GTARIH]
     FROM [dbo].[Data_HareketsizUrun] AS [Data_HareketsizUrun]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Data_PlasTop" EntityType="Self.Data_PlasTop" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Data_PlasTop].[KOD] AS [KOD], 
-    [Data_PlasTop].[toplamSiparis] AS [toplamSiparis], 
-    [Data_PlasTop].[toplamTahsilat] AS [toplamTahsilat]
-    FROM [dbo].[Data_PlasTop] AS [Data_PlasTop]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="Data_SatFat" EntityType="Self.Data_SatFat" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -978,16 +971,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <Property Name="MALIYET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="Data_PlasTop">
-          <Key>
-            <PropertyRef Name="KOD" />
-            <PropertyRef Name="toplamSiparis" />
-            <PropertyRef Name="toplamTahsilat" />
-          </Key>
-          <Property Name="KOD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="toplamSiparis" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="toplamTahsilat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
         <EntityType Name="Data_SatFat">
           <Key>
             <PropertyRef Name="IND" />
@@ -1197,7 +1180,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <EntitySet Name="Data_GecSipList" EntityType="Self.Data_GecSipList" />
           <EntitySet Name="Data_GecTahsilat" EntityType="Self.Data_GecTahsilat" />
           <EntitySet Name="Data_HareketsizUrun" EntityType="Self.Data_HareketsizUrun" />
-          <EntitySet Name="Data_PlasTop" EntityType="Self.Data_PlasTop" />
           <EntitySet Name="Data_SatFat" EntityType="Self.Data_SatFat" />
           <EntitySet Name="Data_SatFatDet" EntityType="Self.Data_SatFatDet" />
           <EntitySet Name="Data_SonGelenler" EntityType="Self.Data_SonGelenler" />
@@ -1208,6 +1190,7 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <EntitySet Name="Data_ECSCari" EntityType="u0524050_dbFB1Model.Data_ECSCari" />
           <EntitySet Name="Data_Extre" EntityType="u0524050_dbFB1Model.Data_Extre" />
           <EntitySet Name="Data_StokList" EntityType="u0524050_dbFB1Model.Data_StokList" />
+          <EntitySet Name="Data_PlasToplam" EntityType="u0524050_dbFB1Model.Data_PlasToplam" />
         </EntityContainer>
         <EntityType Name="Data_ECSTutar">
           <Key>
@@ -1273,6 +1256,17 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
           <Property Name="BIRIMADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Data_PlasToplam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="PERSONELNO" Type="Int32" />
+          <Property Name="TSATIS" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TTAHSILAT" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PRIM" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="GTARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1444,15 +1438,6 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
                 <ScalarProperty Name="KOD5" ColumnName="KOD5" />
                 <ScalarProperty Name="MALIYET" ColumnName="MALIYET" />
                 <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Data_PlasTop">
-            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_PlasTop">
-              <MappingFragment StoreEntitySet="Data_PlasTop">
-                <ScalarProperty Name="KOD" ColumnName="KOD" />
-                <ScalarProperty Name="toplamSiparis" ColumnName="toplamSiparis" />
-                <ScalarProperty Name="toplamTahsilat" ColumnName="toplamTahsilat" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1643,6 +1628,18 @@ warning 6002: The table/view 'u0524050_dbFB1.dbo.Data_Tahsilat' does not have a 
                 <ScalarProperty Name="KOD5" ColumnName="KOD5" />
                 <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
                 <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Data_PlasToplam">
+            <EntityTypeMapping TypeName="u0524050_dbFB1Model.Data_PlasToplam">
+              <MappingFragment StoreEntitySet="Data_PlasToplam">
+                <ScalarProperty Name="GTARIH" ColumnName="GTARIH" />
+                <ScalarProperty Name="PRIM" ColumnName="PRIM" />
+                <ScalarProperty Name="TTAHSILAT" ColumnName="TTAHSILAT" />
+                <ScalarProperty Name="TSATIS" ColumnName="TSATIS" />
+                <ScalarProperty Name="PERSONELNO" ColumnName="PERSONELNO" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

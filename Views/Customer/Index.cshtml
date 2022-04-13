@@ -9,16 +9,7 @@
     <div class="card-header">
         <h3 class="card-title">Cari Listesi</h3>
     </div>
-    <!--<br />-->
-    @*<div class="col-11 row d-flex justify-content-center">
-            <a class="btn btn-primary" href="">BUTTON1</a> &nbsp;
-            <a class="btn btn-primary" href="">BUTTON2</a> &nbsp;
-            <a class="btn btn-primary" href="">BUTTON3</a> &nbsp;
-            <a class="btn btn-primary" href="">BUTTON4</a> &nbsp;
 
-        </div>*@
-    <!--<hr />-->
-    <!-- /.card-header -->
     <div class="card-body">
         <table id="example1" class="table table-bordered table-striped">
             <thead>
@@ -33,7 +24,7 @@
             <tbody>
                 @foreach (var customer in Model)
                 {
-                   
+
                     <tr>
                         <td>@customer.FIRMAADI</td>
                         <td>@customer.UNVAN</td>
@@ -46,10 +37,11 @@
                                     Actions
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    @*<a class="dropdown-item" href="/Customer/CustomerDetail/@customer.IND">Cari Detay </a>*@
                                     <a class="dropdown-item" href="/Customer/CustomerInfo/@customer.IND">Cari Bilgileri</a>
                                     <a class="dropdown-item" href="/Customer/OldBillofSale/@customer.IND">Eski Satış Faturaları</a>
                                     <a class="dropdown-item" href="/Customer/LastCollection/@customer.IND">Eski Tahsilatlar</a>
+                                    <a class="dropdown-item" href="#">Extre </a>
+
 
                                 </div>
                             </div>

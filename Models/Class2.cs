@@ -7,7 +7,7 @@ namespace SSY_Project.Models
 {
     public class Class2
     {
-        public int Rating { get; set; }
+        public decimal Rating { get; set; }
         public string BlogName { get; set; }
     }
 }

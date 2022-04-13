@@ -16,6 +16,8 @@ namespace SSY_Project.Controllers
         // GET: Graph
         public ActionResult Index()
         {
+            ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
+            ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
             return View();
         }
 
@@ -48,38 +50,82 @@ namespace SSY_Project.Controllers
         }
         //Dinamik Grafik
 
-        public List<Class2> BlogList()
+        public List<Class2> EcsCari()
         {
             List<Class2> cs2 = new List<Class2>();
             using (var c = new DatabaseEntities())
             {
-                var sedat = c.Data_StokList.Count();
-                cs2 = c.Data_StokList.Select(x => new Class2
+
+                cs2 = c.Data_ECSCari.Select(x => new Class2
                 {
-                    BlogName = x.MALINCINSI,
-                    Rating = 50
+                    BlogName = x.FIRMAADI,
+                    Rating = (decimal)x.TUTAR
                 }).ToList();
             }
             return cs2;
         }
         public ActionResult VisualizeResult2()
         {
-            return Json(BlogList(), JsonRequestBehavior.AllowGet);
+            return Json(EcsCari(), JsonRequestBehavior.AllowGet);
         }
         public ActionResult Chart1()
         {
+            ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
+            ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
             return View();
+        }
+        public List<Class2> EcsUrun()
+        {
+            List<Class2> cs2 = new List<Class2>();
+            using (var c = new DatabaseEntities())
+            {
+
+                cs2 = c.Data_ECSUrunler.Select(x => new Class2
+                {
+                    BlogName = x.MALINCINSI,
+                    Rating = (decimal)x.CIKAN
+                }).ToList();
+            }
+            return cs2;
+        }
+        public ActionResult VisualizeResult3()
+        {
+            return Json(EcsUrun(), JsonRequestBehavior.AllowGet);
         }
         public ActionResult Chart2()
         {
+            ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
+            ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
             return View();
+        }
+        public List<Class2> EcsTutar()
+        {
+            List<Class2> cs2 = new List<Class2>();
+            using (var c = new DatabaseEntities())
+            {
+
+                cs2 = c.Data_ECSTutar.Select(x => new Class2
+                {
+                    BlogName = x.MALINCINSI,
+                    Rating = (decimal)x.TUTAR
+                }).ToList();
+            }
+            return cs2;
+        }
+        public ActionResult VisualizeResult4()
+        {
+            return Json(EcsTutar(), JsonRequestBehavior.AllowGet);
         }
         public ActionResult Chart3()
         {
+            ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
+            ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
             return View();
         }
         public ActionResult Chart4()
         {
+            ViewBag.firma = db.Data_Firma.Select(y => y.FIRMAADI).FirstOrDefault();
+            ViewBag.logo = db.Data_Firma.Select(x => x.LOGO).FirstOrDefault();
             return View();
         }
     }

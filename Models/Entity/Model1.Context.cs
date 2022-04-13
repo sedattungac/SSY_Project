@@ -35,7 +35,6 @@ namespace SSY_Project.Models.Entity
         public virtual DbSet<Data_GecSipList> Data_GecSipList { get; set; }
         public virtual DbSet<Data_GecTahsilat> Data_GecTahsilat { get; set; }
         public virtual DbSet<Data_HareketsizUrun> Data_HareketsizUrun { get; set; }
-        public virtual DbSet<Data_PlasTop> Data_PlasTop { get; set; }
         public virtual DbSet<Data_SatFat> Data_SatFat { get; set; }
         public virtual DbSet<Data_SatFatDet> Data_SatFatDet { get; set; }
         public virtual DbSet<Data_SonGelenler> Data_SonGelenler { get; set; }
@@ -46,5 +45,6 @@ namespace SSY_Project.Models.Entity
         public virtual DbSet<Data_ECSCari> Data_ECSCari { get; set; }
         public virtual DbSet<Data_Extre> Data_Extre { get; set; }
         public virtual DbSet<Data_StokList> Data_StokList { get; set; }
+        public virtual DbSet<Data_PlasToplam> Data_PlasToplam { get; set; }
     }
 }

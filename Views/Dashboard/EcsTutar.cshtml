@@ -1,0 +1,59 @@
+﻿@using SSY_Project.Models.Entity
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Data_ECSTutar>
+@{int sira = 1; }
+<div class="card">
+    <div class="card-header">
+        <div class="float-left">
+            <h3 class="card-title">EcsTutar</h3>
+        </div>
+        <div class="float-right">
+            <a href="/Chart/Chart3" class="btn btn-danger btn-sm"><i class="fas fa-chart-area"></i> Grafik</a>
+        </div>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>MALIN CİNSİ</th>
+                    <th>TUTAR BAR</th>
+                    <th style="width: 40px">TUTAR</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@sira</td>
+                        <td>@item.MALINCINSI</td>
+                        <td>
+
+                            <div class="progress progress-xs">
+                                <div class="progress-bar progress-bar-danger" style="width: @Convert.ToInt32(item.TUTAR/1000)%"></div>
+                            </div>
+
+
+                        </td>
+                        <td><span class="badge bg-danger">@item.TUTAR ₺</span></td>
+                    </tr>
+                    sira++;
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer clearfix">
+        <div class="float-right">
+            @Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }), new PagedListRenderOptions
+               {
+                LiElementClasses = new List<string>
+                {"page-link"}
+                })
+        </div>
+    </div>
+</div>
+

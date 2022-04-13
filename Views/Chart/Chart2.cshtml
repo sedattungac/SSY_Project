@@ -1,8 +1,9 @@
 ﻿
 @{
-    ViewBag.Title = "Chart1";
+    ViewBag.Title = "Chart2";
     Layout = "~/Views/Shared/_ProjectLayout.cshtml";
 }
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
                 type: "POST",
                 dataType: "json",
                 contentType: "application/json",
-                url: '@Url.Action("VisualizeResult2", "Chart")',
+                url: '@Url.Action("VisualizeResult3", "Chart")',
                 success: function (result) {
                     google.charts.load('current', {
                         'packages': ['corechart']
@@ -33,7 +34,7 @@
         function drawChart(result) {
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Name');
-            data.addColumn('number', 'Stoklar');
+            data.addColumn('number', 'Çıkan');
             var dataArray = [];
 
             $.each(result, function (i, obj) {
@@ -42,7 +43,7 @@
             data.addRows(dataArray);
 
             var columnChartOptions = {
-                title: "En Çok Satılan Cariler Dinamik Pie Grafik",
+                title: "En Çok Satılan Ürünler Dinamik Pie Grafik",
                 width: 1200,
                 height: 600,
                 bar: { groupWidth: "20%" },
@@ -56,9 +57,11 @@
     </script>
 </head>
 <body>
-    <div class="float-left" id="Piechart_div"></div>
+    <div id="Piechart_div"></div>
 </body>
 </html>
+
+
 
 
 

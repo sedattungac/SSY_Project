@@ -1,0 +1,38 @@
+﻿@using SSY_Project.Models.Entity
+@model List<Data_PlasToplam>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ProjectLayout.cshtml";
+}
+<br />
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Kazancım</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    @*<th style="width: 10px">#</th>*@
+                    <th style="width: 40px">TOPLAM SATIŞ</th>
+                    <th style="width: 40px">TOPLAM TAHSİLAT</th>
+                    <th style="width: 40px">PRİM</th>
+                    <th style="width: 40px">TARİH</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>@item.ID</td>*@
+                        <td><span class="badge bg-danger"></span> @item.TSATIS ₺</td>
+                        <td><span class="badge bg-danger"></span> @item.TTAHSILAT ₺</td>
+                        <td><span class="badge bg-danger"></span> @item.PRIM ₺</td>
+                        <td>@item.GTARIH </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

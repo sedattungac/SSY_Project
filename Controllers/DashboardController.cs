@@ -1,4 +1,5 @@
-﻿using SSY_Project.Models;
+﻿using PagedList;
+using SSY_Project.Models;
 using SSY_Project.Models.Entity;
 using System;
 using System.Collections.Generic;
@@ -37,65 +38,21 @@ namespace SSY_Project.Controllers
 
             return PartialView();
         }
-        public PartialViewResult AreaChart()
+        public PartialViewResult EcsUrunler(int sayfa = 1)
         {
-
-            return PartialView();
+            var list = db.Data_ECSUrunler.ToList().ToPagedList(sayfa, 5);
+            return PartialView(list);
         }
-        public PartialViewResult DonutChart()
+        public PartialViewResult EcsCari(int sayfa=1)
         {
-
-            return PartialView();
+            var list = db.Data_ECSCari.ToList().ToPagedList(sayfa,5);
+            return PartialView(list);
         }
-        public PartialViewResult BarChart()
+        public PartialViewResult EcsTutar(int sayfa = 1)
         {
-
-            return PartialView();
+            var list = db.Data_ECSTutar.ToList().ToPagedList(sayfa, 5);
+            return PartialView(list);
         }
-        public PartialViewResult PieChart()
-        {
-
-            return PartialView();
-        }
-
-
-        public PartialViewResult Chart()
-        {
-            return PartialView();
-        }
-        public PartialViewResult Chart2()
-        {
-            return PartialView();
-        }
-
-        public ActionResult VisualizeResult()
-        {
-            return Json(categorylist(), JsonRequestBehavior.AllowGet);
-        }
-
-
-
-        public List<Chart> categorylist()
-        {
-            List<Chart> c = new List<Chart>();
-            c.Add(new Chart()
-            {
-                CategoryName = "Teknoloji",
-                BlogCount = 14
-            });
-            c.Add(new Chart()
-            {
-                CategoryName = "Spor",
-                BlogCount = 10
-            });
-            c.Add(new Chart()
-            {
-                CategoryName = "Kitap",
-                BlogCount = 16
-            });
-            return c;
-        }
-
 
     }
 }

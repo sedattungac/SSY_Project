@@ -12,10 +12,13 @@ namespace SSY_Project.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Data_PlasTop
+    public partial class Data_PlasToplam
     {
-        public string KOD { get; set; }
-        public string toplamSiparis { get; set; }
-        public string toplamTahsilat { get; set; }
+        public int ID { get; set; }
+        public Nullable<int> PERSONELNO { get; set; }
+        public Nullable<decimal> TSATIS { get; set; }
+        public Nullable<decimal> TTAHSILAT { get; set; }
+        public Nullable<decimal> PRIM { get; set; }
+        public string GTARIH { get; set; }
     }
 }
